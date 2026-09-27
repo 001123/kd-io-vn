@@ -8,7 +8,7 @@ interface Props {
 
 const { currentLang } = Astro.props;
 const data = privacyData[currentLang];
-const homeUrl = `/${currentLang}/`;
+const homeUrl = currentLang === 'vi' ? '/' : `/${currentLang}/`;
 
 const printLabel = currentLang === 'vi' ? 'In văn bản / Lưu PDF' : 'Print / Save as PDF';
 const copyLinkSuccess = currentLang === 'vi' ? 'Đã sao chép liên kết mục!' : 'Section link copied!';

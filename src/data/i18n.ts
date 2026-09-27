@@ -834,3 +834,35 @@ export const translations = {
 export function getTranslations(lang: Locale) {
   return translations[lang] || translations.vi;
 }
+
+/**
+ * Returns the localized URL path for a given pathname and target locale.
+ * Default locale ('vi') is served directly at the root (no prefix).
+ * English locale ('en') is prefixed with '/en'.
+ */
+export function getLocalizedPath(pathname: string, targetLang: Locale): string {
+  let cleanPath = pathname.split('?')[0].split('#')[0];
+
+  if (cleanPath.startsWith('/en/')) {
+    cleanPath = cleanPath.slice(3);
+  } else if (cleanPath === '/en') {
+    cleanPath = '/';
+  } else if (cleanPath.startsWith('/vi/')) {
+    cleanPath = cleanPath.slice(3);
+  } else if (cleanPath === '/vi') {
+    cleanPath = '/';
+  }
+
+  if (!cleanPath.startsWith('/')) {
+    cleanPath = '/' + cleanPath;
+  }
+
+  if (targetLang === 'vi') {
+    return cleanPath;
+  } else {
+    if (cleanPath === '/') {
+      return '/en/';
+    }
+    return `/en${cleanPath}`;
+  }
+}

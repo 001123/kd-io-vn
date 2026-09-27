@@ -1,0 +1,5 @@
+# Cloudflare Pages 301 Permanent Redirects
+# Preserves link equity & PageRank from legacy /vi URLs to root
+/vi            /              301
+/vi/           /              301
+/vi/*          /:splat        301

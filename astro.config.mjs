@@ -16,8 +16,14 @@ export default defineConfig({
     defaultLocale: 'vi',
     locales: ['vi', 'en'],
     routing: {
-      prefixDefaultLocale: true,
-      redirectToDefaultLocale: false,
+      prefixDefaultLocale: false,
     },
+  },
+  redirects: {
+    '/vi': '/',
+    '/vi/press': '/press',
+    '/vi/privacy': '/privacy',
+    '/vi/terms': '/terms',
+    '/vi/apps/[slug]': '/apps/[slug]',
   },
 });

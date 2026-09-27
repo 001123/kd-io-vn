@@ -1,8 +1,8 @@
 ---
-import Layout from '../../../layouts/Layout.astro';
-import { appsData } from '../../../data/apps';
-import type { AppItem } from '../../../data/apps';
-import { getTranslations } from '../../../data/i18n';
+import Layout from '../../layouts/Layout.astro';
+import { appsData } from '../../data/apps';
+import type { AppItem } from '../../data/apps';
+import { getTranslations } from '../../data/i18n';
 
 export function getStaticPaths() {
   return appsData.map((app) => ({
@@ -32,7 +32,7 @@ const featureGraphic = app.featureGraphic ? app.featureGraphic[lang] : null;
       
       <!-- Back Link -->
       <a
-        href={`/${lang}/#showcase`}
+        href="/#showcase"
         class="inline-flex items-center gap-2 text-xs font-semibold text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
       >
         <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -255,7 +255,7 @@ const featureGraphic = app.featureGraphic ? app.featureGraphic[lang] : null;
 
             <div class="pt-2">
               <a
-                href={`/${lang}/privacy`}
+                href="/privacy"
                 class="text-xs font-semibold text-orange-600 dark:text-orange-500 hover:underline"
               >
                 Xem Chính sách quyền riêng tư chi tiết →

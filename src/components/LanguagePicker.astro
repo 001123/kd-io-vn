@@ -1,5 +1,6 @@
 ---
 import type { Locale } from '../data/i18n';
+import { getLocalizedPath } from '../data/i18n';
 
 interface Props {
   currentLang: Locale;
@@ -8,21 +9,8 @@ interface Props {
 const { currentLang } = Astro.props;
 const currentPath = Astro.url.pathname;
 
-// Calculate counterpart URLs
-function getLanguageUrl(targetLang: Locale) {
-  if (targetLang === currentLang) return currentPath;
-  
-  // Replace leading /vi or /en with targetLang
-  if (currentPath.startsWith('/vi')) {
-    return currentPath.replace(/^\/vi/, `/${targetLang}`);
-  } else if (currentPath.startsWith('/en')) {
-    return currentPath.replace(/^\/en/, `/${targetLang}`);
-  }
-  return `/${targetLang}/`;
-}
-
-const viUrl = getLanguageUrl('vi');
-const enUrl = getLanguageUrl('en');
+const viUrl = getLocalizedPath(currentPath, 'vi');
+const enUrl = getLocalizedPath(currentPath, 'en');
 ---
 
 <div class="inline-flex items-center p-0.5 rounded-full border border-stone-200 dark:border-stone-800 bg-stone-100/70 dark:bg-stone-900/80 text-xs font-medium">

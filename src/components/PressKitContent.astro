@@ -9,7 +9,7 @@ interface Props {
 const { currentLang } = Astro.props;
 const t = getTranslations(currentLang);
 const b = t.pressPage;
-const homeUrl = `/${currentLang}/`;
+const homeUrl = currentLang === 'vi' ? '/' : `/${currentLang}/`;
 ---
 
 <div class="py-12 sm:py-20">

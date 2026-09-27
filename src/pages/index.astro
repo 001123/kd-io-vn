@@ -1,111 +1,85 @@
 ---
-// Root index page handles client-side redirection to preferred locale
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import StatsBar from '../components/StatsBar.astro';
+import AppCard from '../components/AppCard.astro';
+import AppSlotPlaceholder from '../components/AppSlotPlaceholder.astro';
+import Philosophy from '../components/Philosophy.astro';
+import DataSafetyBanner from '../components/DataSafetyBanner.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { appsData } from '../data/apps';
+import { getTranslations } from '../data/i18n';
+
+const lang = 'vi';
+const t = getTranslations(lang);
+
+const flagshipApp = appsData.find((app) => app.id === 'simple-otp') || appsData[0];
+const otherSlots = appsData.filter((app) => app.id !== flagshipApp.id);
 ---
-<!doctype html>
-<html lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KD Labs • Google Play Developer</title>
-    
-    <!-- Fallback meta refresh if JS is disabled -->
-    <meta http-equiv="refresh" content="0;url=/vi/" />
-    
-    <!-- Smart browser language detection -->
-    <script is:inline>
-      (function() {
-        try {
-          // 1. Explicit query parameter override (?lang=vi or ?lang=en)
-          var params = new URLSearchParams(window.location.search);
-          var paramLang = params.get('lang');
-          if (paramLang === 'vi' || paramLang === 'en') {
-            try { localStorage.setItem('kd_lang', paramLang); } catch (e) {}
-            window.location.replace('/' + paramLang + '/');
-            return;
-          }
 
-          // 2. Comprehensive browser language detection
-          // Checks navigator.languages (array), navigator.language, legacy browser properties, and Intl API
-          var langs = [];
-          if (Array.isArray(navigator.languages)) {
-            for (var i = 0; i < navigator.languages.length; i++) {
-              if (navigator.languages[i]) {
-                langs.push(String(navigator.languages[i]).toLowerCase());
-              }
-            }
-          }
-          if (navigator.language) {
-            langs.push(String(navigator.language).toLowerCase());
-          }
-          if (navigator.userLanguage) {
-            langs.push(String(navigator.userLanguage).toLowerCase());
-          }
-          if (navigator.browserLanguage) {
-            langs.push(String(navigator.browserLanguage).toLowerCase());
-          }
-          try {
-            var intl = Intl.DateTimeFormat().resolvedOptions().locale;
-            if (intl) {
-              langs.push(String(intl).toLowerCase());
-            }
-          } catch (e) {}
+<Layout
+  lang={lang}
+  title="KD Labs • Nhà Phát Triển Google Play | Simple OTP"
+  description="KD Labs - Indie Mobile Studio. Phát triển Simple OTP - Ứng dụng xác thực 2FA 100% ngoại tuyến, két mã hóa phần cứng và trợ thủ ảo tương tác."
+>
+  <!-- Hero Section -->
+  <Hero currentLang={lang} />
 
-          // Check if Vietnamese is present in user's preferred languages
-          var hasVietnamese = langs.some(function(l) {
-            return l === 'vi' || l.indexOf('vi-') === 0 || l.indexOf('vi_') === 0;
-          });
+  <!-- Trust Metrics Bar -->
+  <StatsBar currentLang={lang} />
 
-          if (hasVietnamese) {
-            try { localStorage.setItem('kd_lang', 'vi'); } catch (e) {}
-            window.location.replace('/vi/');
-            return;
-          }
+  <!-- Showcase Section -->
+  <section id="showcase" class="py-20 sm:py-28 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto space-y-4 mb-14">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-500">
+          {t.showcase.tagline}
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">
+          {t.showcase.title}
+        </h2>
+        <p class="text-base text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
+          {t.showcase.subtitle}
+        </p>
+      </div>
 
-          // 3. If browser does not have Vietnamese, check stored preference
-          var savedLang = null;
-          try { savedLang = localStorage.getItem('kd_lang'); } catch (e) {}
-          if (savedLang === 'vi') {
-            window.location.replace('/vi/');
-            return;
-          }
+      <!-- Featured Flagship Upcoming App: Simple OTP -->
+      <div class="space-y-8 mb-16">
+        <AppCard app={flagshipApp} currentLang={lang} />
+      </div>
 
-          // 4. Default for non-Vietnamese visitors
-          window.location.replace('/en/');
-        } catch (e) {
-          window.location.replace('/vi/');
-        }
-      })();
-    </script>
-    <style>
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        margin: 0;
-        background: #FBF9F5;
-        color: #1C1917;
-      }
-      .redirect-box {
-        text-align: center;
-        padding: 2rem;
-      }
-      a {
-        color: #EA580C;
-        text-decoration: underline;
-        font-weight: 600;
-        margin: 0 0.5rem;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="redirect-box">
-      <h2>KD Labs</h2>
-      <p>Đang chuyển hướng / Redirecting...</p>
-      <p>
-        <a href="/vi/">Tiếng Việt</a> | <a href="/en/">English</a>
-      </p>
+      <!-- Upcoming Lab Slots Grid -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between border-b border-stone-200 dark:border-stone-800 pb-3">
+          <div class="flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-stone-700 dark:text-stone-300">
+              Dự Án Nghiên Cứu Lab & Slot Dự Phòng
+            </h3>
+          </div>
+          <span class="text-xs text-stone-600 dark:text-stone-300 font-mono">
+            {otherSlots.length} slots
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+          {otherSlots.map((slot) => (
+            <AppSlotPlaceholder slot={slot} currentLang={lang} />
+          ))}
+        </div>
+      </div>
+
     </div>
-  </body>
-</html>
+  </section>
+
+  <!-- Philosophy Section -->
+  <Philosophy currentLang={lang} />
+
+  <!-- Google Play Data Safety Compliance Banner -->
+  <DataSafetyBanner currentLang={lang} />
+
+  <!-- Contact & FAQ Section -->
+  <ContactSection currentLang={lang} />
+</Layout>

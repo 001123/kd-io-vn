@@ -1,7 +1,9 @@
 ---
 import type { Locale } from '../data/i18n';
+import { getLocalizedPath } from '../data/i18n';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import LanguageSuggestionBanner from '../components/LanguageSuggestionBanner.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -16,7 +18,17 @@ const {
   lang,
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://kd.io.vn');
+const siteUrl = Astro.site ? Astro.site.origin : 'https://kd.io.vn';
+const pathname = Astro.url.pathname;
+const canonicalURL = new URL(pathname, siteUrl);
+
+const viPath = getLocalizedPath(pathname, 'vi');
+const enPath = getLocalizedPath(pathname, 'en');
+
+const viAlternateURL = new URL(viPath, siteUrl);
+const enAlternateURL = new URL(enPath, siteUrl);
+// Google SEO: x-default fallback points to English for international audiences
+const xDefaultURL = enAlternateURL;
 ---
 
 <!doctype html>
@@ -34,6 +46,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://kd.io.vn
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />
+
+    <!-- Multilingual SEO Alternates & x-default (Google Best Practice) -->
+    <link rel="alternate" hreflang="vi" href={viAlternateURL} />
+    <link rel="alternate" hreflang="en" href={enAlternateURL} />
+    <link rel="alternate" hreflang="x-default" href={xDefaultURL} />
 
     <!-- Primary Meta Tags -->
     <title>{title}</title>
@@ -83,5 +100,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://kd.io.vn
 
       <Footer currentLang={lang} />
     </div>
+
+    <LanguageSuggestionBanner currentLang={lang} />
   </body>
 </html>

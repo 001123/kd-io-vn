@@ -1,0 +1,130 @@
+---
+import type { Locale } from '../data/i18n';
+import { getLocalizedPath } from '../data/i18n';
+
+interface Props {
+  currentLang: Locale;
+}
+
+const { currentLang } = Astro.props;
+const currentPath = Astro.url.pathname;
+const enUrl = getLocalizedPath(currentPath, 'en');
+---
+
+{currentLang === 'vi' && (
+  <aside
+    id="lang-suggestion-banner"
+    class="hidden fixed bottom-6 right-6 z-50 max-w-sm rounded-2xl border border-stone-300 dark:border-stone-700 bg-white/95 dark:bg-[#161513]/95 backdrop-blur-md p-4 shadow-2xl transition-all duration-300 transform translate-y-4 opacity-0"
+    role="status"
+    aria-live="polite"
+    aria-label="Language suggestion"
+  >
+    <div class="flex items-start gap-3">
+      <div class="w-8 h-8 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-500 flex items-center justify-center flex-shrink-0 text-base">
+        🌐
+      </div>
+
+      <div class="flex-1 space-y-2">
+        <p class="text-xs font-semibold text-stone-900 dark:text-stone-100 leading-snug">
+          Browsing in English?
+        </p>
+        <p class="text-[11px] text-stone-600 dark:text-stone-300 leading-normal">
+          We detected your browser prefers English. Would you like to view KD Labs in English?
+        </p>
+
+        <div class="flex items-center gap-2 pt-1">
+          <a
+            id="switch-to-en-btn"
+            href={enUrl}
+            class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-orange-600 text-white hover:bg-orange-700 transition-colors shadow-xs"
+          >
+            Switch to English
+          </a>
+          <button
+            id="dismiss-lang-banner-btn"
+            type="button"
+            class="px-2.5 py-1.5 rounded-lg text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
+          >
+            Stay on Tiếng Việt
+          </button>
+        </div>
+      </div>
+
+      <button
+        id="close-lang-banner-x"
+        type="button"
+        class="text-stone-400 hover:text-stone-600 dark:hover:text-stone-200 transition-colors p-1"
+        aria-label="Close"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </aside>
+
+  <script is:inline>
+    (function () {
+      try {
+        if (localStorage.getItem('kd_lang_banner_dismissed') === '1') return;
+        if (localStorage.getItem('kd_lang') === 'vi') return;
+
+        var langs = [];
+        if (Array.isArray(navigator.languages)) {
+          for (var i = 0; i < navigator.languages.length; i++) {
+            if (navigator.languages[i]) langs.push(String(navigator.languages[i]).toLowerCase());
+          }
+        }
+        if (navigator.language) langs.push(String(navigator.language).toLowerCase());
+
+        var hasVietnamese = langs.some(function (l) {
+          return l === 'vi' || l.indexOf('vi-') === 0 || l.indexOf('vi_') === 0;
+        });
+
+        if (hasVietnamese) return;
+
+        var banner = document.getElementById('lang-suggestion-banner');
+        if (!banner) return;
+
+        setTimeout(function () {
+          banner.classList.remove('hidden');
+          requestAnimationFrame(function () {
+            banner.classList.remove('translate-y-4', 'opacity-0');
+            banner.classList.add('translate-y-0', 'opacity-100');
+          });
+        }, 1200);
+
+        function dismissBanner() {
+          try {
+            localStorage.setItem('kd_lang_banner_dismissed', '1');
+          } catch (e) {}
+          banner.classList.remove('translate-y-0', 'opacity-100');
+          banner.classList.add('translate-y-4', 'opacity-0');
+          setTimeout(function () {
+            banner.classList.add('hidden');
+          }, 300);
+        }
+
+        var switchBtn = document.getElementById('switch-to-en-btn');
+        if (switchBtn) {
+          switchBtn.addEventListener('click', function () {
+            try {
+              localStorage.setItem('kd_lang', 'en');
+              localStorage.setItem('kd_lang_banner_dismissed', '1');
+            } catch (e) {}
+          });
+        }
+
+        var dismissBtn = document.getElementById('dismiss-lang-banner-btn');
+        if (dismissBtn) {
+          dismissBtn.addEventListener('click', dismissBanner);
+        }
+
+        var closeX = document.getElementById('close-lang-banner-x');
+        if (closeX) {
+          closeX.addEventListener('click', dismissBanner);
+        }
+      } catch (e) {}
+    })();
+  </script>
+)}
