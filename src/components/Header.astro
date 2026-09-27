@@ -24,21 +24,21 @@ const isHomePage = Astro.url.pathname === `/${currentLang}/` || Astro.url.pathna
         <!-- Zen Enso Ring Logo -->
         <div class="relative w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/30 group-hover:border-orange-500 transition-colors duration-300">
           <svg class="w-6 h-6 text-orange-600 dark:text-orange-500 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 24 24" fill="none">
-            <!-- Zen Enso imperfect open circle -->
+            <!-- Zen Enso open circle & 2 circles (Key & Data) -->
             <path
-              d="M12 3a9 9 0 0 0-8.8 7.2A9 9 0 0 0 11.5 21a8.9 8.9 0 0 0 7.8-4.6"
+              d="M 13.5 3.1 A 8.9 8.9 0 1 0 20.5 15.6"
               stroke="currentColor"
-              stroke-width="2.4"
+              stroke-width="2.2"
               stroke-linecap="round"
             />
-            <circle cx="15.5" cy="8.5" r="2" fill="currentColor" />
+            <circle cx="15.6" cy="6.8" r="2" class="fill-orange-400 dark:fill-orange-400" />
+            <circle cx="18.8" cy="11.5" r="2" class="fill-orange-400 dark:fill-orange-400" />
           </svg>
         </div>
         
         <div class="flex flex-col">
           <span class="text-lg sm:text-xl font-bold tracking-tight text-stone-900 dark:text-stone-100 flex items-center gap-1.5">
             KD Labs
-            <span class="inline-block w-1.5 h-1.5 rounded-full bg-orange-600 dark:bg-orange-500"></span>
           </span>
           <span class="text-[10px] uppercase tracking-widest text-stone-600 dark:text-stone-300 font-medium">
             Google Play Studio

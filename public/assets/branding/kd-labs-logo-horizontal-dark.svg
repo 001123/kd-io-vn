@@ -2,12 +2,12 @@
   <!-- Symbol Icon Box -->
   <g transform="translate(15, 10)">
     <rect width="90" height="90" rx="22" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
-    <path d="M45 18a27 27 0 0 0-26.4 21.6A27 27 0 0 0 43.5 72a26.7 26.7 0 0 0 23.4-13.8" stroke="#EA580C" stroke-width="6.5" stroke-linecap="round"/>
-    <circle cx="55.5" cy="34.5" r="6" fill="#EA580C"/>
+    <path d="M 50.5 11.8 A 33.5 33.5 0 1 0 77.0 58.6" stroke="#EA580C" stroke-width="8.3" stroke-linecap="round"/>
+    <circle cx="58.7" cy="25.5" r="7.5" fill="#FB923C"/>
+    <circle cx="70.6" cy="43.3" r="7.5" fill="#FB923C"/>
   </g>
   <!-- Brand Name -->
   <text x="125" y="62" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" fill="#1C1917" letter-spacing="-0.5">KD Labs</text>
-  <circle cx="307" cy="54" r="5" fill="#EA580C"/>
   <!-- Subtitle -->
   <text x="126" y="86" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#78716C" letter-spacing="3">GOOGLE PLAY STUDIO</text>
 </svg>

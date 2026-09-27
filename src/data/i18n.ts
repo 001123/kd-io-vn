@@ -199,7 +199,7 @@ export const translations = {
         ensoText1:
           'Trong Thiền học Á Đông, Ensō là vòng tròn vẽ bằng một nét mực dứt khoát không ngắt quãng. Vòng tròn mở, không khép kín hoàn toàn thể hiện tinh thần Kanso (Giản dị), sự khiêm tốn và khả năng đón nhận sự tiến hóa không ngừng.',
         ensoText2:
-          'Dấu chấm tròn màu cam (Zen Orange) đặt tại vị trí trung tâm năng lượng của vòng tròn, tượng trưng cho hạt nhân bảo mật bất biến và ngọn lửa đam mê của một indie studio độc lập.',
+          'Hai chấm tròn màu cam ấm bên trong biểu trưng cho "Key & Data" (Khóa bảo mật & Dữ liệu người dùng) — hai giá trị cốt lõi được bao bọc và bảo vệ an toàn tuyệt đối bên trong vòng cung Ensō.',
         nameHeading: 'Ý nghĩa tên gọi "KD Labs"',
         nameText1:
           'Chữ "KD" là sự hòa quyện giữa tinh thần Kanso (Tối giản trong tiếng Nhật) và Khởi Đầu (Sự tươi mới trong tiếng Việt). Dưới góc nhìn mật mã học, KD còn đại diện cho "Key & Data" - chìa khóa và dữ liệu được bảo vệ an toàn tuyệt đối.',
@@ -249,7 +249,7 @@ export const translations = {
           {
             id: 'symbol-transparent',
             name: 'Ensō Mark (Nền Trong Suốt)',
-            desc: 'Biểu tượng vòng tròn Ensō độc lập nền trong suốt, linh hoạt ứng dụng trên mọi chất liệu.',
+            desc: 'Biểu tượng vòng tròn Ensō độc lập nền trong suốt với 2 chấm tròn Key & Data, linh hoạt ứng dụng trên mọi chất liệu.',
             previewBg: 'transparent',
             svgUrl: '/assets/press/kd-labs-symbol-transparent.svg',
             pngUrl: '/assets/press/kd-labs-symbol-transparent.png',
@@ -613,7 +613,7 @@ export const translations = {
         ensoText1:
           'In Zen philosophy, an Ensō is a sacred circle drawn in a single, fluid brushstroke. The unclosed, imperfect ring symbolizes Kanso (Simplicity), humility, and an infinite capacity for learning and evolution.',
         ensoText2:
-          'The radiant Zen Orange dot placed at the focal core represents the inviolable heart of cryptographic security and the vibrant spirit of an independent studio.',
+          'The two vibrant warm orange dots inside symbolize "Key & Data" — cryptographic keys and personal data securely guarded and isolated within the open Ensō arc.',
         nameHeading: 'The Meaning of "KD Labs"',
         nameText1:
           'The letters "KD" unite the Japanese concept of Kanso (Simplicity) with "Khởi Đầu" (Vietnamese for fresh beginnings). In cryptographic engineering, KD also signifies "Key & Data" — safeguarded with hardware-backed integrity.',
@@ -663,7 +663,7 @@ export const translations = {
           {
             id: 'symbol-transparent',
             name: 'Ensō Mark (Transparent)',
-            desc: 'Standalone Ensō brush circle on transparent background for versatile placement.',
+            desc: 'Standalone Ensō brush circle with dual Key & Data dots on transparent background for versatile placement.',
             previewBg: 'transparent',
             svgUrl: '/assets/press/kd-labs-symbol-transparent.svg',
             pngUrl: '/assets/press/kd-labs-symbol-transparent.png',
