@@ -14,8 +14,8 @@ export const translations = {
       language: 'Ngôn ngữ',
     },
     hero: {
-      badge: 'Nhà phát triển Google Play',
-      badgeSubtitle: 'Indie Mobile Studio',
+      badge: 'Software Studio',
+      badgeSubtitle: 'Đa Nền Tảng',
       titleLine1: 'Tối giản trong thiết kế.',
       titleLine2: 'An toàn trong từng thao tác.',
       description:
@@ -456,8 +456,8 @@ export const translations = {
       language: 'Language',
     },
     hero: {
-      badge: 'Google Play Developer',
-      badgeSubtitle: 'Indie Mobile Studio',
+      badge: 'Software Studio',
+      badgeSubtitle: 'Multi-Platform',
       titleLine1: 'Simplicity in design.',
       titleLine2: 'Security in every touch.',
       description:
