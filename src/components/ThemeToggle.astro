@@ -1,0 +1,101 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<button
+  type="button"
+  data-theme-toggle
+  aria-label="Toggle Light/Dark Zen Theme"
+  title="Toggle Theme (Light / Dark)"
+  class={`relative inline-flex items-center justify-center p-2 rounded-full border border-stone-200 dark:border-stone-800 bg-stone-100/70 dark:bg-stone-900/80 text-stone-700 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 hover:border-orange-300 dark:hover:border-orange-800/60 transition-all duration-200 cursor-pointer shadow-sm ${className}`}
+>
+  <!-- Sun Icon (visible in dark mode) -->
+  <svg
+    class="w-4 h-4 hidden dark:block transition-transform duration-300 hover:rotate-45"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+    aria-hidden="true"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+    ></path>
+  </svg>
+  
+  <!-- Moon Icon (visible in light mode) -->
+  <svg
+    class="w-4 h-4 block dark:hidden transition-transform duration-300 hover:-rotate-12"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="2"
+    aria-hidden="true"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+    ></path>
+  </svg>
+</button>
+
+<script is:inline>
+  (function () {
+    if (window.__kdThemeToggleInitialized) return;
+    window.__kdThemeToggleInitialized = true;
+
+    function applyTheme(theme) {
+      const isDark = theme === 'dark';
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        document.documentElement.style.colorScheme = 'dark';
+      } else {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.style.colorScheme = 'light';
+      }
+      document.querySelectorAll('[data-theme-toggle]').forEach((btn) => {
+        btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+      });
+    }
+
+    function toggleTheme() {
+      const isCurrentlyDark = document.documentElement.classList.contains('dark');
+      const nextTheme = isCurrentlyDark ? 'light' : 'dark';
+      localStorage.setItem('kd_theme', nextTheme);
+      applyTheme(nextTheme);
+    }
+
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (target && target.closest && target.closest('[data-theme-toggle]')) {
+        e.preventDefault();
+        toggleTheme();
+      }
+    });
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('kd_theme')) {
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'kd_theme' && e.newValue) {
+        applyTheme(e.newValue);
+      }
+    });
+
+    document.addEventListener('astro:after-swap', () => {
+      const savedTheme = localStorage.getItem('kd_theme');
+      const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      applyTheme(savedTheme === 'dark' || (!savedTheme && systemDark) ? 'dark' : 'light');
+    });
+  })();
+</script>

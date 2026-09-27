@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PressKitContent from '../../components/PressKitContent.astro';
+import { getTranslations } from '../../data/i18n';
+
+const lang = 'vi';
+const t = getTranslations(lang);
+const b = t.pressPage;
+---
+
+<Layout
+  lang={lang}
+  title={`${b.title} • KD Lab`}
+  description={b.subtitle}
+>
+  <PressKitContent currentLang={lang} />
+</Layout>

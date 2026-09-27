@@ -1,0 +1,95 @@
+---
+import type { Locale } from '../data/i18n';
+import { getTranslations } from '../data/i18n';
+
+interface Props {
+  currentLang: Locale;
+}
+
+const { currentLang } = Astro.props;
+const t = getTranslations(currentLang);
+
+const pillars = [
+  {
+    title: t.philosophy.pillar1Title,
+    desc: t.philosophy.pillar1Desc,
+    icon: 'M4 6h16M4 12h8m-8 6h16', // Clean geometric horizontal balance
+    badge: '01',
+  },
+  {
+    title: t.philosophy.pillar2Title,
+    desc: t.philosophy.pillar2Desc,
+    icon: 'M13 10V3L4 14h7v7l9-11h-7z', // Organic flow
+    badge: '02',
+  },
+  {
+    title: t.philosophy.pillar3Title,
+    desc: t.philosophy.pillar3Desc,
+    icon: 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z', // Serenity / Moon
+    badge: '03',
+  },
+  {
+    title: t.philosophy.pillar4Title,
+    desc: t.philosophy.pillar4Desc,
+    icon: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', // Enduring shield
+    badge: '04',
+  },
+];
+---
+
+<section id="philosophy" class="py-20 sm:py-28 relative">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Heading -->
+    <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+      <span class="inline-block text-xs font-bold uppercase tracking-widest text-orange-600 dark:text-orange-500">
+        {t.philosophy.tagline}
+      </span>
+      <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-100">
+        {t.philosophy.title}
+      </h2>
+      <p class="text-base text-stone-600 dark:text-stone-300 leading-relaxed">
+        {t.philosophy.subtitle}
+      </p>
+    </div>
+
+    <!-- 4 Pillars Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {pillars.map((pillar) => (
+        <div class="relative rounded-3xl border border-stone-200 dark:border-stone-800 bg-white/70 dark:bg-[#151412]/80 p-6 sm:p-7 backdrop-blur-sm hover:border-orange-500/40 transition-colors duration-200 flex flex-col justify-between group">
+          <div class="space-y-4">
+            
+            <div class="flex items-center justify-between">
+              <!-- Icon -->
+              <div class="w-12 h-12 rounded-2xl bg-stone-100 dark:bg-stone-900 flex items-center justify-center text-orange-600 dark:text-orange-500 group-hover:bg-orange-500/10 transition-colors">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d={pillar.icon} />
+                </svg>
+              </div>
+
+              <!-- Zen Index number -->
+              <span class="text-xs font-mono font-bold text-stone-300 dark:text-stone-700">
+                {pillar.badge}
+              </span>
+            </div>
+
+            <h3 class="text-lg font-bold text-stone-900 dark:text-stone-100">
+              {pillar.title}
+            </h3>
+
+            <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
+              {pillar.desc}
+            </p>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-stone-100 dark:border-stone-900">
+            <span class="text-[11px] uppercase tracking-wider text-orange-600/80 dark:text-orange-400/80 font-medium">
+              KD Lab Standard
+            </span>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

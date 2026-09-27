@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Soft Glow Background -->
+  <circle cx="100" cy="100" r="90" fill="#FFFBEB" stroke="#FDE68A" stroke-width="2"/>
+
+  <!-- Alert Drooping Cyber Ears -->
+  <path d="M50 70 C36 86 38 120 54 116 C62 114 66 98 62 82 Z" fill="#475569" stroke="#334155" stroke-width="2"/>
+  <path d="M150 70 C164 86 162 120 146 116 C138 114 134 98 138 82 Z" fill="#475569" stroke="#334155" stroke-width="2"/>
+
+  <!-- Dog Head Base -->
+  <rect x="56" y="60" width="88" height="84" rx="34" fill="#1E293B" stroke="#0F172A" stroke-width="3"/>
+
+  <!-- Friendly Alert Eyes -->
+  <circle cx="82" cy="94" r="9" fill="#60A5FA"/>
+  <circle cx="84" cy="91" r="3" fill="#FFFFFF"/>
+  <circle cx="118" cy="94" r="9" fill="#60A5FA"/>
+  <circle cx="120" cy="91" r="3" fill="#FFFFFF"/>
+
+  <!-- Snout / Muzzle -->
+  <ellipse cx="100" cy="116" rx="22" ry="16" fill="#334155"/>
+  <ellipse cx="100" cy="108" rx="8" ry="6" fill="#0F172A"/>
+
+  <!-- Tongue / Smile -->
+  <path d="M94 118 Q100 126 106 118" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M96 122 C96 128 104 128 104 122 Z" fill="#FB7185"/>
+
+  <!-- Radar Ear Antenna -->
+  <line x1="100" y1="60" x2="100" y2="44" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="100" cy="40" r="5" fill="#F59E0B"/>
+
+  <!-- Shield Badge Collar -->
+  <rect x="72" y="142" width="56" height="12" rx="6" fill="#0284C7"/>
+  <path d="M100 154 L108 160 C108 168 100 173 100 173 C100 173 92 168 92 160 Z" fill="#38BDF8" stroke="#0284C7" stroke-width="1.5"/>
+</svg>

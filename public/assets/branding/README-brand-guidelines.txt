@@ -1,0 +1,41 @@
+=====================================================
+KD LAB - BRAND GUIDELINES & ASSETS KIT
+=====================================================
+
+Studio: KD Lab
+Website: https://kd.io.vn
+Focus: 100% Offline Mobile Apps, Hardware-backed Cryptography
+
+1. LOGO FILES
+- kd-lab-icon.svg / .png: App icon badge (dark background)
+- kd-lab-symbol-transparent.svg / .png: Enso Zen open circle & orange dot
+- kd-lab-logo-horizontal-dark.svg / .png: Full horizontal lockup for light surfaces
+- kd-lab-logo-horizontal-light.svg / .png: Full horizontal lockup for dark surfaces
+- kd-lab-logo-monochrome-dark.svg / .png: Black & white print version
+- kd-lab-logo-monochrome-white.svg / .png: Pure white inverted version
+
+2. OFFICIAL MASCOTS
+- be-khoa-mascot.svg / .png: Bé Khóa (Lock-bot) - Flagship Simple OTP mascot
+- cipher-cat-mascot.svg / .png: Cipher Cat - Security companion
+- byte-dog-mascot.svg / .png: Byte Dog - Hardware vault guardian
+
+3. COLOR PALETTE
+- Zen Orange (Primary): #EA580C / RGB(234, 88, 12)
+- Zen Orange Glow: #FB713B / RGB(251, 113, 59)
+- Washi Paper (Light BG): #FBF9F5 / RGB(251, 249, 245)
+- Sumi Ink (Dark BG): #0F0E0D / RGB(15, 14, 13)
+- Slate Text: #1C1917 / RGB(28, 25, 23)
+
+4. TYPOGRAPHY
+- Primary Font: Plus Jakarta Sans
+- Google Fonts: https://fonts.google.com/specimen/Plus+Jakarta+Sans
+
+5. USAGE RULES (DO'S & DON'TS)
+- DO maintain clear space around the logo equal to the height of the letter "K".
+- DO use high-contrast backgrounds (light logos on dark, dark logos on light).
+- DON'T alter the orientation or rotation of the Enso brush circle.
+- DON'T distort, stretch, or alter the aspect ratio.
+- DON'T replace the Zen Orange accent color with arbitrary colors.
+
+Media Inquiries: contact@kd.io.vn
+Copyright (c) KD Lab. All rights reserved.

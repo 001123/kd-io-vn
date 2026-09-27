@@ -1,0 +1,53 @@
+---
+import type { Locale } from '../data/i18n';
+
+interface Props {
+  currentLang: Locale;
+}
+
+const { currentLang } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+// Calculate counterpart URLs
+function getLanguageUrl(targetLang: Locale) {
+  if (targetLang === currentLang) return currentPath;
+  
+  // Replace leading /vi or /en with targetLang
+  if (currentPath.startsWith('/vi')) {
+    return currentPath.replace(/^\/vi/, `/${targetLang}`);
+  } else if (currentPath.startsWith('/en')) {
+    return currentPath.replace(/^\/en/, `/${targetLang}`);
+  }
+  return `/${targetLang}/`;
+}
+
+const viUrl = getLanguageUrl('vi');
+const enUrl = getLanguageUrl('en');
+---
+
+<div class="inline-flex items-center p-0.5 rounded-full border border-stone-200 dark:border-stone-800 bg-stone-100/70 dark:bg-stone-900/80 text-xs font-medium">
+  <a
+    href={viUrl}
+    class={`px-2.5 py-1 rounded-full transition-all duration-200 ${
+      currentLang === 'vi'
+        ? 'bg-orange-600 text-white shadow-sm font-semibold'
+        : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100'
+    }`}
+    aria-label="Tiếng Việt"
+    onclick="localStorage.setItem('kd_lang', 'vi')"
+  >
+    VI
+  </a>
+  <a
+    href={enUrl}
+    class={`px-2.5 py-1 rounded-full transition-all duration-200 ${
+      currentLang === 'en'
+        ? 'bg-orange-600 text-white shadow-sm font-semibold'
+        : 'text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100'
+    }`}
+    aria-label="English"
+    onclick="localStorage.setItem('kd_lang', 'en')"
+  >
+    EN
+  </a>
+</div>

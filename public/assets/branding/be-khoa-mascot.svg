@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Soft Glow Background -->
+  <circle cx="100" cy="100" r="90" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
+  
+  <!-- Shackle (Quai khóa) -->
+  <path d="M68 95 V60 C68 42.3 82.3 28 100 28 C117.7 28 132 42.3 132 60 V95" 
+        stroke="#475569" stroke-width="14" stroke-linecap="round"/>
+  <!-- Shackle highlight -->
+  <path d="M72 65 C72 50 84 38 100 38" 
+        stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Antenna with Glowing Indicator -->
+  <line x1="100" y1="28" x2="100" y2="14" stroke="#EA580C" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="100" cy="12" r="6" fill="#EA580C"/>
+  <circle cx="100" cy="12" r="3" fill="#FED7AA"/>
+
+  <!-- Body (Thân khóa bo tròn) -->
+  <rect x="52" y="80" width="96" height="88" rx="28" fill="#1E293B" stroke="#334155" stroke-width="3"/>
+
+  <!-- Belly Shield / Keyhole Chamber -->
+  <rect x="66" y="94" width="68" height="60" rx="18" fill="#0F172A"/>
+
+  <!-- Cheerful Glowing Eyes -->
+  <ellipse cx="82" cy="116" rx="6" ry="8" fill="#38BDF8"/>
+  <circle cx="84" cy="113" r="2.5" fill="#FFFFFF"/>
+  <ellipse cx="118" cy="116" rx="6" ry="8" fill="#38BDF8"/>
+  <circle cx="120" cy="113" r="2.5" fill="#FFFFFF"/>
+
+  <!-- Blushing Cheeks -->
+  <circle cx="75" cy="126" r="4" fill="#F43F5E" opacity="0.6"/>
+  <circle cx="125" cy="126" r="4" fill="#F43F5E" opacity="0.6"/>
+
+  <!-- Friendly Smiling Keyhole Mouth -->
+  <path d="M96 128 C96 125 104 125 104 128 C104 130 102 131 101.5 133 L102 139 H98 L98.5 133 C98 131 96 130 96 128 Z" fill="#FB923C"/>
+
+  <!-- Interactive status pulse badge -->
+  <circle cx="100" cy="158" r="3" fill="#22C55E"/>
+</svg>

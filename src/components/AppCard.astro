@@ -1,0 +1,167 @@
+---
+import type { AppItem } from '../data/apps';
+import type { Locale } from '../data/i18n';
+import { getTranslations } from '../data/i18n';
+
+interface Props {
+  app: AppItem;
+  currentLang: Locale;
+}
+
+const { app, currentLang } = Astro.props;
+const t = getTranslations(currentLang);
+const detailUrl = `/${currentLang}/apps/${app.slug}`;
+const featureGraphic = app.featureGraphic ? app.featureGraphic[currentLang] : null;
+---
+
+<div class="group relative rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#161513] p-6 sm:p-8 shadow-sm hover:shadow-xl hover:border-orange-500/40 dark:hover:border-orange-500/40 transition-all duration-300">
+  
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+    
+    <!-- Left Column: App Information & CTA (7 cols) -->
+    <div class="lg:col-span-7 space-y-5">
+      
+      <!-- Top Badges & Meta -->
+      <div class="flex flex-wrap items-center gap-2.5">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-orange-50 dark:bg-orange-950/40 text-orange-700 dark:text-orange-400 border border-orange-200 dark:border-orange-900/50">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange-600 animate-pulse"></span>
+          {t.showcase.comingSoonBadge}
+        </span>
+        
+        <span class="px-2.5 py-1 rounded-full text-xs font-medium bg-stone-100 dark:bg-stone-800/80 text-stone-600 dark:text-stone-300">
+          {app.category[currentLang]}
+        </span>
+
+        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-900/40">
+          <svg class="w-3.5 h-3.5 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+          <span>100% Offline</span>
+        </span>
+
+        {app.version && (
+          <span class="text-xs text-stone-600 dark:text-stone-300 font-mono">
+            {app.version}
+          </span>
+        )}
+      </div>
+
+      <!-- App Header: Icon + Title -->
+      <div class="flex items-center gap-4">
+        {app.iconImage ? (
+          <img
+            src={app.iconImage}
+            alt={`${app.name} Icon`}
+            class="w-16 h-16 rounded-2xl object-cover shadow-md shadow-orange-500/20 flex-shrink-0 border border-stone-200 dark:border-stone-800"
+          />
+        ) : (
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center text-white shadow-md shadow-orange-500/20 flex-shrink-0">
+            <svg class="w-9 h-9" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+        )}
+
+        <div>
+          <h3 class="text-2xl font-bold text-stone-900 dark:text-stone-100 tracking-tight group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+            {app.name}
+          </h3>
+          <p class="text-xs font-mono text-stone-600 dark:text-stone-300 mt-0.5">
+            {app.packageName}
+          </p>
+        </div>
+      </div>
+
+      <!-- Short Description -->
+      <p class="text-sm sm:text-base text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
+        {app.shortDescription[currentLang]}
+      </p>
+
+      <!-- Key Features Checkmarks -->
+      <div class="space-y-2 pt-1">
+        <h4 class="text-xs uppercase tracking-wider font-semibold text-stone-600 dark:text-stone-300">
+          {t.showcase.featuresHeading}
+        </h4>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-stone-700 dark:text-stone-300">
+          {app.features[currentLang].slice(0, 4).map((feature) => (
+            <li class="flex items-start gap-2">
+              <svg class="w-4 h-4 text-orange-600 dark:text-orange-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>{feature}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- CTA Action Row -->
+      <div class="flex flex-wrap items-center gap-3 pt-3">
+        <!-- Download on Google Play Button -->
+        <a
+          href={app.googlePlayUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-orange-600 hover:bg-orange-700 text-white text-xs sm:text-sm font-semibold shadow-sm transition-all duration-200"
+        >
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M3.609 1.814L13.793 12 3.61 22.186c-.37-.367-.61-.88-.61-1.464V3.278c0-.584.24-1.097.61-1.464zm1.402-.822L16.273 7.42 14.5 9.193 5.011.992zm9.49 9.873l1.774 1.774-11.264 6.43 9.49-8.204zm2.463-.997l2.827 1.616c.82.469.82 1.233 0 1.701l-2.827 1.616-1.993-1.993 1.993-1.94z"/>
+          </svg>
+          <span>{t.showcase.getOnGooglePlay}</span>
+        </a>
+
+        <!-- GitHub Repo Button -->
+        {app.githubUrl && (
+          <a
+            href={app.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-stone-300 dark:border-stone-700 bg-stone-100/80 dark:bg-stone-800/80 hover:bg-stone-200 dark:hover:bg-stone-700 text-stone-800 dark:text-stone-200 text-xs sm:text-sm font-medium transition-colors"
+          >
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+        )}
+
+        <!-- View Details Page Button -->
+        <a
+          href={detailUrl}
+          class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl border border-stone-300 dark:border-stone-700 hover:border-orange-500 text-stone-700 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 text-xs sm:text-sm font-medium transition-colors"
+        >
+          <span>{t.showcase.viewDetails}</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Right Column: Official Feature Graphic / Banner (5 cols) -->
+    <div class="lg:col-span-5 flex justify-center">
+      {featureGraphic ? (
+        <div class="relative w-full rounded-2xl overflow-hidden shadow-lg border border-stone-200 dark:border-stone-800 bg-stone-900 group-hover:shadow-2xl group-hover:border-orange-500/40 transition-all duration-300">
+          <img
+            src={featureGraphic}
+            alt={`${app.name} Feature Banner`}
+            class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-500"
+            loading="lazy"
+          />
+          <div class="absolute bottom-2 right-2 px-2 py-0.5 rounded-md bg-stone-950/80 backdrop-blur-md text-[10px] text-stone-300 border border-stone-800">
+            Google Play Feature Graphic
+          </div>
+        </div>
+      ) : (
+        <div class="w-full max-w-[300px] rounded-3xl p-3 bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 shadow-md">
+          <div class="rounded-2xl bg-stone-950 p-6 text-stone-100 flex flex-col justify-center items-center aspect-[9/16]">
+            <span class="text-4xl">🔒</span>
+            <span class="text-base font-bold mt-2">Simple OTP</span>
+          </div>
+        </div>
+      )}
+    </div>
+
+  </div>
+
+</div>

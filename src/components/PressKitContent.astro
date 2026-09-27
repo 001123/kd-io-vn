@@ -1,0 +1,735 @@
+---
+import type { Locale } from '../data/i18n';
+import { getTranslations } from '../data/i18n';
+
+interface Props {
+  currentLang: Locale;
+}
+
+const { currentLang } = Astro.props;
+const t = getTranslations(currentLang);
+const b = t.pressPage;
+const homeUrl = `/${currentLang}/`;
+---
+
+<div class="py-12 sm:py-20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
+    
+    <!-- Top Breadcrumb / Back Link -->
+    <div class="flex items-center justify-between">
+      <a
+        href={homeUrl}
+        class="inline-flex items-center gap-2 text-xs font-semibold text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+      >
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        <span>{b.backToHome}</span>
+      </a>
+
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-stone-200/60 dark:bg-stone-800 text-stone-700 dark:text-stone-300">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+        <span>Press Kit • v1.0</span>
+      </span>
+    </div>
+
+    <!-- Hero Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-orange-50 dark:bg-orange-950/40 text-orange-700 dark:text-orange-400 border border-orange-200 dark:border-orange-900/50 shadow-xs">
+        <svg class="w-4 h-4 text-orange-600 dark:text-orange-400" viewBox="0 0 24 24" fill="none">
+          <path d="M12 3a9 9 0 0 0-8.8 7.2A9 9 0 0 0 11.5 21a8.9 8.9 0 0 0 7.8-4.6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+          <circle cx="15.5" cy="8.5" r="2" fill="currentColor" />
+        </svg>
+        <span>{b.badge}</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-900 dark:text-stone-100">
+        {b.title}
+      </h1>
+
+      <p class="text-base sm:text-lg text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
+        {b.subtitle}
+      </p>
+
+      <!-- Primary Action: Download All Press Kit -->
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="/assets/press/kd-lab-press-kit.zip"
+          download="kd-lab-press-kit.zip"
+          class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl text-sm font-semibold bg-orange-600 text-white hover:bg-orange-700 active:scale-[0.98] transition-all duration-200 shadow-md shadow-orange-600/20"
+        >
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          <span>{b.downloadKitBtn}</span>
+        </a>
+      </div>
+      <p class="text-xs text-stone-500 dark:text-stone-400">
+        {b.downloadKitSub}
+      </p>
+    </div>
+
+    <!-- MODULE 1: Press Boilerplate & Contact (Top Position for Press/Media) -->
+    <section id="press" class="space-y-8 pt-4">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-5">
+        <span class="text-xs font-bold tracking-widest text-orange-600 dark:text-orange-400 uppercase">
+          {b.boilerplate.tagline}
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100 mt-1">
+          {b.boilerplate.title}
+        </h2>
+        <p class="text-sm text-stone-600 dark:text-stone-400 mt-2 max-w-2xl">
+          {b.boilerplate.subtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
+        <!-- Boilerplate Text Box (2 cols on lg) -->
+        <div class="lg:col-span-2 rounded-3xl p-6 sm:p-8 bg-white dark:bg-[#161412] border border-stone-200 dark:border-stone-800 shadow-sm flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-stone-100 dark:border-stone-800">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+                <span class="text-xs font-bold uppercase tracking-wider text-stone-600 dark:text-stone-400">
+                  {currentLang === 'vi' ? 'Thông cáo giới thiệu chính thức' : 'Official Press Statement'}
+                </span>
+              </div>
+              <button
+                type="button"
+                id="copy-boilerplate-btn"
+                data-boilerplate-text={b.boilerplate.text}
+                class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-stone-100 dark:bg-stone-800 text-stone-800 dark:text-stone-200 hover:bg-orange-500 hover:text-white transition-colors self-start sm:self-auto cursor-pointer"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <span>{b.boilerplate.copyBtn}</span>
+              </button>
+            </div>
+
+            <div class="p-5 sm:p-6 rounded-2xl bg-stone-50 dark:bg-stone-900/50 border border-stone-200/80 dark:border-stone-800 text-sm sm:text-base text-stone-700 dark:text-stone-300 leading-relaxed font-normal">
+              "{b.boilerplate.text}"
+            </div>
+          </div>
+
+          <!-- Studio Highlights Tags -->
+          <div class="flex flex-wrap gap-2 pt-2 border-t border-stone-100 dark:border-stone-800/80">
+            <span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-stone-100 dark:bg-stone-800/80 text-stone-700 dark:text-stone-300">
+              📱 Indie Studio
+            </span>
+            <span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-stone-100 dark:bg-stone-800/80 text-stone-700 dark:text-stone-300">
+              🔒 100% Offline (Zero-Network)
+            </span>
+            <span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-stone-100 dark:bg-stone-800/80 text-stone-700 dark:text-stone-300">
+              🛡️ Hardware Enclave Keystore
+            </span>
+            <span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-stone-100 dark:bg-stone-800/80 text-stone-700 dark:text-stone-300">
+              📄 MIT License
+            </span>
+            <span class="px-2.5 py-1 rounded-lg text-[11px] font-medium bg-stone-100 dark:bg-stone-800/80 text-stone-700 dark:text-stone-300">
+              🇻🇳 Vietnam
+            </span>
+          </div>
+        </div>
+
+        <!-- Press Contact Card (1 col on lg) -->
+        <div class="lg:col-span-1 rounded-3xl p-6 sm:p-8 bg-orange-50/40 dark:bg-orange-950/20 border border-orange-200/80 dark:border-orange-900/40 shadow-sm flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="w-10 h-10 rounded-2xl bg-orange-500/10 dark:bg-orange-500/20 border border-orange-500/30 flex items-center justify-center text-orange-600 dark:text-orange-400">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-stone-900 dark:text-stone-100">
+              {b.boilerplate.contactTitle}
+            </h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+              {b.boilerplate.contactDesc}
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white dark:bg-[#181614] border border-orange-200 dark:border-orange-900/50 space-y-1.5 shadow-xs">
+            <span class="text-[10px] uppercase font-bold tracking-wider text-orange-600 dark:text-orange-400">
+              Official Media Inbox
+            </span>
+            <div class="flex items-center justify-between gap-2">
+              <a
+                href={`mailto:${b.boilerplate.contactEmail}`}
+                class="text-xs sm:text-sm font-semibold text-stone-900 dark:text-stone-100 hover:text-orange-600 dark:hover:text-orange-400 transition-colors break-all"
+              >
+                {b.boilerplate.contactEmail}
+              </a>
+              <button
+                type="button"
+                id="copy-press-email-btn"
+                data-email={b.boilerplate.contactEmail}
+                title="Copy email"
+                class="p-1.5 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 transition-colors shrink-0 cursor-pointer"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 2: Story & Ensō Philosophy -->
+    <section id="story" class="space-y-10">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-5">
+        <span class="text-xs font-bold tracking-widest text-orange-600 dark:text-orange-400 uppercase">
+          {b.story.tagline}
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100 mt-1">
+          {b.story.title}
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <!-- Ensō Art Card (5 cols) -->
+        <div class="lg:col-span-5 rounded-3xl p-8 bg-white dark:bg-[#161412] border border-stone-200 dark:border-stone-800 flex flex-col justify-between shadow-sm relative overflow-hidden">
+          <div class="relative z-10 space-y-4">
+            <span class="inline-block px-3 py-1 rounded-lg text-xs font-semibold bg-orange-100/70 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300">
+              Ensō • 円相
+            </span>
+            <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100">
+              {b.story.ensoHeading}
+            </h3>
+            <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+              {b.story.ensoText1}
+            </p>
+            <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+              {b.story.ensoText2}
+            </p>
+          </div>
+
+          <!-- Large Ensō Visual Presentation -->
+          <div class="py-6 flex items-center justify-center relative">
+            <div class="w-44 h-44 rounded-full bg-orange-500/10 dark:bg-orange-500/15 flex items-center justify-center border border-orange-500/25">
+              <svg class="w-32 h-32 text-orange-600 dark:text-orange-500" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3a9 9 0 0 0-8.8 7.2A9 9 0 0 0 11.5 21a8.9 8.9 0 0 0 7.8-4.6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" />
+                <circle cx="15.5" cy="8.5" r="2" fill="currentColor" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Name Story & Core Values (7 cols) -->
+        <div class="lg:col-span-7 flex flex-col justify-between space-y-6">
+          <div class="rounded-3xl p-8 bg-white dark:bg-[#161412] border border-stone-200 dark:border-stone-800 shadow-sm space-y-4">
+            <span class="inline-block px-3 py-1 rounded-lg text-xs font-semibold bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300">
+              Kanso • Khởi Đầu • Key & Data
+            </span>
+            <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100">
+              {b.story.nameHeading}
+            </h3>
+            <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+              {b.story.nameText1}
+            </p>
+            <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+              {b.story.nameText2}
+            </p>
+          </div>
+
+          <!-- 4 Core Pillars -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {b.story.values.map((v) => (
+              <div class="rounded-2xl p-5 bg-white dark:bg-[#161412] border border-stone-200 dark:border-stone-800 shadow-xs space-y-1.5">
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+                  <h4 class="text-sm font-bold text-stone-900 dark:text-stone-100">{v.title}</h4>
+                </div>
+                <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                  {v.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 3: Logo Suite -->
+    <section id="logos" class="space-y-8">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-5">
+        <span class="text-xs font-bold tracking-widest text-orange-600 dark:text-orange-400 uppercase">
+          {b.logos.tagline}
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100 mt-1">
+          {b.logos.title}
+        </h2>
+        <p class="text-sm text-stone-600 dark:text-stone-400 mt-2 max-w-2xl">
+          {b.logos.subtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {b.logos.items.map((item) => (
+          <div class="rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#161412] p-6 flex flex-col justify-between shadow-sm space-y-6 group">
+            
+            <div class="space-y-4">
+              <!-- Visual Preview Box -->
+              <div
+                class={`w-full h-44 rounded-2xl flex items-center justify-center p-6 border transition-all duration-200 ${
+                  item.previewBg === 'light'
+                    ? 'bg-[#FBF9F5] border-stone-200 text-stone-900'
+                    : item.previewBg === 'dark'
+                    ? 'bg-[#0F0E0D] border-stone-800 text-stone-100'
+                    : 'bg-stone-100/70 dark:bg-stone-900/60 border-dashed border-stone-300 dark:border-stone-700'
+                }`}
+              >
+                <img
+                  src={item.svgUrl}
+                  alt={item.name}
+                  class="max-h-20 max-w-full object-contain group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              </div>
+
+              <!-- Metadata -->
+              <div class="space-y-1">
+                <h3 class="text-base font-bold text-stone-900 dark:text-stone-100">
+                  {item.name}
+                </h3>
+                <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+
+            <!-- Action Buttons: SVG, PNG, Copy -->
+            <div class="pt-4 border-t border-stone-100 dark:border-stone-800/80 flex items-center gap-2">
+              <a
+                href={item.svgUrl}
+                download
+                class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-stone-100 dark:bg-stone-800 text-stone-900 dark:text-stone-100 hover:bg-orange-500 hover:text-white transition-colors"
+                title="Tải tệp SVG vector"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                <span>{b.logos.downloadSvg}</span>
+              </a>
+
+              <a
+                href={item.pngUrl}
+                download
+                class="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-stone-100 dark:bg-stone-800 text-stone-900 dark:text-stone-100 hover:bg-orange-500 hover:text-white transition-colors"
+                title="Tải hình ảnh PNG 2K"
+              >
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                <span>{b.logos.downloadPng}</span>
+              </a>
+
+              <button
+                type="button"
+                data-copy-svg-url={item.svgUrl}
+                class="copy-svg-btn p-2 rounded-xl bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors cursor-pointer"
+                title={b.logos.copySvg}
+              >
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+              </button>
+            </div>
+
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- MODULE 4: Color System -->
+    <section id="colors" class="space-y-8">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-5">
+        <span class="text-xs font-bold tracking-widest text-orange-600 dark:text-orange-400 uppercase">
+          {b.colors.tagline}
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100 mt-1">
+          {b.colors.title}
+        </h2>
+        <p class="text-sm text-stone-600 dark:text-stone-400 mt-2 max-w-2xl">
+          {b.colors.subtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        {b.colors.colors.map((c) => (
+          <div
+            data-color-hex={c.hex}
+            class="color-copy-card rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#161412] p-4 flex flex-col justify-between shadow-xs hover:border-orange-500/50 hover:shadow-md transition-all duration-200 cursor-pointer group"
+          >
+            <!-- Swatch Frame -->
+            <div
+              class="w-full h-28 rounded-2xl relative flex items-end p-3 transition-transform duration-300 group-hover:scale-[1.02]"
+              style={`background-color: ${c.hex}; ${c.bordered ? 'border: 1px solid rgba(0,0,0,0.1);' : ''}`}
+            >
+              <span
+                class="text-[11px] font-mono font-bold px-2 py-0.5 rounded-md backdrop-blur-md"
+                style={`color: ${c.textColor}; background-color: ${c.textColor === '#FFFFFF' ? 'rgba(0,0,0,0.25)' : 'rgba(255,255,255,0.7)'}`}
+              >
+                {c.hex}
+              </span>
+            </div>
+
+            <!-- Labels -->
+            <div class="pt-3 space-y-1">
+              <div class="flex items-center justify-between">
+                <h3 class="text-sm font-bold text-stone-900 dark:text-stone-100">
+                  {c.name}
+                </h3>
+                <span class="text-[10px] text-stone-500 dark:text-stone-400 font-mono">
+                  {c.rgb}
+                </span>
+              </div>
+              <p class="text-xs text-stone-600 dark:text-stone-400">
+                {c.role}
+              </p>
+            </div>
+
+            <div class="mt-3 pt-2 border-t border-stone-100 dark:border-stone-800/80 flex items-center justify-between text-[11px] text-stone-500 dark:text-stone-400">
+              <span>{b.colors.clickToCopy}</span>
+              <svg class="w-3.5 h-3.5 text-stone-400 group-hover:text-orange-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+            </div>
+
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- MODULE 5: Typography -->
+    <section id="typography" class="space-y-8">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-5">
+        <span class="text-xs font-bold tracking-widest text-orange-600 dark:text-orange-400 uppercase">
+          {b.typography.tagline}
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100 mt-1">
+          {b.typography.title}
+        </h2>
+        <p class="text-sm text-stone-600 dark:text-stone-400 mt-2 max-w-2xl">
+          {b.typography.subtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <!-- Giant Alphabet Specimen (5 cols) -->
+        <div class="lg:col-span-5 rounded-3xl p-8 bg-white dark:bg-[#161412] border border-stone-200 dark:border-stone-800 shadow-sm flex flex-col justify-between space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400">
+              Primary Font Family
+            </span>
+            <div class="text-6xl sm:text-7xl font-extrabold tracking-tight text-stone-900 dark:text-stone-100 mt-2 font-sans">
+              Aa Bb
+            </div>
+            <p class="text-xs sm:text-sm font-mono text-stone-500 dark:text-stone-400 mt-4 leading-relaxed break-all">
+              ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+              abcdefghijklmnopqrstuvwxyz<br />
+              0123456789 (!@#$%^&*?)
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-stone-100 dark:border-stone-800">
+            <a
+              href={b.typography.specimenUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-xs font-semibold text-orange-600 dark:text-orange-400 hover:underline"
+            >
+              <span>{b.typography.specimenBtn}</span>
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Weights Scale (7 cols) -->
+        <div class="lg:col-span-7 rounded-3xl p-8 bg-white dark:bg-[#161412] border border-stone-200 dark:border-stone-800 shadow-sm space-y-5">
+          {b.typography.weights.map((w) => (
+            <div class="space-y-1 pb-4 border-b border-stone-100 dark:border-stone-800/80 last:border-0 last:pb-0">
+              <div class="flex items-center justify-between text-xs text-stone-500 dark:text-stone-400">
+                <span class="font-mono font-semibold">{w.name}</span>
+                <span class="text-[11px]">font-{w.name.split(' ')[0].toLowerCase()}</span>
+              </div>
+              <p class={`text-base sm:text-lg text-stone-900 dark:text-stone-100 ${w.class}`}>
+                {w.sample}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE 6: Official Application Icons (Mascots removed; only official App Icons retained) -->
+    <section id="app-icons" class="space-y-8">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-5">
+        <span class="text-xs font-bold tracking-widest text-orange-600 dark:text-orange-400 uppercase">
+          {b.appIcons.tagline}
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100 mt-1">
+          {b.appIcons.title}
+        </h2>
+        <p class="text-sm text-stone-600 dark:text-stone-400 mt-2 max-w-2xl">
+          {b.appIcons.subtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        {b.appIcons.items.map((app) => (
+          <div class="rounded-3xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#161412] p-8 flex flex-col sm:flex-row items-center gap-8 shadow-sm group">
+            
+            <!-- Icon Display Frame (Google Play Squircle) -->
+            <div class="shrink-0 w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-stone-100 dark:bg-stone-900/60 border border-stone-200/80 dark:border-stone-800/80 flex items-center justify-center p-3 relative overflow-hidden shadow-inner">
+              <img
+                src={app.pngUrl}
+                alt={app.name}
+                class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-md"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- Details & Download -->
+            <div class="flex-1 space-y-4 text-center sm:text-left">
+              <div class="space-y-1.5">
+                <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                  <h3 class="text-xl font-bold text-stone-900 dark:text-stone-100">
+                    {app.name}
+                  </h3>
+                  <span class="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-orange-100/70 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300">
+                    {app.badge}
+                  </span>
+                </div>
+                <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed">
+                  {app.desc}
+                </p>
+              </div>
+
+              <!-- Technical Specifications -->
+              <div class="grid grid-cols-2 gap-2 text-[11px] font-mono text-stone-500 dark:text-stone-400 py-2 border-y border-stone-100 dark:border-stone-800">
+                <div>
+                  <span class="block text-stone-400 dark:text-stone-500">Resolution</span>
+                  <span class="font-semibold text-stone-700 dark:text-stone-300">{app.resolution}</span>
+                </div>
+                <div>
+                  <span class="block text-stone-400 dark:text-stone-500">Format</span>
+                  <span class="font-semibold text-stone-700 dark:text-stone-300">{app.format}</span>
+                </div>
+              </div>
+
+              <!-- Download Button -->
+              <div>
+                <a
+                  href={app.pngUrl}
+                  download
+                  class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold bg-stone-900 text-stone-100 dark:bg-stone-100 dark:text-stone-900 hover:bg-orange-600 dark:hover:bg-orange-500 dark:hover:text-white transition-colors shadow-xs"
+                >
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                  </svg>
+                  <span>{b.appIcons.downloadPng}</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- MODULE 7: Usage Guidelines (Do's and Don'ts) -->
+    <section id="guidelines" class="space-y-8">
+      <div class="border-b border-stone-200 dark:border-stone-800 pb-5">
+        <span class="text-xs font-bold tracking-widest text-orange-600 dark:text-orange-400 uppercase">
+          {b.guidelines.tagline}
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-bold text-stone-900 dark:text-stone-100 mt-1">
+          {b.guidelines.title}
+        </h2>
+        <p class="text-sm text-stone-600 dark:text-stone-400 mt-2 max-w-2xl">
+          {b.guidelines.subtitle}
+        </p>
+      </div>
+
+      <!-- Clear Space Highlight Box -->
+      <div class="rounded-3xl p-8 bg-white dark:bg-[#161412] border border-stone-200 dark:border-stone-800 shadow-sm flex flex-col md:flex-row items-center gap-8">
+        <div class="w-full md:w-1/2 p-6 rounded-2xl bg-stone-100/70 dark:bg-stone-900/50 border border-dashed border-orange-500/50 flex flex-col items-center justify-center relative">
+          <span class="absolute top-2 left-3 text-[10px] font-mono text-orange-600 dark:text-orange-400 font-bold">Clear Space: 1X (X = K-height)</span>
+          <div class="p-6 border border-stone-300 dark:border-stone-700 rounded-xl bg-white dark:bg-[#181614] shadow-xs">
+            <img
+              src="/assets/press/kd-lab-logo-horizontal-dark.svg"
+              alt="KD Lab Logo Clear Space"
+              class="h-12 w-auto dark:hidden"
+            />
+            <img
+              src="/assets/press/kd-lab-logo-horizontal-light.svg"
+              alt="KD Lab Logo Clear Space"
+              class="h-12 w-auto hidden dark:block"
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 space-y-3">
+          <h3 class="text-lg font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-orange-500"></span>
+            {b.guidelines.clearSpaceTitle}
+          </h3>
+          <p class="text-sm text-stone-600 dark:text-stone-300 leading-relaxed">
+            {b.guidelines.clearSpaceDesc}
+          </p>
+        </div>
+      </div>
+
+      <!-- Do's and Don'ts Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- DO'S -->
+        <div class="rounded-3xl p-8 bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/80 dark:border-emerald-900/40 space-y-5">
+          <div class="flex items-center gap-2.5 text-emerald-800 dark:text-emerald-300">
+            <div class="w-7 h-7 rounded-full bg-emerald-500/20 flex items-center justify-center">
+              <svg class="w-4 h-4 text-emerald-600 dark:text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold">
+              {b.guidelines.dosTitle}
+            </h3>
+          </div>
+
+          <ul class="space-y-3.5">
+            {b.guidelines.dos.map((item) => (
+              <li class="flex items-start gap-3 text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
+                <svg class="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- DON'TS -->
+        <div class="rounded-3xl p-8 bg-rose-50/50 dark:bg-rose-950/20 border border-rose-200/80 dark:border-rose-900/40 space-y-5">
+          <div class="flex items-center gap-2.5 text-rose-800 dark:text-rose-300">
+            <div class="w-7 h-7 rounded-full bg-rose-500/20 flex items-center justify-center">
+              <svg class="w-4 h-4 text-rose-600 dark:text-rose-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold">
+              {b.guidelines.dontsTitle}
+            </h3>
+          </div>
+
+          <ul class="space-y-3.5">
+            {b.guidelines.donts.map((item) => (
+              <li class="flex items-start gap-3 text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
+                <svg class="w-4 h-4 text-rose-500 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- Global Toast Notification -->
+<div
+  id="press-toast"
+  class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2.5 px-4 py-3 rounded-2xl bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-xl text-xs font-semibold"
+>
+  <svg class="w-4 h-4 text-emerald-400 dark:text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+  </svg>
+  <span id="press-toast-msg">Đã sao chép!</span>
+</div>
+
+<script is:inline>
+  function setupPressInteractions() {
+    const toast = document.getElementById('press-toast');
+    const toastMsg = document.getElementById('press-toast-msg');
+
+    function showToast(message) {
+      if (!toast || !toastMsg) return;
+      toastMsg.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 2400);
+    }
+
+    // Color Swatch 1-Click Copy
+    document.querySelectorAll('.color-copy-card').forEach((card) => {
+      card.addEventListener('click', async () => {
+        const hex = card.getAttribute('data-color-hex');
+        if (!hex) return;
+        try {
+          await navigator.clipboard.writeText(hex);
+          showToast(`Copied ${hex}`);
+        } catch (e) {
+          // Fallback
+        }
+      });
+    });
+
+    // Copy SVG Code
+    document.querySelectorAll('.copy-svg-btn').forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const svgUrl = btn.getAttribute('data-copy-svg-url');
+        if (!svgUrl) return;
+        try {
+          const res = await fetch(svgUrl);
+          const svgText = await res.text();
+          await navigator.clipboard.writeText(svgText);
+          showToast('SVG Markup Copied!');
+        } catch (e) {
+          showToast('Could not copy SVG');
+        }
+      });
+    });
+
+    // Copy Boilerplate Text
+    const copyBoilerplateBtn = document.getElementById('copy-boilerplate-btn');
+    if (copyBoilerplateBtn) {
+      copyBoilerplateBtn.addEventListener('click', async () => {
+        const text = copyBoilerplateBtn.getAttribute('data-boilerplate-text');
+        if (!text) return;
+        try {
+          await navigator.clipboard.writeText(text);
+          showToast('Boilerplate Copied!');
+        } catch (e) {
+          // Fallback
+        }
+      });
+    }
+
+    // Copy Press Email
+    const copyPressEmailBtn = document.getElementById('copy-press-email-btn');
+    if (copyPressEmailBtn) {
+      copyPressEmailBtn.addEventListener('click', async () => {
+        const email = copyPressEmailBtn.getAttribute('data-email');
+        if (!email) return;
+        try {
+          await navigator.clipboard.writeText(email);
+          showToast(`Copied ${email}`);
+        } catch (e) {
+          // Fallback
+        }
+      });
+    }
+  }
+
+  setupPressInteractions();
+  document.addEventListener('astro:after-swap', setupPressInteractions);
+</script>

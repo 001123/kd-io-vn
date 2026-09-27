@@ -1,0 +1,87 @@
+---
+import type { Locale } from '../data/i18n';
+import { getTranslations } from '../data/i18n';
+
+interface Props {
+  currentLang: Locale;
+}
+
+const { currentLang } = Astro.props;
+const t = getTranslations(currentLang);
+---
+
+<div class="border-y border-stone-200/80 dark:border-stone-800/80 bg-stone-100/50 dark:bg-stone-900/40 backdrop-blur-sm py-8 transition-colors duration-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+      
+      <!-- Item 1 -->
+      <div class="flex items-start gap-3.5">
+        <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/25 flex items-center justify-center text-orange-600 dark:text-orange-500">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-stone-900 dark:text-stone-100">
+            {currentLang === 'vi' ? 'Tiêu chuẩn Google Play' : 'Google Play Standard'}
+          </h4>
+          <p class="text-xs text-stone-600 dark:text-stone-300 mt-0.5">
+            {currentLang === 'vi' ? 'Tuân thủ 100% chính sách nhà phát triển' : '100% Developer Policy Compliant'}
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="flex items-start gap-3.5">
+        <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/25 flex items-center justify-center text-orange-600 dark:text-orange-500">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-stone-900 dark:text-stone-100">
+            {currentLang === 'vi' ? 'Bảo mật ngoại tuyến' : 'Offline-First Security'}
+          </h4>
+          <p class="text-xs text-stone-600 dark:text-stone-300 mt-0.5">
+            {currentLang === 'vi' ? 'Dữ liệu chỉ nằm trên điện thoại của bạn' : 'On-device local data storage'}
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="flex items-start gap-3.5">
+        <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/25 flex items-center justify-center text-orange-600 dark:text-orange-500">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-stone-900 dark:text-stone-100">
+            {currentLang === 'vi' ? 'Hiệu năng mượt mà' : 'Ultra-Low Footprint'}
+          </h4>
+          <p class="text-xs text-stone-600 dark:text-stone-300 mt-0.5">
+            {currentLang === 'vi' ? 'Tiết kiệm pin, tải nhanh dưới 10MB' : 'Battery optimized, under 10MB'}
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="flex items-start gap-3.5">
+        <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-orange-500/10 dark:bg-orange-500/15 border border-orange-500/25 flex items-center justify-center text-orange-600 dark:text-orange-500">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-stone-900 dark:text-stone-100">
+            {currentLang === 'vi' ? 'Trải nghiệm an nhiên' : 'Zero Cognitive Noise'}
+          </h4>
+          <p class="text-xs text-stone-600 dark:text-stone-300 mt-0.5">
+            {currentLang === 'vi' ? 'Không quảng cáo rác, không chiêu trò' : 'No intrusive ads or guilt tricks'}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

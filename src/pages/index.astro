@@ -1,49 +1,70 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+// Root index page handles client-side redirection to preferred locale
 ---
-
 <!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your{' '}
-				<code>astro.config.mjs</code> file. You can customize your setup with{' '}
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to{' '}
-				<a href="https://docs.astro.build/">read the docs</a>{' '}
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out{' '}
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>{' '}
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KD Lab • Google Play Developer</title>
+    
+    <!-- Fallback meta refresh if JS is disabled -->
+    <meta http-equiv="refresh" content="0;url=/vi/" />
+    
+    <!-- Smart browser language detection -->
+    <script is:inline>
+      (function() {
+        try {
+          const savedLang = localStorage.getItem('kd_lang');
+          if (savedLang === 'vi') {
+            window.location.replace('/vi/');
+            return;
+          } else if (savedLang === 'en') {
+            window.location.replace('/en/');
+            return;
+          }
+
+          const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+          if (browserLang.startsWith('vi')) {
+            window.location.replace('/vi/');
+          } else {
+            window.location.replace('/en/');
+          }
+        } catch (e) {
+          window.location.replace('/vi/');
+        }
+      })();
+    </script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background: #FBF9F5;
+        color: #1C1917;
+      }
+      .redirect-box {
+        text-align: center;
+        padding: 2rem;
+      }
+      a {
+        color: #EA580C;
+        text-decoration: underline;
+        font-weight: 600;
+        margin: 0 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="redirect-box">
+      <h2>KD Lab</h2>
+      <p>Đang chuyển hướng / Redirecting...</p>
+      <p>
+        <a href="/vi/">Tiếng Việt</a> | <a href="/en/">English</a>
+      </p>
+    </div>
+  </body>
 </html>

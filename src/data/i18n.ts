@@ -1,0 +1,836 @@
+export type Locale = 'vi' | 'en';
+
+export const translations = {
+  vi: {
+    nav: {
+      apps: 'Dự án',
+      philosophy: 'Triết lý',
+      press: 'Press Kit',
+      privacy: 'Quyền riêng tư',
+      support: 'Hỗ trợ',
+      googlePlay: 'Google Play Store',
+      themeToggle: 'Chuyển giao diện',
+      language: 'Ngôn ngữ',
+    },
+    hero: {
+      badge: 'Nhà phát triển Google Play',
+      badgeSubtitle: 'Indie Mobile Studio',
+      titleLine1: 'Tối giản trong thiết kế.',
+      titleLine2: 'An toàn trong từng thao tác.',
+      description:
+        'KD Lab sáng tạo các ứng dụng di động tinh gọn, 100% ngoại tuyến, bảo vệ bằng mã hóa phần cứng và tôn trọng quyền riêng tư tuyệt đối.',
+      ctaGooglePlay: 'Sắp ra mắt trên Google Play',
+      ctaBrowseApps: 'Khám phá Simple OTP',
+      statsOffline: '100% Ngoại tuyến',
+      statsSecurity: 'Mã hóa AES-256-GCM',
+      statsAdFree: 'Không quảng cáo rác',
+      statsOpenSource: 'Mã nguồn mở MIT',
+    },
+    showcase: {
+      tagline: 'Dự án trọng tâm',
+      title: 'Ứng dụng sắp ra mắt',
+      subtitle:
+        'Tâm điểm ra mắt sắp tới của KD Lab: Simple OTP - Ứng dụng xác thực 2FA ngoại tuyến 100%, bảo vệ bằng mã hóa phần cứng cùng linh vật trợ thủ tương tác.',
+      viewDetails: 'Chi tiết & Tính năng',
+      getOnGooglePlay: 'Sắp có trên Google Play',
+      viewOnGithub: 'Mã nguồn trên GitHub',
+      releasedBadge: 'Đã phát hành',
+      comingSoonBadge: 'Sắp ra mắt',
+      inLabBadge: 'Phòng Lab KD',
+      readySlotBadge: 'Slot mở sẵn',
+      slotTitleTemplate: 'Dự án tiếp theo',
+      slotDescTemplate:
+        'KD Lab đang nghiên cứu và phát triển công cụ mới theo tinh thần Zen. Slot này đã sẵn sàng để tích hợp sản phẩm tiếp theo.',
+      slotHint: 'Cấu hình dễ dàng qua tệp dữ liệu src/data/apps.ts',
+      featuresHeading: 'Tính năng cốt lõi:',
+      version: 'Phiên bản',
+      downloads: 'Trạng thái',
+      rating: 'Bảo mật',
+      category: 'Danh mục',
+    },
+    philosophy: {
+      tagline: 'Triết lý sáng tạo',
+      title: 'Tinh thần Zen & Bảo mật phần cứng',
+      subtitle:
+        'Chúng tôi tin rằng bảo mật đỉnh cao không nhất thiết phải phức tạp. Nó nên hiện diện nhẹ nhàng, tinh giản và đem lại sự an tâm tuyệt đối.',
+      pillar1Title: 'Ngoại Tuyến Tuyệt Đối',
+      pillar1Desc:
+        'Kiến trúc Zero-Network không cấp quyền truy cập mạng. Khóa bí mật và mã số 2FA chỉ nằm duy nhất trên thiết bị của bạn.',
+      pillar2Title: 'Két Mã Hóa Phần Cứng',
+      pillar2Desc:
+        'Khóa chính MVK sinh qua PBKDF2 (100.000 vòng) và bảo vệ trong Android Keystore / iOS Keychain với thuật toán AES-256-GCM.',
+      pillar3Title: 'Trợ Thủ Ảo Gần Gũi',
+      pillar3Desc:
+        'Bảo mật không còn khô khan với linh vật Bé Khóa (Lock-bot), Cipher Cat và Byte Dog tương tác phản hồi vui tươi theo từng lần sao chép.',
+      pillar4Title: 'Minh Bạch Nguồn Mở',
+      pillar4Desc:
+        'Toàn bộ mã nguồn mở theo giấy phép MIT. Cộng đồng và chuyên gia bảo mật có thể kiểm tra độc lập bất cứ lúc nào.',
+    },
+    dataSafety: {
+      tagline: 'Cam kết minh bạch',
+      title: 'Tiêu chuẩn an toàn Google Play',
+      subtitle:
+        'Tại KD Lab, dữ liệu của bạn thuộc về bạn. Chúng tôi tuân thủ nghiêm ngặt các chính sách an toàn dữ liệu của Google Play.',
+      point1Title: 'Không thu thập dữ liệu ngầm',
+      point1Desc:
+        '0 kết nối mạng, 0 SDK thu thập dữ liệu, 0 theo dõi hành vi người dùng.',
+      point2Title: 'Quyền hạn tối thiểu',
+      point2Desc:
+        'Chỉ dùng Camera để quét mã QR và Sinh trắc học để mở khoá. Quyền micro bị tắt vĩnh viễn.',
+      point3Title: 'Không bán dữ liệu cho bên thứ ba',
+      point3Desc:
+        'Chúng tôi phát triển phần mềm vì niềm đam mê và cống hiến mã nguồn mở, không kinh doanh dữ liệu người dùng.',
+      readPolicyCta: 'Đọc Chính sách quyền riêng tư đầy đủ',
+    },
+    contact: {
+      tagline: 'Kết nối',
+      title: 'Đồng hành cùng KD Lab',
+      subtitle:
+        'Bạn có câu hỏi, đóng góp mã nguồn hoặc muốn thử nghiệm sớm Simple OTP? Chúng tôi luôn sẵn lòng lắng nghe.',
+      emailLabel: 'Email hỗ trợ chính thức',
+      developerIdLabel: 'Mã nhà phát triển Google Play',
+      copySuccess: 'Đã sao chép vào bộ nhớ tạm!',
+      faqTitle: 'Câu hỏi thường gặp',
+      faq1Q: 'Simple OTP có thể hoạt động khi mất mạng hoặc ở chế độ máy bay không?',
+      faq1A:
+        'Hoàn toàn hoạt động bình thường 100%. Simple OTP được thiết kế kiến trúc Không-Mạng (Zero-Network), tính toán mã OTP hoàn toàn cục bộ trên máy mà không cần kết nối Internet.',
+      faq2Q: 'Làm thế nào để chuyển đổi mã 2FA sang điện thoại mới?',
+      faq2A:
+        'Bạn có thể dùng tính năng Sao lưu mã hóa: ứng dụng xuất ra tệp .simpleotp được bảo vệ bằng mật khẩu AES-256-GCM do bạn chọn để khôi phục an toàn trên máy mới.',
+      faq3Q: 'Simple OTP có phải là mã nguồn mở không?',
+      faq3A:
+        'Có! Toàn bộ mã nguồn của Simple OTP được công khai trên GitHub (github.com/001123/simple-otp) theo giấy phép mã nguồn mở MIT.',
+    },
+    footer: {
+      description:
+        'KD Lab - Studio phát triển ứng dụng di động độc lập. Tinh gọn, hữu ích và tôn trọng trải nghiệm người dùng Android & iOS.',
+      quickLinks: 'Điều hướng',
+      legal: 'Pháp lý',
+      privacyPolicy: 'Chính sách quyền riêng tư',
+      termsOfService: 'Điều khoản dịch vụ',
+      googlePlayNotice:
+        'Google Play và logo Google Play là thương hiệu của Google LLC.',
+      allRightsReserved: 'Đã đăng ký bản quyền.',
+    },
+    appDetail: {
+      backToApps: 'Quay lại danh sách dự án',
+      downloadNow: 'Sắp ra mắt trên Google Play',
+      viewGithub: 'Mã nguồn mở trên GitHub',
+      specifications: 'Thông số kỹ thuật',
+      packageId: 'Mã gói (Package Name)',
+      osRequirement: 'Yêu cầu hệ điều hành',
+      size: 'Dung lượng tải',
+      lastUpdate: 'Cập nhật lần cuối',
+      screenshots: 'Hình ảnh giao diện thực tế',
+      whatsNew: 'Có gì mới trong phiên bản này',
+      dataProtection: 'Bảo vệ quyền riêng tư',
+      dataProtectionText:
+        'Ứng dụng này cam kết không chứa mã độc, không kết nối internet ngầm và tuân thủ tuyệt đối chuẩn Google Play Data Safety.',
+    },
+    privacyPage: {
+      title: 'Chính Sách Quyền Riêng Tư',
+      lastUpdated: 'Cập nhật lần cuối: Tháng 9, 2026',
+      intro:
+        'KD Lab cam kết bảo vệ tuyệt đối sự riêng tư của bạn. Chúng tôi phát triển các ứng dụng di động như Simple OTP với kiến trúc 100% ngoại tuyến (Zero-Network) và không bao giờ thu thập thông tin người dùng.',
+      summaryBadge: 'Tuân thủ Google Play Developer Policy & Kiến trúc Không-Mạng',
+      sections: [
+        {
+          heading: '1. Không thu thập bất kỳ dữ liệu nào',
+          content:
+            'Simple OTP và các ứng dụng của KD Lab KHÔNG thu thập tên, số điện thoại, địa chỉ IP, vị trí địa lý hay danh bạ của bạn. Ứng dụng không sử dụng bất kỳ SDK phân tích (như Firebase, Google Analytics) hay mã quảng cáo nào.',
+        },
+        {
+          heading: '2. Hoạt động ngoại tuyến 100% (Zero-Network)',
+          content:
+            'Ứng dụng hoàn toàn không yêu cầu quyền Internet (android.permission.INTERNET). Toàn bộ khóa bảo mật và mã 2FA được mã hóa AES-256-GCM và lưu trữ độc quyền trong két phần cứng (Android Keystore / iOS Keychain) trên máy của bạn.',
+        },
+        {
+          heading: '3. Quyền hạn thiết bị tối thiểu',
+          content:
+            'Camera chỉ được sử dụng để quét mã QR 2FA và hình ảnh được xử lý trực tiếp trên RAM, không bao giờ lưu trữ. Thư viện ảnh chỉ mở khi bạn chủ động chọn ảnh. Sinh trắc học (vân tay/khuôn mặt) được xử lý an toàn qua hệ điều hành.',
+        },
+        {
+          heading: '4. Bản sao lưu được mã hóa mạnh mẽ',
+          content:
+            'Tệp sao lưu .simpleotp do bạn tạo ra được mã hóa bằng thuật toán PBKDF2 (100.000 vòng lặp) và AES-256-GCM với mật khẩu riêng của bạn.',
+        },
+        {
+          heading: '5. Mã nguồn mở minh bạch & Liên hệ',
+          content:
+            'Mã nguồn của Simple OTP được công khai minh bạch tại github.com/001123/simple-otp để cộng đồng tự do kiểm chứng. Mọi thắc mắc vui lòng gửi về support@kd-labs.io.',
+        },
+      ],
+    },
+    termsPage: {
+      title: 'Điều Khoản Dịch Vụ',
+      lastUpdated: 'Cập nhật lần cuối: Tháng 9, 2026',
+      intro:
+        'Chào mừng bạn đến với các ứng dụng của KD Lab. Khi cài đặt và sử dụng ứng dụng của chúng tôi từ Google Play hoặc kho mã nguồn mở, bạn đồng ý với các điều khoản dưới đây.',
+      sections: [
+        {
+          heading: '1. Giấy phép mã nguồn mở & Sử dụng',
+          content:
+            'Simple OTP được phát hành theo giấy phép mã nguồn mở MIT, trao cho bạn quyền tự do sử dụng, tùy chỉnh và kiểm tra tính an toàn của phần mềm.',
+        },
+        {
+          heading: '2. Trách nhiệm quản lý khóa bí mật',
+          content:
+            'Vì KD Lab không lưu trữ dữ liệu của bạn trên bất kỳ máy chủ nào, bạn chịu trách nhiệm bảo quản mật khẩu sao lưu và thiết bị cá nhân của mình.',
+        },
+        {
+          heading: '3. Miễn trừ trách nhiệm',
+          content:
+            'Phần mềm được cung cấp "nguyên trạng" (as is) với cam kết cao nhất về tiêu chuẩn mật mã học chuẩn RFC 6238 và RFC 4226.',
+        },
+      ],
+    },
+    pressPage: {
+      badge: 'Media & Press Kit',
+      title: 'Bộ Tư Liệu Báo Chí & Thương Hiệu KD Lab',
+      subtitle:
+        'Thông cáo báo chí chính thức, thông tin studio, hệ thống logo vector, bảng màu Zen và biểu tượng ứng dụng KD Lab.',
+      downloadKitBtn: 'Tải Trọn Bộ Press Kit (.zip)',
+      downloadKitSub: 'Bao gồm file SVG vector, PNG 2K, App Icon, thông cáo & hướng dẫn sử dụng',
+      backToHome: 'Quay về trang chủ',
+      story: {
+        tagline: 'Triết lý & Câu chuyện',
+        title: 'Vòng tròn Ensō & Tinh thần Khởi Đầu',
+        ensoHeading: 'Biểu tượng Vòng tròn Ensō (Thiền họa)',
+        ensoText1:
+          'Trong Thiền học Á Đông, Ensō là vòng tròn vẽ bằng một nét mực dứt khoát không ngắt quãng. Vòng tròn mở, không khép kín hoàn toàn thể hiện tinh thần Kanso (Giản dị), sự khiêm tốn và khả năng đón nhận sự tiến hóa không ngừng.',
+        ensoText2:
+          'Dấu chấm tròn màu cam (Zen Orange) đặt tại vị trí trung tâm năng lượng của vòng tròn, tượng trưng cho hạt nhân bảo mật bất biến và ngọn lửa đam mê của một indie studio độc lập.',
+        nameHeading: 'Ý nghĩa tên gọi "KD Lab"',
+        nameText1:
+          'Chữ "KD" là sự hòa quyện giữa tinh thần Kanso (Tối giản trong tiếng Nhật) và Khởi Đầu (Sự tươi mới trong tiếng Việt). Dưới góc nhìn mật mã học, KD còn đại diện cho "Key & Data" - chìa khóa và dữ liệu được bảo vệ an toàn tuyệt đối.',
+        nameText2:
+          '"Lab" là không gian nghiên cứu độc lập, nơi chúng tôi không ngừng thử nghiệm, tinh lọc để tạo ra những ứng dụng di động ngoại tuyến 100% tinh gọn nhất.',
+        values: [
+          { title: 'Kanso (Tối giản)', desc: 'Loại bỏ chi tiết thừa, tập trung vào cốt lõi trải nghiệm.' },
+          { title: 'Zero-Network (Ngoại tuyến)', desc: 'Dữ liệu không bao giờ rời khỏi thiết bị người dùng.' },
+          { title: 'Minh bạch nguồn mở', desc: 'Mã nguồn mở độc lập MIT, sẵn sàng cho cộng đồng kiểm chứng.' },
+          { title: 'Gần gũi & Thân thiện', desc: 'Bảo mật đỉnh cao được thể hiện qua các linh vật dễ thương.' },
+        ],
+      },
+      logos: {
+        tagline: 'Hệ thống Logo',
+        title: 'Bộ Logo & Biểu tượng Vector',
+        subtitle:
+          'Được thiết kế tối ưu với định dạng SVG vector sắc nét vô hạn và PNG độ phân giải cao cho mọi kích thước hiển thị.',
+        downloadSvg: 'Tải SVG',
+        downloadPng: 'Tải PNG',
+        copySvg: 'Sao chép SVG',
+        copied: 'Đã sao chép mã SVG!',
+        items: [
+          {
+            id: 'horizontal-dark',
+            name: 'Logo Ngang (Nền Sáng)',
+            desc: 'Dành cho nền trắng hoặc giấy Washi. Chữ màu mực Sumi đậm kết hợp vòng tròn Ensō cam.',
+            previewBg: 'light',
+            svgUrl: '/assets/press/kd-lab-logo-horizontal-dark.svg',
+            pngUrl: '/assets/press/kd-lab-logo-horizontal-dark.png',
+          },
+          {
+            id: 'horizontal-light',
+            name: 'Logo Ngang (Nền Tối)',
+            desc: 'Dành cho nền đen Sumi hoặc dark mode. Chữ màu sáng thanh thoát với độ tương phản cao.',
+            previewBg: 'dark',
+            svgUrl: '/assets/press/kd-lab-logo-horizontal-light.svg',
+            pngUrl: '/assets/press/kd-lab-logo-horizontal-light.png',
+          },
+          {
+            id: 'icon-badge',
+            name: 'Icon Badge Ứng Dụng',
+            desc: 'Biểu tượng ứng dụng di động bo góc tròn chuẩn squircle trên nền đen Sumi.',
+            previewBg: 'transparent',
+            svgUrl: '/assets/press/kd-lab-icon.svg',
+            pngUrl: '/assets/press/kd-lab-icon.png',
+          },
+          {
+            id: 'symbol-transparent',
+            name: 'Ensō Mark (Nền Trong Suốt)',
+            desc: 'Biểu tượng vòng tròn Ensō độc lập nền trong suốt, linh hoạt ứng dụng trên mọi chất liệu.',
+            previewBg: 'transparent',
+            svgUrl: '/assets/press/kd-lab-symbol-transparent.svg',
+            pngUrl: '/assets/press/kd-lab-symbol-transparent.png',
+          },
+          {
+            id: 'monochrome-black',
+            name: 'Đơn Sắc Đen (In ấn)',
+            desc: 'Dành cho tài liệu đơn sắc, in ấn văn bản hoặc vật phẩm khắc laser.',
+            previewBg: 'light',
+            svgUrl: '/assets/press/kd-lab-logo-monochrome-dark.svg',
+            pngUrl: '/assets/press/kd-lab-logo-monochrome-dark.png',
+          },
+          {
+            id: 'monochrome-white',
+            name: 'Đơn Sắc Trắng (Âm bản)',
+            desc: 'Dành cho in áo, khắc laser trên bề mặt tối màu hoặc màn hình đơn sắc.',
+            previewBg: 'dark',
+            svgUrl: '/assets/press/kd-lab-logo-monochrome-white.svg',
+            pngUrl: '/assets/press/kd-lab-logo-monochrome-white.png',
+          },
+        ],
+      },
+      colors: {
+        tagline: 'Hệ màu thương hiệu',
+        title: 'Bảng màu Washi & Sumi Zen',
+        subtitle:
+          'Hệ màu cân bằng giữa sự tĩnh lặng của giấy thủ công Washi, chiều sâu của mực Sumi và sức sống của ngọn lửa Zen Orange.',
+        clickToCopy: 'Nhấp chuột để sao chép',
+        copied: 'Đã sao chép mã màu!',
+        colors: [
+          {
+            name: 'Zen Orange',
+            role: 'Màu nhận diện chính (Primary Accent)',
+            hex: '#EA580C',
+            rgb: 'rgb(234, 88, 12)',
+            textColor: '#FFFFFF',
+            bordered: false,
+          },
+          {
+            name: 'Zen Orange Glow',
+            role: 'Màu điểm nhấn Dark Theme',
+            hex: '#FB713B',
+            rgb: 'rgb(251, 113, 59)',
+            textColor: '#000000',
+            bordered: false,
+          },
+          {
+            name: 'Washi Background',
+            role: 'Màu nền giấy thủ công (Light BG)',
+            hex: '#FBF9F5',
+            rgb: 'rgb(251, 249, 245)',
+            textColor: '#1C1917',
+            bordered: true,
+          },
+          {
+            name: 'Washi Card',
+            role: 'Khối nội dung sáng (Light Card)',
+            hex: '#FFFFFF',
+            rgb: 'rgb(255, 255, 255)',
+            textColor: '#1C1917',
+            bordered: true,
+          },
+          {
+            name: 'Sumi Background',
+            role: 'Màu nền mực mài (Dark BG)',
+            hex: '#0F0E0D',
+            rgb: 'rgb(15, 14, 13)',
+            textColor: '#F7F5F0',
+            bordered: false,
+          },
+          {
+            name: 'Sumi Card',
+            role: 'Khối nội dung tối (Dark Card)',
+            hex: '#181614',
+            rgb: 'rgb(24, 22, 20)',
+            textColor: '#F7F5F0',
+            bordered: false,
+          },
+          {
+            name: 'Sumi Slate',
+            role: 'Văn bản tương phản cao',
+            hex: '#1C1917',
+            rgb: 'rgb(28, 25, 23)',
+            textColor: '#F7F5F0',
+            bordered: false,
+          },
+          {
+            name: 'Muted Stone',
+            role: 'Đường viền và phân cách',
+            hex: '#E8E2D8',
+            rgb: 'rgb(232, 226, 216)',
+            textColor: '#1C1917',
+            bordered: true,
+          },
+        ],
+      },
+      typography: {
+        tagline: 'Kiểu chữ',
+        title: 'Plus Jakarta Sans',
+        subtitle:
+          'Họ font chữ sans-serif hình học hiện đại, các đường cong phóng khoáng mang lại cảm giác thân thiện, rõ ràng và thanh thoát.',
+        specimenUrl: 'https://fonts.google.com/specimen/Plus+Jakarta+Sans',
+        specimenBtn: 'Mở Google Fonts',
+        weights: [
+          { name: 'Light 300', class: 'font-light', sample: 'KD Lab - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
+          { name: 'Regular 400', class: 'font-normal', sample: 'KD Lab - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
+          { name: 'SemiBold 600', class: 'font-semibold', sample: 'KD Lab - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
+          { name: 'Bold 700', class: 'font-bold', sample: 'KD Lab - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
+        ],
+      },
+      appIcons: {
+        tagline: 'Biểu tượng ứng dụng',
+        title: 'Hệ Thống Icon Ứng Dụng Chính Thức',
+        subtitle:
+          'Biểu tượng ứng dụng di động được thiết kế nổi khối tinh tế, chuẩn hóa theo quy chuẩn Google Play Store (512x512px).',
+        downloadPng: 'Tải PNG (512x512)',
+        items: [
+          {
+            name: 'Simple OTP',
+            badge: 'Flagship App',
+            desc: 'Biểu tượng ứng dụng Simple OTP với sắc cam Zen ấm áp, thiết kế 3D nổi khối mềm mại trên nền squircle chuẩn Google Play Store.',
+            resolution: '512 x 512 px',
+            format: 'PNG (Nền trong suốt)',
+            pngUrl: '/assets/press/simple-otp-icon.png',
+          },
+        ],
+      },
+      guidelines: {
+        tagline: 'Quy chuẩn sử dụng',
+        title: 'Điều Nên Làm & Cần Tránh',
+        subtitle:
+          'Nhằm đảm bảo sự nhất quán và tính nhận diện của KD Lab trên mọi ấn phẩm truyền thông, vui lòng tuân thủ các quy tắc dưới đây.',
+        clearSpaceTitle: 'Khoảng trống an toàn (Clear Space)',
+        clearSpaceDesc:
+          'Luôn giữ khoảng cách an toàn xung quanh logo tối thiểu bằng chiều cao của chữ "K" trong logo. Không để bất kỳ chữ, hình khối hoặc đường kẻ nào xâm phạm vào vùng an toàn này.',
+        dosTitle: 'Điều nên làm (Do\'s)',
+        dos: [
+          'Sử dụng các tệp vector SVG chính thức để đảm bảo độ sắc nét tốt nhất.',
+          'Dùng phiên bản logo sáng trên nền tối và phiên bản logo tối trên nền sáng.',
+          'Giữ nguyên tỉ lệ kích thước gốc 100% khi phóng to thu nhỏ.',
+          'Duy trì khoảng trống an toàn xung quanh logo trên tất cả bố cục thiết kế.',
+        ],
+        dontsTitle: 'Điều cần tránh (Don\'ts)',
+        donts: [
+          'Không kéo dãn, bóp méo hoặc thay đổi tỉ lệ ngang/dọc của logo.',
+          'Không xoay nghiêng hoặc đảo ngược hướng mở của vòng tròn Ensō.',
+          'Không thay đổi màu cam thương hiệu bằng các dải màu không quy định.',
+          'Không áp dụng hiệu ứng bóng đổ nặng nề, viền sáng lòe loẹt hoặc hoa văn rườm rà.',
+        ],
+      },
+      boilerplate: {
+        tagline: 'Dành cho báo chí',
+        title: 'Press Boilerplate & Liên Hệ Truyền Thông',
+        subtitle:
+          'Đoạn giới thiệu chuẩn mực sẵn sàng sao chép cho các bài viết báo chí, tin tức công nghệ và đối tác.',
+        copyBtn: 'Sao chép Boilerplate',
+        copied: 'Đã sao chép đoạn giới thiệu!',
+        text: 'KD Lab là một indie mobile studio độc lập tại Việt Nam, sáng tạo các ứng dụng di động tối giản theo tinh thần Zen Nhật Bản kết hợp mật mã học phần cứng hiện đại. Với tôn chỉ 100% ngoại tuyến (Zero-Network) và cam kết không thu thập dữ liệu người dùng, KD Lab hướng tới việc mang lại sự an tâm tuyệt đối và trải nghiệm tĩnh tại cho người dùng công nghệ trên toàn cầu.',
+        contactTitle: 'Bộ phận Truyền thông & Báo chí',
+        contactDesc:
+          'Nếu bạn là phóng viên, blogger công nghệ hoặc đối tác cần hình ảnh độ phân giải cao hoặc phỏng vấn nhà sáng lập:',
+        contactEmail: 'contact@kd.io.vn',
+      },
+    },
+  },
+  en: {
+    nav: {
+      apps: 'Projects',
+      philosophy: 'Philosophy',
+      press: 'Press Kit',
+      privacy: 'Privacy Policy',
+      support: 'Support',
+      googlePlay: 'Google Play Store',
+      themeToggle: 'Toggle Theme',
+      language: 'Language',
+    },
+    hero: {
+      badge: 'Google Play Developer',
+      badgeSubtitle: 'Indie Mobile Studio',
+      titleLine1: 'Simplicity in design.',
+      titleLine2: 'Security in every touch.',
+      description:
+        'KD Lab crafts refined, 100% offline mobile applications engineered with hardware-backed cryptography and uncompromising privacy.',
+      ctaGooglePlay: 'Coming Soon on Google Play',
+      ctaBrowseApps: 'Explore Simple OTP',
+      statsOffline: '100% Offline Core',
+      statsSecurity: 'AES-256-GCM Enclave',
+      statsAdFree: 'Zero Invasive Ads',
+      statsOpenSource: 'Open Source MIT',
+    },
+    showcase: {
+      tagline: 'Flagship Debut',
+      title: 'Upcoming Project',
+      subtitle:
+        'Upcoming release from KD Lab: Simple OTP - A 100% offline 2FA authenticator with hardware-backed encryption and interactive companion mascots.',
+      viewDetails: 'Details & Features',
+      getOnGooglePlay: 'Coming Soon on Google Play',
+      viewOnGithub: 'Source on GitHub',
+      releasedBadge: 'Released',
+      comingSoonBadge: 'Coming Soon',
+      inLabBadge: 'KD Lab',
+      readySlotBadge: 'Open Slot',
+      slotTitleTemplate: 'Next Project',
+      slotDescTemplate:
+        'KD Lab is actively researching and engineering new tools guided by Zen principles. This slot is configured and ready for your next deployment.',
+      slotHint: 'Easily customize through data file src/data/apps.ts',
+      featuresHeading: 'Core Security Pillars:',
+      version: 'Version',
+      downloads: 'Status',
+      rating: 'Security',
+      category: 'Category',
+    },
+    philosophy: {
+      tagline: 'Studio Craft',
+      title: 'Zen Aesthetics & Hardware Cryptography',
+      subtitle:
+        'We believe enterprise-grade security should not feel intimidating. It should exist quietly, elegantly, and provide absolute peace of mind.',
+      pillar1Title: '100% Offline (Zero-Network)',
+      pillar1Desc:
+        'Architected with zero internet permissions. Your secret keys and 2FA tokens never leave your physical device.',
+      pillar2Title: 'Hardware Vault Enclave',
+      pillar2Desc:
+        'Master Vault Key derived via PBKDF2 (100,000 rounds) and locked in Android Keystore / iOS Keychain using AES-256-GCM.',
+      pillar3Title: 'Delightful Companions',
+      pillar3Desc:
+        'Security meets warmth. The Bé Khóa (Lock-bot), Cipher Cat, and Byte Dog companions react joyfully to every token generation.',
+      pillar4Title: 'Open Source Transparency',
+      pillar4Desc:
+        'Fully open source under the MIT license. The security community is welcome to independently inspect every line of code.',
+    },
+    dataSafety: {
+      tagline: 'Transparency First',
+      title: 'Google Play Data Safety Standards',
+      subtitle:
+        'At KD Lab, your cryptographic data belongs exclusively to you. We strictly honor Google Play Developer Data Safety commitments.',
+      point1Title: 'Zero Network Tracking',
+      point1Desc:
+        '0 network calls, 0 third-party telemetry SDKs, 0 user tracking cookies.',
+      point2Title: 'Minimal Permissions',
+      point2Desc:
+        'Camera is only used for live QR scanning. Audio/mic permission is completely stripped. Biometrics stay inside system enclaves.',
+      point3Title: 'No Data Brokerage',
+      point3Desc:
+        'We build software as independent open-source creators. We never sell, monetize, or log user data.',
+      readPolicyCta: 'Read Full Privacy Policy',
+    },
+    contact: {
+      tagline: 'Get in Touch',
+      title: 'Connect with KD Lab',
+      subtitle:
+        'Have feedback, want to contribute to the codebase, or join early beta testing for Simple OTP? We are always glad to connect.',
+      emailLabel: 'Official Support Email',
+      developerIdLabel: 'Google Play Developer ID',
+      copySuccess: 'Copied to clipboard!',
+      faqTitle: 'Frequently Asked Questions',
+      faq1Q: 'Can Simple OTP generate codes on Airplane Mode or without Wi-Fi?',
+      faq1A:
+        'Yes, 100%! Simple OTP is designed with an offline-first cryptographic engine that generates standard RFC 6238/4226 tokens completely locally.',
+      faq2Q: 'How do I transfer accounts to a new device?',
+      faq2A:
+        'You can use the Encrypted Backup feature to export a password-protected .simpleotp file encrypted with AES-256-GCM and import it onto your new phone.',
+      faq3Q: 'Is Simple OTP open source?',
+      faq3A:
+        'Yes! The complete source code is public and auditable on GitHub (github.com/001123/simple-otp) under the permissive MIT license.',
+    },
+    footer: {
+      description:
+        'KD Lab - Independent mobile development studio. Crafting refined, 100% offline, privacy-first Android & iOS tools.',
+      quickLinks: 'Navigation',
+      legal: 'Legal',
+      privacyPolicy: 'Privacy Policy',
+      termsOfService: 'Terms of Service',
+      googlePlayNotice:
+        'Google Play and the Google Play logo are trademarks of Google LLC.',
+      allRightsReserved: 'All rights reserved.',
+    },
+    appDetail: {
+      backToApps: 'Back to Projects',
+      downloadNow: 'Coming Soon on Google Play',
+      viewGithub: 'Open Source on GitHub',
+      specifications: 'Technical Specifications',
+      packageId: 'Package Name',
+      osRequirement: 'OS Requirement',
+      size: 'Download Size',
+      lastUpdate: 'Last Updated',
+      screenshots: 'Official App Screenshots & Banners',
+      whatsNew: "What's New in this Version",
+      dataProtection: 'Privacy & Data Protection',
+      dataProtectionText:
+        'This application guarantees zero spyware, zero network tracking, and 100% compliance with Google Play Data Safety.',
+    },
+    privacyPage: {
+      title: 'Privacy Policy',
+      lastUpdated: 'Last Updated: September 2026',
+      intro:
+        'KD Lab is committed to protecting your privacy. We engineer mobile applications like Simple OTP with a strict Zero-Network architecture that never collects or transmits user data.',
+      summaryBadge: 'Google Play Developer Policy & Zero-Network Compliant',
+      sections: [
+        {
+          heading: '1. Zero Data Collection',
+          content:
+            'Simple OTP and KD Lab apps DO NOT collect your name, phone number, IP address, geolocation, or contacts. We include zero tracking or telemetry SDKs (no Firebase, no Google Analytics).',
+        },
+        {
+          heading: '2. 100% Offline Architecture',
+          content:
+            'The app operates with zero network permissions (no android.permission.INTERNET). All secret keys and OTP codes are encrypted using AES-256-GCM and kept exclusively inside your hardware security enclaves.',
+        },
+        {
+          heading: '3. Bare Minimum Permissions',
+          content:
+            'Camera permission is solely used for live QR code scanning, processed entirely in local memory. Biometric authentication is managed natively by OS LocalAuthentication.',
+        },
+        {
+          heading: '4. Strong Password-Protected Backups',
+          content:
+            'Exported .simpleotp backup files are fortified with PBKDF2 (100,000 iterations) and authenticated AES-256-GCM encryption using your chosen passphrase.',
+        },
+        {
+          heading: '5. Open Source Auditability & Contact',
+          content:
+            'Simple OTP is free open-source software auditable at github.com/001123/simple-otp. For support or privacy questions, reach us at support@kd-labs.io.',
+        },
+      ],
+    },
+    termsPage: {
+      title: 'Terms of Service',
+      lastUpdated: 'Last Updated: September 2026',
+      intro:
+        'Welcome to KD Lab software. By installing or utilizing our applications downloaded from the Google Play Store or open-source repositories, you agree to these terms.',
+      sections: [
+        {
+          heading: '1. Open Source License & Usage',
+          content:
+            'Simple OTP is distributed under the MIT license, giving you the freedom to use, modify, and audit the application for personal and commercial needs.',
+        },
+        {
+          heading: '2. Responsibility for Master Passwords',
+          content:
+            'Because KD Lab stores zero data on cloud servers, you are solely responsible for safeguarding your encrypted backup passphrases and physical device access.',
+        },
+        {
+          heading: '3. Disclaimer of Warranties',
+          content:
+            'The software is provided "as is" with the highest commitment to international cryptographic standards (RFC 6238 and RFC 4226).',
+        },
+      ],
+    },
+    pressPage: {
+      badge: 'Media & Press Kit',
+      title: 'KD Lab Official Press Kit & Brand Assets',
+      subtitle:
+        'Official press statement, studio facts, vector logo suites, Zen color system, and application icons.',
+      downloadKitBtn: 'Download Press Kit (.zip)',
+      downloadKitSub: 'Includes vector SVGs, 2K PNGs, official app icon, boilerplate & guidelines',
+      backToHome: 'Back to Home',
+      story: {
+        tagline: 'Philosophy & Origins',
+        title: 'The Ensō Circle & Spirit of Beginnings',
+        ensoHeading: 'The Ensō Symbolism (Zen Brushstroke)',
+        ensoText1:
+          'In Zen philosophy, an Ensō is a sacred circle drawn in a single, fluid brushstroke. The unclosed, imperfect ring symbolizes Kanso (Simplicity), humility, and an infinite capacity for learning and evolution.',
+        ensoText2:
+          'The radiant Zen Orange dot placed at the focal core represents the inviolable heart of cryptographic security and the vibrant spirit of an independent studio.',
+        nameHeading: 'The Meaning of "KD Lab"',
+        nameText1:
+          'The letters "KD" unite the Japanese concept of Kanso (Simplicity) with "Khởi Đầu" (Vietnamese for fresh beginnings). In cryptographic engineering, KD also signifies "Key & Data" — safeguarded with hardware-backed integrity.',
+        nameText2:
+          '"Lab" represents our independent workshop, relentlessly experimenting and distilling mobile tools down to their purest offline essence.',
+        values: [
+          { title: 'Kanso (Simplicity)', desc: 'Stripping away excess to accentuate core digital peace.' },
+          { title: 'Zero-Network (100% Offline)', desc: 'Your private keys never leave your physical device.' },
+          { title: 'Open-Source Transparency', desc: 'Permissive MIT licensing, freely auditable by the community.' },
+          { title: 'Approachable Security', desc: 'Making cryptography delightful with warm, expressive mascots.' },
+        ],
+      },
+      logos: {
+        tagline: 'Logo Architecture',
+        title: 'Official Vector Marks & Suites',
+        subtitle:
+          'Engineered for infinite scalability as vector SVGs and pixel-perfect high-resolution PNGs across light and dark displays.',
+        downloadSvg: 'Download SVG',
+        downloadPng: 'Download PNG',
+        copySvg: 'Copy SVG Code',
+        copied: 'SVG code copied to clipboard!',
+        items: [
+          {
+            id: 'horizontal-dark',
+            name: 'Horizontal Logo (Light Surface)',
+            desc: 'Tailored for pure white or Washi backgrounds. Sumi ink lettering with signature Zen Orange ring.',
+            previewBg: 'light',
+            svgUrl: '/assets/press/kd-lab-logo-horizontal-dark.svg',
+            pngUrl: '/assets/press/kd-lab-logo-horizontal-dark.png',
+          },
+          {
+            id: 'horizontal-light',
+            name: 'Horizontal Logo (Dark Surface)',
+            desc: 'Tailored for Sumi black surfaces and dark mode. Clean high-contrast typography.',
+            previewBg: 'dark',
+            svgUrl: '/assets/press/kd-lab-logo-horizontal-light.svg',
+            pngUrl: '/assets/press/kd-lab-logo-horizontal-light.png',
+          },
+          {
+            id: 'icon-badge',
+            name: 'Application Icon Badge',
+            desc: 'Rounded squircle application badge on deep Sumi black backdrop.',
+            previewBg: 'transparent',
+            svgUrl: '/assets/press/kd-lab-icon.svg',
+            pngUrl: '/assets/press/kd-lab-icon.png',
+          },
+          {
+            id: 'symbol-transparent',
+            name: 'Ensō Mark (Transparent)',
+            desc: 'Standalone Ensō brush circle on transparent background for versatile placement.',
+            previewBg: 'transparent',
+            svgUrl: '/assets/press/kd-lab-symbol-transparent.svg',
+            pngUrl: '/assets/press/kd-lab-symbol-transparent.png',
+          },
+          {
+            id: 'monochrome-black',
+            name: 'Monochrome Black (Print)',
+            desc: 'For single-color grayscale print documents, paperwork, and laser engravings.',
+            previewBg: 'light',
+            svgUrl: '/assets/press/kd-lab-logo-monochrome-dark.svg',
+            pngUrl: '/assets/press/kd-lab-logo-monochrome-dark.png',
+          },
+          {
+            id: 'monochrome-white',
+            name: 'Monochrome White (Inverted)',
+            desc: 'For laser engraving on dark anodized metal, merchandise, and single-tone dark screens.',
+            previewBg: 'dark',
+            svgUrl: '/assets/press/kd-lab-logo-monochrome-white.svg',
+            pngUrl: '/assets/press/kd-lab-logo-monochrome-white.png',
+          },
+        ],
+      },
+      colors: {
+        tagline: 'Brand Color System',
+        title: 'Zen Washi & Sumi Palette',
+        subtitle:
+          'Harmonizing the gentle texture of handmade Washi paper, deep charcoal Sumi ink, and the dawn warmth of Zen Orange.',
+        clickToCopy: 'Click to copy color code',
+        copied: 'Color code copied!',
+        colors: [
+          {
+            name: 'Zen Orange',
+            role: 'Primary Signature Accent',
+            hex: '#EA580C',
+            rgb: 'rgb(234, 88, 12)',
+            textColor: '#FFFFFF',
+            bordered: false,
+          },
+          {
+            name: 'Zen Orange Glow',
+            role: 'Dark Theme Glow Accent',
+            hex: '#FB713B',
+            rgb: 'rgb(251, 113, 59)',
+            textColor: '#000000',
+            bordered: false,
+          },
+          {
+            name: 'Washi Background',
+            role: 'Handmade Paper (Light BG)',
+            hex: '#FBF9F5',
+            rgb: 'rgb(251, 249, 245)',
+            textColor: '#1C1917',
+            bordered: true,
+          },
+          {
+            name: 'Washi Card',
+            role: 'Light Container Surface',
+            hex: '#FFFFFF',
+            rgb: 'rgb(255, 255, 255)',
+            textColor: '#1C1917',
+            bordered: true,
+          },
+          {
+            name: 'Sumi Background',
+            role: 'Charcoal Ink (Dark BG)',
+            hex: '#0F0E0D',
+            rgb: 'rgb(15, 14, 13)',
+            textColor: '#F7F5F0',
+            bordered: false,
+          },
+          {
+            name: 'Sumi Card',
+            role: 'Dark Container Surface',
+            hex: '#181614',
+            rgb: 'rgb(24, 22, 20)',
+            textColor: '#F7F5F0',
+            bordered: false,
+          },
+          {
+            name: 'Sumi Slate',
+            role: 'High Contrast Ink Typography',
+            hex: '#1C1917',
+            rgb: 'rgb(28, 25, 23)',
+            textColor: '#F7F5F0',
+            bordered: false,
+          },
+          {
+            name: 'Muted Stone',
+            role: 'Borders & Subtle Dividers',
+            hex: '#E8E2D8',
+            rgb: 'rgb(232, 226, 216)',
+            textColor: '#1C1917',
+            bordered: true,
+          },
+        ],
+      },
+      typography: {
+        tagline: 'Typography',
+        title: 'Plus Jakarta Sans',
+        subtitle:
+          'A geometric sans-serif typeface crafted with generous proportions and crisp clarity, delivering effortless reading comfort.',
+        specimenUrl: 'https://fonts.google.com/specimen/Plus+Jakarta+Sans',
+        specimenBtn: 'Open Google Fonts',
+        weights: [
+          { name: 'Light 300', class: 'font-light', sample: 'KD Lab - Simplicity in design, security in every touch.' },
+          { name: 'Regular 400', class: 'font-normal', sample: 'KD Lab - Simplicity in design, security in every touch.' },
+          { name: 'SemiBold 600', class: 'font-semibold', sample: 'KD Lab - Simplicity in design, security in every touch.' },
+          { name: 'Bold 700 / 800', class: 'font-bold', sample: 'KD Lab - Simplicity in design, security in every touch.' },
+        ],
+      },
+      appIcons: {
+        tagline: 'Application Icons',
+        title: 'Official Production App Icons',
+        subtitle:
+          'Mobile application icons rendered to Google Play Store specifications (512x512px, adaptive squircle).',
+        downloadPng: 'Download PNG (512x512)',
+        items: [
+          {
+            name: 'Simple OTP',
+            badge: 'Flagship App',
+            desc: 'Official app icon for Simple OTP featuring warm Zen Orange depth and dimensional frosted squircle geometry.',
+            resolution: '512 x 512 px',
+            format: 'PNG (Transparent background)',
+            pngUrl: '/assets/press/simple-otp-icon.png',
+          },
+        ],
+      },
+      guidelines: {
+        tagline: 'Brand Protection',
+        title: 'Do\'s and Don\'ts Guidelines',
+        subtitle:
+          'To preserve the elegance and clarity of the KD Lab identity across all media, please adhere to these guidelines.',
+        clearSpaceTitle: 'Clear Space Requirement',
+        clearSpaceDesc:
+          'Always preserve an exclusion zone around the logo equal to at least the height of the letter "K" in the wordmark. No text, graphic, or trim line should encroach on this perimeter.',
+        dosTitle: 'Do\'s (Recommended Practices)',
+        dos: [
+          'Use official vector SVG files whenever possible for maximum sharpness.',
+          'Use light logo variants on dark surfaces, and dark variants on light surfaces.',
+          'Maintain original aspect ratio and geometry without stretching or warping.',
+          'Preserve the clear space zone on all marketing assets and press covers.',
+        ],
+        dontsTitle: 'Don\'ts (Prohibited Uses)',
+        donts: [
+          'Do not stretch, distort, or alter the geometric proportions.',
+          'Do not rotate or invert the Ensō circle (the brush opening must stay lower-right).',
+          'Do not substitute the signature Zen Orange with arbitrary non-brand hues.',
+          'Do not add heavy drop shadows, outer glow strokes, or place over busy backgrounds.',
+        ],
+      },
+      boilerplate: {
+        tagline: 'Press & Media Kit',
+        title: 'Press Boilerplate & Media Inquiries',
+        subtitle:
+          'Standardized overview text ready for press releases, technological media, and editorial coverage.',
+        copyBtn: 'Copy Boilerplate',
+        copied: 'Boilerplate copied to clipboard!',
+        text: 'KD Lab is an independent mobile application studio based in Vietnam, engineering minimalist tools guided by Japanese Zen aesthetics and hardware-backed cryptography. Guided by a strict 100% offline (Zero-Network) architecture and zero user data collection, KD Lab delivers uncompromising digital peace of mind to tech users globally.',
+        contactTitle: 'Media & Communications Contact',
+        contactDesc:
+          'For press kits, editorial inquiries, or founder interviews, please reach out to our communications inbox:',
+        contactEmail: 'contact@kd.io.vn',
+      },
+    },
+  },
+};
+
+export function getTranslations(lang: Locale) {
+  return translations[lang] || translations.vi;
+}
