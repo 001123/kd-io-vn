@@ -23,12 +23,48 @@ const toc = headings.filter((h) => h.depth === 2 || h.depth === 3);
 
 // Current canonical URL for social sharing
 const postUrl = Astro.url.href;
+const siteUrl = Astro.site ? Astro.site.origin : 'https://kd.io.vn';
+const blogOgImage = post.data.heroImage;
+
+const blogJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: post.data.title,
+  description: post.data.description,
+  image: blogOgImage ? (blogOgImage.startsWith('http') ? blogOgImage : `${siteUrl}${blogOgImage}`) : undefined,
+  datePublished: post.data.pubDate.toISOString(),
+  ...(post.data.updatedDate ? { dateModified: post.data.updatedDate.toISOString() } : {}),
+  author: {
+    '@type': 'Person',
+    name: post.data.author || 'KD Labs',
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'KD Labs',
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/assets/branding/kd-labs-icon.png`,
+    },
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': postUrl,
+  },
+};
 ---
 
 <Layout
   lang={lang}
   title={`${post.data.title} • KD Labs Blog`}
   description={post.data.description}
+  image={blogOgImage}
+  imageAlt={post.data.title}
+  ogType="article"
+  publishedTime={post.data.pubDate}
+  modifiedTime={post.data.updatedDate}
+  author={post.data.author}
+  tags={post.data.tags}
+  jsonLd={blogJsonLd}
 >
   <div class="py-10 sm:py-16">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">

@@ -100,7 +100,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
       {
         icon: 'audit',
         title: 'Minh Bạch Nguồn Mở MIT',
-        desc: 'Toàn bộ mã nguồn được công khai tại github.com/001123/simple-otp để cộng đồng và các chuyên gia bảo mật kiểm chứng độc lập.',
+        desc: 'Toàn bộ mã nguồn được công khai tại github.com/kd-labs-io/simple-otp để cộng đồng và các chuyên gia bảo mật kiểm chứng độc lập.',
         tag: 'Mã Nguồn Mở',
       },
     ],
@@ -332,7 +332,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
           {
             title: '7.2. Tương tác trên kho mã nguồn mở GitHub',
             content: [
-              '• Khi bạn báo cáo lỗi (Issues) hoặc đóng góp mã nguồn (Pull Requests) tại kho lưu trữ github.com/001123/simple-otp, các thông tin này tuân theo Chính sách Quyền riêng tư của GitHub (Microsoft).',
+              '• Khi bạn báo cáo lỗi (Issues) hoặc đóng góp mã nguồn (Pull Requests) tại kho lưu trữ github.com/kd-labs-io/simple-otp, các thông tin này tuân theo Chính sách Quyền riêng tư của GitHub (Microsoft).',
               '• Cảnh báo: Vui lòng KHÔNG BAO GIỜ đính kèm ảnh chụp mã QR, khóa bí mật Seed, mật mã sao lưu hoặc thông tin cá nhân nhạy cảm trong các Issue công khai trên GitHub.',
             ],
           },
@@ -382,7 +382,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         title: 'Minh Bạch Nguồn Mở & Hướng Dẫn Kiểm Định Độc Lập',
         content: [
           'Chúng tôi tin rằng trong lĩnh vực an ninh mạng và mật mã học: "Không nên tin tưởng một cách mù quáng, hãy kiểm chứng" (Don\'t trust, verify). Cách duy nhất để chứng minh một ứng dụng tôn trọng quyền riêng tư là để cộng đồng tự do soi chiếu từng dòng mã nguồn.',
-          'Toàn bộ mã nguồn của Simple OTP được phát hành công khai theo Giấy phép Mã nguồn Mở MIT (MIT License) tại địa chỉ: https://github.com/001123/simple-otp.',
+          'Toàn bộ mã nguồn của Simple OTP được phát hành công khai theo Giấy phép Mã nguồn Mở MIT (MIT License) tại địa chỉ: https://github.com/kd-labs-io/simple-otp.',
         ],
         subsections: [
           {
@@ -429,7 +429,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
               '• Đại diện kỹ thuật: Duy BK',
               '• Hòm thư điện tử bảo mật & hỗ trợ: support@kd.io.vn',
               '• Trang thông tin điện tử: https://kd.io.vn',
-              '• Kho lưu trữ mã nguồn mở: https://github.com/001123/simple-otp',
+              '• Kho lưu trữ mã nguồn mở: https://github.com/kd-labs-io/simple-otp',
               '• Thời gian phản hồi cam kết: Chúng tôi nỗ lực phản hồi mọi yêu cầu liên quan đến bảo mật và quyền riêng tư trong vòng 48 giờ làm việc.',
             ],
           },
@@ -443,7 +443,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
       entityName: 'KD Labs',
       jurisdiction: 'Việt Nam • Phạm vi phục vụ Toàn Cầu',
       supportEmail: 'support@kd.io.vn',
-      githubRepo: 'https://github.com/001123/simple-otp',
+      githubRepo: 'https://github.com/kd-labs-io/simple-otp',
       gpgKeyNote: 'Đối với các thông báo lỗ hổng nhạy cảm, bạn có thể gửi email kèm mã hóa hoặc mở Security Advisory riêng tư trên GitHub repository.',
     },
   },
@@ -485,7 +485,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
       {
         icon: 'audit',
         title: 'MIT Open-Source Auditing',
-        desc: 'Entire codebase publicly auditable at github.com/001123/simple-otp for peer review by security researchers worldwide.',
+        desc: 'Entire codebase publicly auditable at github.com/kd-labs-io/simple-otp for peer review by security researchers worldwide.',
         tag: 'Open-Source Auditable',
       },
     ],
@@ -717,7 +717,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
           {
             title: '7.2. Public GitHub Repository Interactions',
             content: [
-              '• Bug reports (Issues) and code contributions (Pull Requests) submitted to github.com/001123/simple-otp are governed by GitHub’s (Microsoft) Privacy Statement.',
+              '• Bug reports (Issues) and code contributions (Pull Requests) submitted to github.com/kd-labs-io/simple-otp are governed by GitHub’s (Microsoft) Privacy Statement.',
               '• Precaution: NEVER attach screenshots containing live QR codes, secret keys, or backup passwords to public GitHub tickets.',
             ],
           },
@@ -767,7 +767,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         title: 'Open-Source Transparency & Independent Auditing',
         content: [
           'In cryptography and software security, we adhere firmly to Kerckhoffs’s principle: "Don\'t trust, verify." The only credible proof of privacy is unrestricted open-source audibility.',
-          'Simple OTP is distributed under the permissive MIT Open Source License at https://github.com/001123/simple-otp.',
+          'Simple OTP is distributed under the permissive MIT Open Source License at https://github.com/kd-labs-io/simple-otp.',
         ],
         subsections: [
           {
@@ -814,7 +814,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
               '• Lead Developer: Duy BK',
               '• Official Privacy & Support Email: support@kd.io.vn',
               '• Official Website: https://kd.io.vn',
-              '• Open-Source Repository: https://github.com/001123/simple-otp',
+              '• Open-Source Repository: https://github.com/kd-labs-io/simple-otp',
               '• Service Level Commitment: We endeavor to address all privacy and cryptographic inquiries within 48 business hours.',
             ],
           },
@@ -828,7 +828,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
       entityName: 'KD Labs',
       jurisdiction: 'Vietnam • Serving Users Globally',
       supportEmail: 'support@kd.io.vn',
-      githubRepo: 'https://github.com/001123/simple-otp',
+      githubRepo: 'https://github.com/kd-labs-io/simple-otp',
       gpgKeyNote: 'For sensitive vulnerability disclosures, please reach out via email or submit a private GitHub Security Advisory on our repository.',
     },
   },

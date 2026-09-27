@@ -192,7 +192,7 @@ To add a new application to the portfolio showcase:
   osRequirement: 'Android 8.0+',
   packageName: 'com.kdlabs.mynewapp',
   googlePlayUrl: 'https://play.google.com/store/apps/details?id=com.kdlabs.mynewapp',
-  githubUrl: 'https://github.com/001123/my-new-app',
+  githubUrl: 'https://github.com/kd-labs-io/my-new-app',
   iconImage: '/assets/my-new-app/icon.png',
   shortDescription: {
     en: 'Short English description...',

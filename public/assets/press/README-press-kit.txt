@@ -12,6 +12,7 @@ Focus: 100% Offline Mobile Apps, Hardware-backed Cryptography
 
 2. LOGO SUITE
 - kd-labs-icon.svg / .png: App icon badge (dark background)
+- kd-labs-icon-light.svg / .png: App icon badge (light/Washi background)
 - kd-labs-symbol-transparent.svg / .png: Enso Zen open circle & 2 orange dots (Key & Data)
 - kd-labs-logo-horizontal-dark.svg / .png: Full horizontal lockup for light surfaces
 - kd-labs-logo-horizontal-light.svg / .png: Full horizontal lockup for dark surfaces

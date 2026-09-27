@@ -106,7 +106,7 @@ In cryptographic software, trust cannot be demanded through marketing copy; it m
 
 The complete codebase of Simple OTP is public and transparent under the permissive **MIT License**:
 
-- **GitHub Repository:** [github.com/001123/simple-otp](https://github.com/001123/simple-otp)
+- **GitHub Repository:** [github.com/kd-labs-io/simple-otp](https://github.com/kd-labs-io/simple-otp)
 - Independent security researchers, developers, and users worldwide are invited to inspect, verify, and audit every line of code.
 
 ---

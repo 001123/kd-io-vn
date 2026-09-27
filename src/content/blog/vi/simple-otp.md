@@ -106,7 +106,7 @@ Chúng tôi tin rằng trong lĩnh vực bảo mật, sự tin tưởng phải �
 
 Toàn bộ mã nguồn của Simple OTP được công khai minh bạch tại kho lưu trữ GitHub của KD Labs theo giấy phép **MIT License**:
 
-- **GitHub Repository:** [github.com/001123/simple-otp](https://github.com/001123/simple-otp)
+- **GitHub Repository:** [github.com/kd-labs-io/simple-otp](https://github.com/kd-labs-io/simple-otp)
 - Bất kỳ ai, từ người dùng cá nhân đến chuyên gia bảo mật độc lập, đều có thể kiểm tra từng dòng mã để xác thực cam kết không kết nối mạng và tính toàn vẹn của ứng dụng.
 
 ---

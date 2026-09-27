@@ -20,12 +20,44 @@ const lang = 'vi';
 const t = getTranslations(lang);
 const screenshots = app.screenshots ? app.screenshots[lang] : [];
 const featureGraphic = app.featureGraphic ? app.featureGraphic[lang] : null;
+const siteUrl = Astro.site ? Astro.site.origin : 'https://kd.io.vn';
+const appOgImage = featureGraphic || app.iconImage;
+
+const appJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: app.name,
+  operatingSystem: 'Android',
+  applicationCategory: 'SecurityApplication',
+  description: app.shortDescription[lang],
+  image: appOgImage ? (appOgImage.startsWith('http') ? appOgImage : `${siteUrl}${appOgImage}`) : undefined,
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  ...(app.rating ? {
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: app.rating,
+      ratingCount: app.reviewsCount ? parseInt(app.reviewsCount.replace(/\D/g, '')) || 100 : 100,
+    },
+  } : {}),
+  author: {
+    '@type': 'Organization',
+    name: 'KD Labs',
+    url: siteUrl,
+  },
+};
 ---
 
 <Layout
   lang={lang}
   title={`${app.name} • KD Labs Google Play`}
   description={app.shortDescription[lang]}
+  image={appOgImage}
+  imageAlt={`${app.name} - ${app.shortDescription[lang]}`}
+  jsonLd={appJsonLd}
 >
   <div class="py-12 sm:py-16">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">

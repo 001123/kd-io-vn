@@ -13,13 +13,15 @@ const homeUrl = currentLang === 'vi' ? '/' : `/${currentLang}/`;
 const printLabel = currentLang === 'vi' ? 'In văn bản / Lưu PDF' : 'Print / Save as PDF';
 const copyLinkSuccess = currentLang === 'vi' ? 'Đã sao chép liên kết mục!' : 'Section link copied!';
 const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to section';
+const backToTopLabel = currentLang === 'vi' ? 'Về đầu trang' : 'Back to top';
+const itemsCountLabel = currentLang === 'vi' ? `${data.sections.length} Mục` : `${data.sections.length} Items`;
 ---
 
-<div class="py-10 sm:py-16">
+<div class="py-8 sm:py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Top Action / Breadcrumb Bar -->
-    <div class="flex flex-wrap items-center justify-between gap-4 border-b border-stone-200 dark:border-stone-800 pb-6 mb-10">
+    <div class="flex flex-wrap items-center justify-between gap-4 border-b border-stone-200 dark:border-stone-800 pb-4 sm:pb-5 mb-6 sm:mb-8">
       <a
         href={homeUrl}
         class="inline-flex items-center gap-2 text-xs font-semibold text-stone-600 dark:text-stone-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
@@ -51,7 +53,7 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
     </div>
 
     <!-- Main Header Section -->
-    <header class="max-w-4xl space-y-5 mb-12">
+    <header class="max-w-4xl space-y-4 mb-8 sm:mb-10">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-orange-50 dark:bg-orange-950/40 text-orange-700 dark:text-orange-400 border border-orange-200 dark:border-orange-900/50">
         <svg class="w-4 h-4 text-orange-600 dark:text-orange-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -88,8 +90,8 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
     </header>
 
     <!-- Highlights Banner: At a Glance (4 Pillars) -->
-    <div class="mb-14 rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-orange-50/70 via-stone-50/90 to-stone-100/70 dark:from-orange-950/20 dark:via-[#161412] dark:to-stone-900/50 border border-orange-200/80 dark:border-orange-900/40 shadow-xs">
-      <div class="max-w-2xl mb-6">
+    <div class="mb-8 sm:mb-10 rounded-2xl sm:rounded-3xl p-5 sm:p-6 bg-gradient-to-br from-orange-50/70 via-stone-50/90 to-stone-100/70 dark:from-orange-950/20 dark:via-[#161412] dark:to-stone-900/50 border border-orange-200/80 dark:border-orange-900/40 shadow-xs">
+      <div class="max-w-2xl mb-4 sm:mb-5">
         <h2 class="text-lg sm:text-xl font-bold text-stone-900 dark:text-stone-100 flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
           {data.highlightsTitle}
@@ -99,10 +101,10 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
         {data.highlights.map((item) => (
-          <div class="bg-white/80 dark:bg-[#1a1715]/80 backdrop-blur-xs rounded-2xl p-4 sm:p-5 border border-stone-200/80 dark:border-stone-800/80 space-y-2.5 flex flex-col justify-between">
-            <div class="space-y-2">
+          <div class="bg-white/80 dark:bg-[#1a1715]/80 backdrop-blur-xs rounded-2xl p-3.5 sm:p-4 border border-stone-200/80 dark:border-stone-800/80 space-y-2 flex flex-col justify-between">
+            <div class="space-y-1.5">
               <div class="flex items-center justify-between">
                 <span class="text-xs font-bold font-mono px-2 py-0.5 rounded-md bg-orange-100/70 dark:bg-orange-950/60 text-orange-700 dark:text-orange-400 border border-orange-200/50 dark:border-orange-900/50">
                   {item.tag}
@@ -121,7 +123,7 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
     </div>
 
     <!-- Mobile Table of Contents Accordion (visible on < lg) -->
-    <div class="lg:hidden mb-10">
+    <div class="lg:hidden mb-8">
       <details class="group rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-[#181614] overflow-hidden shadow-xs">
         <summary class="flex items-center justify-between p-4 cursor-pointer font-semibold text-sm text-stone-900 dark:text-stone-100 select-none">
           <span class="flex items-center gap-2">
@@ -148,18 +150,18 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
       </details>
     </div>
 
-    <!-- 2-Column Grid Layout: Main Content (8 cols) + Sticky TOC (4 cols) -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+    <!-- 2-Column Grid Layout: Main Content (9 cols) + Sticky TOC (3 cols) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
       
       <!-- LEFT COLUMN: Comprehensive Sections -->
-      <main class="lg:col-span-8 space-y-12 sm:space-y-16">
+      <main class="lg:col-span-9 space-y-8 sm:space-y-10 min-w-0">
         {data.sections.map((section) => (
           <section
             id={section.id}
-            class="privacy-section scroll-mt-24 rounded-3xl border border-stone-200/90 dark:border-stone-800/90 bg-white dark:bg-[#161412] p-6 sm:p-9 space-y-6 shadow-xs hover:border-stone-300 dark:hover:border-stone-700 transition-colors"
+            class="privacy-section scroll-mt-24 rounded-2xl sm:rounded-3xl border border-stone-200/90 dark:border-stone-800/90 bg-white dark:bg-[#161412] p-5 sm:p-7 space-y-5 shadow-xs hover:border-stone-300 dark:hover:border-stone-700 transition-colors"
           >
             <!-- Section Header -->
-            <div class="space-y-2 border-b border-stone-100 dark:border-stone-800/80 pb-5">
+            <div class="space-y-2 border-b border-stone-100 dark:border-stone-800/80 pb-4">
               <div class="flex items-center justify-between">
                 <span class="text-xs font-mono font-bold text-orange-600 dark:text-orange-400 px-2.5 py-0.5 rounded-full bg-orange-50 dark:bg-orange-950/50 border border-orange-200/40 dark:border-orange-900/40">
                   Điều / Section {section.number}
@@ -181,7 +183,7 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
             </div>
 
             <!-- Main Paragraphs -->
-            <div class="space-y-4 text-sm sm:text-base text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
+            <div class="space-y-3.5 text-sm sm:text-base text-stone-600 dark:text-stone-300 leading-relaxed font-normal">
               {section.content.map((p) => (
                 <p>{p}</p>
               ))}
@@ -189,7 +191,7 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
 
             <!-- Callout Box (if present at section level) -->
             {section.callout && (
-              <div class={`p-5 rounded-2xl border text-sm leading-relaxed ${
+              <div class={`p-4 sm:p-5 rounded-2xl border text-sm leading-relaxed ${
                 section.callout.type === 'shield'
                   ? 'bg-emerald-50/70 dark:bg-emerald-950/20 border-emerald-200 dark:border-emerald-900/50 text-emerald-950 dark:text-emerald-200'
                   : section.callout.type === 'alert'
@@ -222,31 +224,45 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
 
             <!-- Responsive Table (if present at section level) -->
             {section.table && (
-              <div class="overflow-x-auto rounded-2xl border border-stone-200 dark:border-stone-800 -mx-2 sm:mx-0">
+              <div class="overflow-x-auto rounded-2xl border border-stone-200 dark:border-stone-800 -mx-1 sm:mx-0">
                 <table class="w-full text-left text-xs sm:text-sm text-stone-700 dark:text-stone-300">
                   <thead class="bg-stone-50 dark:bg-stone-900/80 text-stone-900 dark:text-stone-100 font-semibold border-b border-stone-200 dark:border-stone-800">
                     <tr>
-                      {section.table.headers.map((h) => (
-                        <th class="px-4 py-3 sm:px-5 sm:py-3.5">{h}</th>
-                      ))}
+                      {section.table.headers.map((h, idx) => {
+                        const isStatusCol = (section.id === 'google-play-data-safety' || section.number === '03') && (idx === 1 || idx === 2);
+                        return (
+                          <th class={`px-3.5 py-2.5 sm:px-4 sm:py-3 ${isStatusCol ? 'text-center whitespace-nowrap min-w-[140px]' : idx === 0 ? 'min-w-[160px]' : ''}`}>
+                            {h}
+                          </th>
+                        );
+                      })}
                     </tr>
                   </thead>
                   <tbody class="divide-y divide-stone-100 dark:divide-stone-800/80">
                     {section.table.rows.map((row) => (
                       <tr class="hover:bg-stone-50/50 dark:hover:bg-stone-900/40 transition-colors">
-                        {row.map((cell, idx) => (
-                          <td class={`px-4 py-3 sm:px-5 sm:py-3.5 align-top ${idx === 0 ? 'font-medium text-stone-900 dark:text-stone-100' : 'text-stone-600 dark:text-stone-400'}`}>
-                            {cell.includes('\n') ? (
-                              <div class="whitespace-pre-line font-mono text-xs">{cell}</div>
-                            ) : cell === 'KHÔNG THU THẬP' || cell === 'NOT COLLECTED' || cell === 'KHÔNG CHIA SẺ' || cell === 'NOT SHARED' ? (
-                              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-mono font-bold bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-900/50">
-                                {cell}
-                              </span>
-                            ) : (
-                              cell
-                            )}
-                          </td>
-                        ))}
+                        {row.map((cell, idx) => {
+                          const isStatus = cell === 'KHÔNG THU THẬP' || cell === 'NOT COLLECTED' || cell === 'KHÔNG CHIA SẺ' || cell === 'NOT SHARED';
+                          return (
+                            <td class={`px-3.5 py-2.5 sm:px-4 sm:py-3 align-top ${
+                              isStatus 
+                                ? 'text-center whitespace-nowrap' 
+                                : idx === 0 
+                                ? 'font-medium text-stone-900 dark:text-stone-100' 
+                                : 'text-stone-600 dark:text-stone-400'
+                            }`}>
+                              {cell.includes('\n') ? (
+                                <div class="whitespace-pre-line font-mono text-xs">{cell}</div>
+                              ) : isStatus ? (
+                                <span class="inline-flex items-center justify-center px-2.5 py-0.5 rounded-full text-xs font-mono font-bold whitespace-nowrap shrink-0 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-900/50">
+                                  {cell}
+                                </span>
+                              ) : (
+                                cell
+                              )}
+                            </td>
+                          );
+                        })}
                       </tr>
                     ))}
                   </tbody>
@@ -256,9 +272,9 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
 
             <!-- Subsections (if any) -->
             {section.subsections && (
-              <div class="space-y-6 pt-2">
+              <div class="space-y-4 pt-1">
                 {section.subsections.map((sub) => (
-                  <div class="rounded-2xl bg-stone-50/60 dark:bg-stone-900/30 p-5 sm:p-6 border border-stone-100 dark:border-stone-800/60 space-y-3">
+                  <div class="rounded-2xl bg-stone-50/60 dark:bg-stone-900/30 p-4 sm:p-5 border border-stone-100 dark:border-stone-800/60 space-y-2.5">
                     <h3 class="text-base sm:text-lg font-bold text-stone-900 dark:text-stone-100">
                       {sub.title}
                     </h3>
@@ -287,7 +303,7 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
         ))}
 
         <!-- Developer Contact & DPO Card (Section 12 details card) -->
-        <div class="rounded-3xl border border-stone-200 dark:border-stone-800 bg-gradient-to-br from-stone-50 to-orange-50/40 dark:from-stone-900/50 dark:to-orange-950/20 p-6 sm:p-9 space-y-5">
+        <div class="rounded-2xl sm:rounded-3xl border border-stone-200 dark:border-stone-800 bg-gradient-to-br from-stone-50 to-orange-50/40 dark:from-stone-900/50 dark:to-orange-950/20 p-5 sm:p-7 space-y-4">
           <div class="space-y-2">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-orange-100/70 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300">
               {data.contactBox.entityName}
@@ -300,8 +316,8 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
             </p>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-            <div class="p-4 rounded-2xl bg-white dark:bg-[#181614] border border-stone-200 dark:border-stone-800 space-y-1">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+            <div class="p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-[#181614] border border-stone-200 dark:border-stone-800 space-y-1">
               <span class="text-xs text-stone-500 dark:text-stone-400 font-mono">Email Hỗ Trợ & Bảo Mật:</span>
               <a
                 href={`mailto:${data.contactBox.supportEmail}`}
@@ -311,7 +327,7 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
               </a>
             </div>
 
-            <div class="p-4 rounded-2xl bg-white dark:bg-[#181614] border border-stone-200 dark:border-stone-800 space-y-1">
+            <div class="p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-[#181614] border border-stone-200 dark:border-stone-800 space-y-1">
               <span class="text-xs text-stone-500 dark:text-stone-400 font-mono">GitHub Repository:</span>
               <a
                 href={data.contactBox.githubRepo}
@@ -319,12 +335,12 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
                 rel="noopener noreferrer"
                 class="block text-sm font-bold text-stone-900 dark:text-stone-100 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
               >
-                github.com/001123/simple-otp ↗
+                github.com/kd-labs-io/simple-otp ↗
               </a>
             </div>
           </div>
 
-          <div class="p-4 rounded-2xl bg-stone-100/70 dark:bg-stone-900/60 border border-stone-200/80 dark:border-stone-800/80 text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-stone-100/70 dark:bg-stone-900/60 border border-stone-200/80 dark:border-stone-800/80 text-xs text-stone-600 dark:text-stone-400 leading-relaxed">
             <p class="font-medium text-stone-900 dark:text-stone-200 mb-1">Ghi chú về bảo mật nâng cao:</p>
             {data.contactBox.gpgKeyNote}
           </div>
@@ -333,30 +349,30 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
       </main>
 
       <!-- RIGHT COLUMN: Sticky Table of Contents Sidebar (visible on lg+) -->
-      <aside class="hidden lg:block lg:col-span-4 sticky top-28 space-y-6">
-        <div class="rounded-3xl border border-stone-200/90 dark:border-stone-800/90 bg-white/90 dark:bg-[#161412]/90 backdrop-blur-md p-6 space-y-5 shadow-xs">
+      <aside class="hidden lg:block lg:col-span-3 sticky top-28 space-y-4">
+        <div class="rounded-2xl sm:rounded-3xl border border-stone-200/90 dark:border-stone-800/90 bg-white/90 dark:bg-[#161412]/90 backdrop-blur-md p-4 sm:p-5 space-y-4 shadow-xs">
           
-          <div class="flex items-center justify-between border-b border-stone-100 dark:border-stone-800 pb-3">
+          <div class="flex items-center justify-between border-b border-stone-100 dark:border-stone-800 pb-2.5">
             <h3 class="text-xs font-mono font-bold uppercase tracking-wider text-stone-500 dark:text-stone-400">
               {data.tableOfContentsTitle}
             </h3>
-            <span class="text-xs font-mono px-2 py-0.5 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">
-              12 Mục
+            <span class="text-[11px] font-mono px-2 py-0.5 rounded-full bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">
+              {itemsCountLabel}
             </span>
           </div>
 
           <!-- Nav Items -->
-          <nav class="toc-nav space-y-1 max-h-[calc(100vh-280px)] overflow-y-auto pr-1">
+          <nav class="toc-nav space-y-0.5 max-h-[calc(100vh-250px)] overflow-y-auto pr-1">
             {data.sections.map((sec) => (
               <a
                 href={`#${sec.id}`}
                 id={`toc-link-${sec.id}`}
-                class="toc-item group flex items-start gap-2.5 px-3 py-2 rounded-xl text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100/70 dark:hover:bg-stone-800/50 transition-all leading-snug"
+                class="toc-item group flex items-start gap-2 px-2.5 py-1.5 rounded-lg text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100/70 dark:hover:bg-stone-800/50 transition-all leading-snug"
               >
-                <span class="font-mono text-[11px] font-bold text-orange-600/70 dark:text-orange-400/70 group-hover:text-orange-600 dark:group-hover:text-orange-400 shrink-0">
+                <span class="font-mono text-[11px] font-bold text-orange-600/70 dark:text-orange-400/70 group-hover:text-orange-600 dark:group-hover:text-orange-400 shrink-0 pt-0.5">
                   {sec.number}.
                 </span>
-                <span class="truncate-2-lines line-clamp-1 group-hover:translate-x-0.5 transition-transform">
+                <span class="group-hover:translate-x-0.5 transition-transform break-words">
                   {sec.title}
                 </span>
               </a>
@@ -364,23 +380,23 @@ const jumpToSectionLabel = currentLang === 'vi' ? 'Mục lục nhanh' : 'Jump to
           </nav>
 
           <!-- Quick Jump Footer Actions -->
-          <div class="pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs">
+          <div class="pt-2.5 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-xs">
             <button
               type="button"
               onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-              class="inline-flex items-center gap-1.5 text-stone-500 dark:text-stone-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors cursor-pointer"
+              class="inline-flex items-center gap-1.5 text-stone-500 dark:text-stone-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors cursor-pointer text-xs"
             >
               <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
               </svg>
-              <span>Về đầu trang</span>
+              <span>{backToTopLabel}</span>
             </button>
 
             <a
-              href="https://github.com/001123/simple-otp"
+              href={data.contactBox.githubRepo}
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center gap-1 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors"
+              class="inline-flex items-center gap-1 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors text-xs"
             >
               <span>GitHub</span>
               <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">

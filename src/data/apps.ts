@@ -63,7 +63,7 @@ export const appsData: AppItem[] = [
     lastUpdated: 'Tháng 9, 2026',
     packageName: 'com.duybk.simpleotp',
     googlePlayUrl: '#', // TODO: Thay bằng link Google Play chính thức khi publish
-    githubUrl: 'https://github.com/001123/simple-otp',
+    githubUrl: 'https://github.com/kd-labs-io/simple-otp',
     iconImage: '/assets/simple-otp/icon.png',
     featureGraphic: {
       vi: '/assets/simple-otp/banners/vi/00_feature_graphic.png',

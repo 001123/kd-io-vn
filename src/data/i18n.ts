@@ -100,7 +100,7 @@ export const translations = {
         'Bạn có thể dùng tính năng Sao lưu mã hóa: ứng dụng xuất ra tệp .simpleotp được bảo vệ bằng mật khẩu AES-256-GCM do bạn chọn để khôi phục an toàn trên máy mới.',
       faq3Q: 'Simple OTP có phải là mã nguồn mở không?',
       faq3A:
-        'Có! Toàn bộ mã nguồn của Simple OTP được công khai trên GitHub (github.com/001123/simple-otp) theo giấy phép mã nguồn mở MIT.',
+        'Có! Toàn bộ mã nguồn của Simple OTP được công khai trên GitHub (github.com/kd-labs-io/simple-otp) theo giấy phép mã nguồn mở MIT.',
     },
     footer: {
       description:
@@ -158,7 +158,7 @@ export const translations = {
         {
           heading: '5. Mã nguồn mở minh bạch & Liên hệ',
           content:
-            'Mã nguồn của Simple OTP được công khai minh bạch tại github.com/001123/simple-otp để cộng đồng tự do kiểm chứng. Mọi thắc mắc vui lòng gửi về support@kd.io.vn.',
+            'Mã nguồn của Simple OTP được công khai minh bạch tại github.com/kd-labs-io/simple-otp để cộng đồng tự do kiểm chứng. Mọi thắc mắc vui lòng gửi về support@kd.io.vn.',
         },
       ],
     },
@@ -241,11 +241,19 @@ export const translations = {
           },
           {
             id: 'icon-badge',
-            name: 'Icon Badge Ứng Dụng',
+            name: 'Icon Badge (Nền Tối)',
             desc: 'Biểu tượng ứng dụng di động bo góc tròn chuẩn squircle trên nền đen Sumi.',
             previewBg: 'transparent',
             svgUrl: '/assets/press/kd-labs-icon.svg',
             pngUrl: '/assets/press/kd-labs-icon.png',
+          },
+          {
+            id: 'icon-badge-light',
+            name: 'Icon Badge (Nền Sáng)',
+            desc: 'Biểu tượng ứng dụng di động bo góc tròn squircle trên nền giấy Washi ấm áp viền cam nhạt.',
+            previewBg: 'transparent',
+            svgUrl: '/assets/press/kd-labs-icon-light.svg',
+            pngUrl: '/assets/press/kd-labs-icon-light.png',
           },
           {
             id: 'symbol-transparent',
@@ -534,7 +542,7 @@ export const translations = {
         'You can use the Encrypted Backup feature to export a password-protected .simpleotp file encrypted with AES-256-GCM and import it onto your new phone.',
       faq3Q: 'Is Simple OTP open source?',
       faq3A:
-        'Yes! The complete source code is public and auditable on GitHub (github.com/001123/simple-otp) under the permissive MIT license.',
+        'Yes! The complete source code is public and auditable on GitHub (github.com/kd-labs-io/simple-otp) under the permissive MIT license.',
     },
     footer: {
       description:
@@ -592,7 +600,7 @@ export const translations = {
         {
           heading: '5. Open Source Auditability & Contact',
           content:
-            'Simple OTP is free open-source software auditable at github.com/001123/simple-otp. For support or privacy questions, reach us at support@kd.io.vn.',
+            'Simple OTP is free open-source software auditable at github.com/kd-labs-io/simple-otp. For support or privacy questions, reach us at support@kd.io.vn.',
         },
       ],
     },
@@ -675,11 +683,19 @@ export const translations = {
           },
           {
             id: 'icon-badge',
-            name: 'Application Icon Badge',
+            name: 'Application Icon Badge (Dark)',
             desc: 'Rounded squircle application badge on deep Sumi black backdrop.',
             previewBg: 'transparent',
             svgUrl: '/assets/press/kd-labs-icon.svg',
             pngUrl: '/assets/press/kd-labs-icon.png',
+          },
+          {
+            id: 'icon-badge-light',
+            name: 'Application Icon Badge (Light)',
+            desc: 'Rounded squircle application badge on warm Washi paper backdrop with subtle orange border.',
+            previewBg: 'transparent',
+            svgUrl: '/assets/press/kd-labs-icon-light.svg',
+            pngUrl: '/assets/press/kd-labs-icon-light.png',
           },
           {
             id: 'symbol-transparent',
