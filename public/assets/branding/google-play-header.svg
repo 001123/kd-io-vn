@@ -1,0 +1,197 @@
+<svg width="4096" height="2304" viewBox="0 0 4096 2304" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="washiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF7"/>
+      <stop offset="35%" stop-color="#FBF9F5"/>
+      <stop offset="75%" stop-color="#F5EFE6"/>
+      <stop offset="100%" stop-color="#EFE7DA"/>
+    </linearGradient>
+
+    <!-- Warm Zen Orange Ambient Glows -->
+    <radialGradient id="zenAuraEnso" cx="55%" cy="50%" r="45%">
+      <stop offset="0%" stop-color="#EA580C" stop-opacity="0.16"/>
+      <stop offset="50%" stop-color="#FB923C" stop-opacity="0.06"/>
+      <stop offset="85%" stop-color="#F97316" stop-opacity="0.01"/>
+      <stop offset="100%" stop-color="#EA580C" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="zenAuraRight" cx="80%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="#EA580C" stop-opacity="0.10"/>
+      <stop offset="60%" stop-color="#FB923C" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#EA580C" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Subtle Left Ambient Light for Pure Spaciousness -->
+    <radialGradient id="leftSoftGlow" cx="20%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Enso Gradient -->
+    <linearGradient id="ensoGrad" x1="20%" y1="0%" x2="90%" y2="100%">
+      <stop offset="0%" stop-color="#EA580C"/>
+      <stop offset="45%" stop-color="#F97316"/>
+      <stop offset="100%" stop-color="#C2410C"/>
+    </linearGradient>
+
+    <!-- Satellite Dots Gradient -->
+    <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FB923C"/>
+      <stop offset="100%" stop-color="#EA580C"/>
+    </linearGradient>
+
+    <!-- Geometric Wave Gradients (Harmonious Japanese Karesansui / Cryptographic Waves) -->
+    <linearGradient id="waveGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#EA580C" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#EA580C" stop-opacity="0.14"/>
+      <stop offset="65%" stop-color="#EA580C" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#EA580C" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <linearGradient id="waveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#D97706" stop-opacity="0.09"/>
+      <stop offset="70%" stop-color="#EA580C" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#EA580C" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="waveGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78716C" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#A8A29E" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#78716C" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Fine Zen Matrix Dot Grid -->
+    <pattern id="zenDotGrid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <circle cx="32" cy="32" r="1.6" fill="#78716C" fill-opacity="0.09"/>
+    </pattern>
+
+    <!-- Drop Shadows -->
+    <filter id="badgeShadow" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="0" dy="24" stdDeviation="32" flood-color="#7C2D12" flood-opacity="0.08"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#1C1917" flood-opacity="0.04"/>
+    </filter>
+
+    <filter id="ensoGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="20" stdDeviation="36" flood-color="#EA580C" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <!-- ================= 1. BASE BACKGROUND LAYERS ================= -->
+  <!-- Washi Paper Base Tone -->
+  <rect width="4096" height="2304" fill="url(#washiBg)"/>
+
+  <!-- Left Ambient Airy Softness -->
+  <rect width="4096" height="2304" fill="url(#leftSoftGlow)"/>
+
+  <!-- Right Zen Ambient Glows -->
+  <rect width="4096" height="2304" fill="url(#zenAuraEnso)"/>
+  <rect width="4096" height="2304" fill="url(#zenAuraRight)"/>
+
+  <!-- Subtle Zen Dot Grid Pattern -->
+  <rect width="4096" height="2304" fill="url(#zenDotGrid)"/>
+
+  <!-- ================= 2. ABSTRACT ZEN GEOMETRIC WAVES (Karesansui / Cipher Streams) ================= -->
+  <g opacity="0.88">
+    <!-- Stream 1 (Primary sweeping curve) -->
+    <path d="M -200 1620 C 600 1370, 1150 1880, 1900 1480 C 2500 1160, 3150 1280, 4296 920" 
+          fill="none" stroke="url(#waveGrad1)" stroke-width="3.5" stroke-dasharray="8 12"/>
+
+    <!-- Stream 2 (Harmonic echo) -->
+    <path d="M -200 1780 C 700 1500, 1250 2020, 2050 1620 C 2650 1320, 3300 1400, 4296 1080" 
+          fill="none" stroke="url(#waveGrad2)" stroke-width="2.5"/>
+
+    <!-- Stream 3 (Upper flowing crest) -->
+    <path d="M -100 1460 C 750 1210, 1350 1720, 2200 1340 C 2800 1060, 3450 1170, 4296 820" 
+          fill="none" stroke="url(#waveGrad1)" stroke-width="1.8"/>
+
+    <!-- Stream 4 (Top gentle atmospheric line) -->
+    <path d="M 300 -100 C 1100 320, 1700 140, 2500 420 C 3200 680, 3750 480, 4300 620" 
+          fill="none" stroke="url(#waveGrad3)" stroke-width="2"/>
+
+    <!-- Stream 5 (Deep Zen base ripple) -->
+    <path d="M 200 2400 C 1050 1980, 1650 2120, 2400 1820 C 3100 1560, 3650 1720, 4300 1380" 
+          fill="none" stroke="url(#waveGrad2)" stroke-width="2.8"/>
+  </g>
+
+  <!-- ================= 3. CONCENTRIC ZEN RINGS / ORBITAL HARMONY ================= -->
+  <!-- Rings centered with the Enso focal point at X=2100, Y=1152 -->
+  <g transform="translate(2100, 1152)" opacity="0.65">
+    <!-- Outer dashed telemetry ring -->
+    <circle cx="0" cy="0" r="820" fill="none" stroke="#EA580C" stroke-width="1.5" stroke-opacity="0.16" stroke-dasharray="6 14"/>
+    <circle cx="0" cy="0" r="660" fill="none" stroke="#D6D3D1" stroke-width="1.2" stroke-opacity="0.32"/>
+    <circle cx="0" cy="0" r="500" fill="none" stroke="#EA580C" stroke-width="1.2" stroke-opacity="0.22" stroke-dasharray="4 8"/>
+    <!-- Subtle cardinal orientation ticks -->
+    <line x1="-840" y1="0" x2="-800" y2="0" stroke="#EA580C" stroke-width="2" stroke-opacity="0.35"/>
+    <line x1="800" y1="0" x2="840" y2="0" stroke="#EA580C" stroke-width="2" stroke-opacity="0.35"/>
+    <line x1="0" y1="-840" x2="0" y2="-800" stroke="#EA580C" stroke-width="2" stroke-opacity="0.35"/>
+    <line x1="0" y1="800" x2="0" y2="840" stroke="#EA580C" stroke-width="2" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- ================= 4. GRAND ABSTRACT ENSO (Center Focal Masterpiece) ================= -->
+  <!-- Placed at X=2100, Y=1152 -->
+  <g transform="translate(2100, 1152) scale(10.2) translate(-50, -50)">
+    <!-- Ambient Enso Glow Aura -->
+    <path d="M 56.1 13.1 A 37.2 37.2 0 1 0 85.6 65.1" stroke="#FB923C" stroke-width="16" stroke-linecap="round" opacity="0.14"/>
+    <!-- Core Primary Enso Brush Stroke -->
+    <path d="M 56.1 13.1 A 37.2 37.2 0 1 0 85.6 65.1" stroke="url(#ensoGrad)" stroke-width="9.2" stroke-linecap="round" filter="url(#ensoGlow)"/>
+    <!-- Satellite Dot 1 (Key) -->
+    <circle cx="65.2" cy="28.3" r="8.3" fill="url(#dotGrad)"/>
+    <!-- Satellite Dot 2 (Data) -->
+    <circle cx="78.4" cy="48.1" r="8.3" fill="url(#dotGrad)"/>
+  </g>
+
+  <!-- ================= 5. BRAND IDENTITY LOCKUP (Right Safe Zone) ================= -->
+  <!-- Elegant, pure, and minimal lockup perfectly centered vertically at Y=1045 -->
+  <g transform="translate(2880, 1045)">
+    <!-- 5.1 Iconic Studio Card Badge -->
+    <g filter="url(#badgeShadow)">
+      <!-- Badge Backdrop with subtle warm tint & orange border -->
+      <rect x="0" y="0" width="214" height="214" rx="54" fill="#FFFFFF" stroke="#FDBA74" stroke-width="3"/>
+      <!-- Inner Zen Enso in Badge -->
+      <g transform="translate(25, 25) scale(1.64)">
+        <path d="M 56.1 13.1 A 37.2 37.2 0 1 0 85.6 65.1" stroke="#EA580C" stroke-width="9.2" stroke-linecap="round"/>
+        <circle cx="65.2" cy="28.3" r="8.3" fill="#FB923C"/>
+        <circle cx="78.4" cy="48.1" r="8.3" fill="#FB923C"/>
+      </g>
+    </g>
+
+    <!-- 5.2 Studio Name: KD Labs -->
+    <text x="256" y="126" 
+          font-family="'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="124" 
+          font-weight="800" 
+          fill="#1C1917" 
+          letter-spacing="-2.5">KD Labs</text>
+
+    <!-- 5.3 Philosophy Subtitle -->
+    <text x="260" y="180" 
+          font-family="'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="30" 
+          font-weight="800" 
+          fill="#EA580C" 
+          letter-spacing="10">KEEP DEVELOPMENT</text>
+  </g>
+
+  <!-- ================= 6. SUBTLE ACCENT ELEMENTS & GEOMETRIC BALANCE ================= -->
+  <!-- Left Safe Zone Minimalist Zen Accents (Quiet, Serene, Non-intrusive) -->
+  <g transform="translate(180, 180)" opacity="0.38">
+    <circle cx="0" cy="0" r="4.5" fill="#EA580C"/>
+    <line x1="22" y1="0" x2="88" y2="0" stroke="#78716C" stroke-width="1.5"/>
+    <text x="105" y="5" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="16" font-weight="600" fill="#78716C" letter-spacing="4">GOOGLE PLAY DEVELOPER PROFILE</text>
+  </g>
+
+  <!-- Bottom Left Philosophy Note (Faint, acts as subtle watermark) -->
+  <g transform="translate(180, 2140)" opacity="0.45">
+    <text x="0" y="0" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="700" fill="#A8A29E" letter-spacing="6">KANSO • SHIZEN • SHIBUI</text>
+  </g>
+
+  <!-- Bottom Right Version Spec -->
+  <g transform="translate(3916, 2140)" opacity="0.35">
+    <text x="0" y="0" text-anchor="end" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="20" font-weight="600" fill="#A8A29E" letter-spacing="2">4096 × 2304 • 16:9</text>
+  </g>
+
+  <!-- Subtle Outer Framing Border -->
+  <rect x="40" y="40" width="4016" height="2224" rx="40" fill="none" stroke="#EA580C" stroke-width="2" stroke-opacity="0.15"/>
+</svg>

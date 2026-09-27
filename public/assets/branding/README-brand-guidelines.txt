@@ -25,18 +25,25 @@ Focus: 100% Offline Mobile Apps, Hardware-backed Cryptography
 - og-vi.png / .svg: Social card chuẩn tiếng Việt (Facebook, Zalo, X, Telegram)
 - og-en.png / .svg: Social card chuẩn tiếng Anh (Facebook, LinkedIn, X, Telegram)
 
-4. COLOR PALETTE
+4. GOOGLE PLAY DEVELOPER PROFILE BANNER (4096x2304 / 16:9)
+- google-play-header.svg: Vector master file (4096x2304)
+- google-play-header.png: 4096x2304 24-bit RGB PNG (no alpha, chuẩn Google Play Developer Console)
+- google-play-header-2048.png: 2048x1152 PNG bản tối ưu web
+- google-play-header.jpg: 4096x2304 JPG high-quality fallback
+- header-preview.html: Công cụ tương tác giả lập hiển thị trên Desktop / Mobile Google Play
+
+5. COLOR PALETTE
 - Zen Orange (Primary): #EA580C / RGB(234, 88, 12)
 - Zen Orange Glow: #FB713B / RGB(251, 113, 59)
 - Washi Paper (Light BG): #FBF9F5 / RGB(251, 249, 245)
 - Sumi Ink (Dark BG): #0F0E0D / RGB(15, 14, 13)
 - Slate Text: #1C1917 / RGB(28, 25, 23)
 
-5. TYPOGRAPHY
+6. TYPOGRAPHY
 - Primary Font: Plus Jakarta Sans
 - Google Fonts: https://fonts.google.com/specimen/Plus+Jakarta+Sans
 
-6. USAGE RULES (DO'S & DON'TS)
+7. USAGE RULES (DO'S & DON'TS)
 - DO maintain clear space around the logo equal to the height of the letter "K".
 - DO use high-contrast backgrounds (light logos on dark, dark logos on light).
 - DON'T alter the orientation or rotation of the Enso brush circle.

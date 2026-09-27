@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KD Labs — Google Play Developer Header Preview & Simulator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-washi: #FBF9F5;
+      --bg-surface: #FFFFFF;
+      --zen-orange: #EA580C;
+      --zen-orange-hover: #C2410C;
+      --zen-orange-light: #FFF7ED;
+      --zen-orange-border: #FDBA74;
+      --sumi-ink: #0F0E0D;
+      --slate-dark: #1C1917;
+      --slate-muted: #78716C;
+      --slate-border: #E7E5E4;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-washi);
+      color: var(--slate-dark);
+      line-height: 1.5;
+      padding: 32px 24px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--slate-border);
+    }
+
+    .brand-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #FFFFFF;
+      border: 1.5px solid var(--zen-orange-border);
+      padding: 6px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--slate-muted);
+      font-weight: 500;
+    }
+
+    /* Action bar controls */
+    .controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      background: var(--bg-surface);
+      padding: 12px 18px;
+      border-radius: 16px;
+      border: 1px solid var(--slate-border);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+      margin-bottom: 24px;
+    }
+
+    .segmented-group {
+      display: flex;
+      background: #F5F5F4;
+      padding: 4px;
+      border-radius: 10px;
+      gap: 4px;
+    }
+
+    .seg-btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: none;
+      background: transparent;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--slate-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .seg-btn.active {
+      background: #FFFFFF;
+      color: var(--slate-dark);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    .download-group {
+      margin-left: auto;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--zen-orange);
+      color: #FFFFFF;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: var(--zen-orange-hover);
+    }
+
+    .btn-secondary {
+      background: #FFFFFF;
+      color: var(--slate-dark);
+      border: 1px solid var(--slate-border);
+    }
+
+    .btn-secondary:hover {
+      background: #F5F5F4;
+    }
+
+    /* Preview Canvas Area */
+    .preview-viewport {
+      position: relative;
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #E7E5E4;
+      box-shadow: 0 16px 40px -10px rgba(0,0,0,0.08);
+      border: 1px solid var(--slate-border);
+      aspect-ratio: 16 / 9;
+    }
+
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Overlay Simulation: Safe Zone Grid */
+    .overlay-safe-zone {
+      display: none;
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border: 3px dashed rgba(234, 88, 12, 0.6);
+      background: linear-gradient(90deg, rgba(239, 68, 68, 0.12) 0%, rgba(239, 68, 68, 0.12) 35%, rgba(34, 197, 94, 0.06) 35%, rgba(34, 197, 94, 0.06) 100%);
+    }
+
+    .safe-zone-label-left {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      background: rgba(220, 38, 38, 0.9);
+      color: #FFFFFF;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .safe-zone-label-right {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(22, 163, 74, 0.9);
+      color: #FFFFFF;
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    /* Overlay Simulation: Google Play Web Desktop */
+    .overlay-desktop-play {
+      display: none;
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px 48px;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%);
+    }
+
+    .play-profile-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 24px;
+    }
+
+    .play-avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 20px;
+      background: #FFFFFF;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      border: 2px solid #FFFFFF;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .play-info {
+      color: #FFFFFF;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      margin-bottom: 6px;
+    }
+
+    .play-info h2 {
+      font-size: 28px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .verified-icon {
+      display: inline-flex;
+      width: 20px;
+      height: 20px;
+      background: #3B82F6;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 12px;
+    }
+
+    .play-info p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    /* Overlay Simulation: Google Play Mobile App */
+    .overlay-mobile-play {
+      display: none;
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .mobile-phone-frame {
+      width: 320px;
+      height: 90%;
+      background: #FFFFFF;
+      border-radius: 36px;
+      border: 8px solid #1C1917;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    }
+
+    .mobile-status-bar {
+      height: 28px;
+      background: #000;
+      color: #fff;
+      font-size: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    .mobile-banner-crop {
+      width: 100%;
+      height: 140px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mobile-banner-crop img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mobile-profile-content {
+      padding: 14px 16px;
+      position: relative;
+      flex: 1;
+      background: #FAF9F6;
+    }
+
+    .mobile-avatar-overlap {
+      width: 60px;
+      height: 60px;
+      border-radius: 16px;
+      background: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      border: 2px solid #FFFFFF;
+      position: absolute;
+      top: -30px;
+      left: 16px;
+      padding: 6px;
+    }
+
+    .mobile-avatar-overlap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .mobile-header-text {
+      margin-top: 34px;
+    }
+
+    .mobile-header-text h3 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .mobile-header-text span {
+      font-size: 12px;
+      color: #78716C;
+    }
+
+    .mobile-tabs {
+      display: flex;
+      gap: 16px;
+      border-bottom: 1px solid #E7E5E4;
+      margin-top: 14px;
+      padding-bottom: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #78716C;
+    }
+
+    .mobile-tabs .active {
+      color: var(--zen-orange);
+      border-bottom: 2px solid var(--zen-orange);
+      padding-bottom: 4px;
+    }
+
+    /* Specifications Card */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--slate-border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .spec-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px dashed var(--slate-border);
+      font-size: 13px;
+    }
+
+    .spec-item:last-child {
+      border-bottom: none;
+    }
+
+    .spec-label {
+      color: var(--slate-muted);
+    }
+
+    .spec-val {
+      font-weight: 600;
+      color: var(--slate-dark);
+    }
+
+    .check-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: #16A34A;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand-title">
+        <img class="brand-logo" src="/assets/branding/kd-labs-symbol-transparent.svg" alt="KD Labs Logo">
+        <div>
+          <h1>Google Play Developer Profile Header</h1>
+          <div class="subtitle">KD Labs • Japanese Minimalist Washi & Zen Orange Aesthetic</div>
+        </div>
+      </div>
+      <div style="font-size: 13px; color: var(--slate-muted);">
+        Status: <span class="check-badge">✓ Google Play Compliant</span>
+      </div>
+    </header>
+
+    <!-- Controls Bar -->
+    <div class="controls-bar">
+      <div class="segmented-group">
+        <button class="seg-btn active" onclick="setMode('raw')">🖼️ Clean Header</button>
+        <button class="seg-btn" onclick="setMode('safe-zone')">📐 Safe Zone Grid</button>
+        <button class="seg-btn" onclick="setMode('desktop')">💻 Desktop Play Store</button>
+        <button class="seg-btn" onclick="setMode('mobile')">📱 Mobile App Store</button>
+      </div>
+
+      <div class="download-group">
+        <a href="/assets/branding/google-play-header.png" download="google-play-header-4096x2304.png" class="btn btn-primary">
+          ⬇️ PNG 4096×2304 (Official Max)
+        </a>
+        <a href="/assets/branding/google-play-header.jpg" download="google-play-header-4096x2304.jpg" class="btn btn-secondary">
+          ⬇️ JPG 4096×2304
+        </a>
+        <a href="/assets/branding/google-play-header-2048.png" download="google-play-header-2048x1152.png" class="btn btn-secondary">
+          ⬇️ PNG 2048×1152
+        </a>
+        <a href="/assets/branding/google-play-header.svg" download="google-play-header.svg" class="btn btn-secondary">
+          ⬇️ SVG Vector
+        </a>
+      </div>
+    </div>
+
+    <!-- Viewport Container -->
+    <div class="preview-viewport" id="viewport">
+      <img src="/assets/branding/google-play-header.png" alt="KD Labs Google Play Developer Header" class="banner-img">
+
+      <!-- Safe Zone Overlay -->
+      <div class="overlay-safe-zone" id="overlaySafeZone">
+        <div class="safe-zone-label-left">⚠️ Avatar & Studio Overlay Zone (Protected Area)</div>
+        <div class="safe-zone-label-right">✓ Prime Content Safe Zone (KD Labs Logo Mark)</div>
+      </div>
+
+      <!-- Desktop Play Store Simulator Overlay -->
+      <div class="overlay-desktop-play" id="overlayDesktop">
+        <div class="play-profile-row">
+          <div class="play-avatar">
+            <img src="/assets/branding/kd-labs-icon.png" alt="Avatar">
+          </div>
+          <div class="play-info">
+            <h2>KD Labs <span class="verified-icon">✓</span></h2>
+            <p>100% Offline Mobile Applications • Zero Telemetry</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Play Store Simulator Overlay -->
+      <div class="overlay-mobile-play" id="overlayMobile">
+        <div class="mobile-phone-frame">
+          <div class="mobile-status-bar">
+            <span>9:41</span>
+            <span>5G 100%</span>
+          </div>
+          <div class="mobile-banner-crop">
+            <img src="/assets/branding/google-play-header.png" alt="Crop">
+          </div>
+          <div class="mobile-profile-content">
+            <div class="mobile-avatar-overlap">
+              <img src="/assets/branding/kd-labs-icon.png" alt="KD Icon">
+            </div>
+            <div class="mobile-header-text">
+              <h3>KD Labs</h3>
+              <span>Developer • Tools & Productivity</span>
+            </div>
+            <div class="mobile-tabs">
+              <span class="active">Apps</span>
+              <span>About</span>
+              <span>Reviews</span>
+            </div>
+            <div style="margin-top: 20px; font-size: 11px; color: #78716C;">
+              <strong>Simple OTP: Offline 2FA Authenticator</strong>
+              <div style="background: #E7E5E4; height: 48px; border-radius: 8px; margin-top: 8px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Technical Specs & Compliance Checklist -->
+    <div class="specs-grid">
+      <div class="card">
+        <h3>📋 Google Play Technical Specs</h3>
+        <div class="spec-item">
+          <span class="spec-label">Dimensions</span>
+          <span class="spec-val">4096 × 2304 px (16:9)</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Format</span>
+          <span class="spec-val">24-bit RGB PNG (No Alpha) / JPG</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">File Size</span>
+          <span class="spec-val">678 KB (&lt; 15 MB limit)</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Aspect Ratio</span>
+          <span class="spec-val">16 : 9 Perfect Ratio</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🎨 Design Identity (Zen Light Washi)</h3>
+        <div class="spec-item">
+          <span class="spec-label">Background Base</span>
+          <span class="spec-val">Washi Paper (#FBF9F5 / #FCFAF7)</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Brand Accent</span>
+          <span class="spec-val">Zen Orange (#EA580C / #FB923C)</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Typography</span>
+          <span class="spec-val">Plus Jakarta Sans</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Layout Philosophy</span>
+          <span class="spec-val">Google Play Safe-Zone Aware</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🚀 Ready-to-Upload Files</h3>
+        <div class="spec-item">
+          <span class="spec-label">Recommended Upload</span>
+          <span class="spec-val"><code>google-play-header.png</code></span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">JPG Alternative</span>
+          <span class="spec-val"><code>google-play-header.jpg</code></span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Vector Master</span>
+          <span class="spec-val"><code>google-play-header.svg</code></span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">Console Page</span>
+          <span class="spec-val">Developer page &gt; Header image</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function setMode(mode) {
+      document.querySelectorAll('.seg-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const safeZone = document.getElementById('overlaySafeZone');
+      const desktop = document.getElementById('overlayDesktop');
+      const mobile = document.getElementById('overlayMobile');
+
+      safeZone.style.display = 'none';
+      desktop.style.display = 'none';
+      mobile.style.display = 'none';
+
+      if (mode === 'safe-zone') {
+        safeZone.style.display = 'block';
+      } else if (mode === 'desktop') {
+        desktop.style.display = 'flex';
+      } else if (mode === 'mobile') {
+        mobile.style.display = 'flex';
+      }
+    }
+  </script>
+</body>
+</html>
