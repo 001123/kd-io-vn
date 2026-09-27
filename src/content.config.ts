@@ -13,8 +13,12 @@ const blog = defineCollection({
 			// Transform string to Date object
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
-			heroImage: z.optional(image()),
+			heroImage: z.string().optional(),
+			tags: z.array(z.string()).default([]),
+			author: z.string().default('KD Labs'),
+			readingTime: z.string().optional(),
 		}),
 });
 
 export const collections = { blog };
+

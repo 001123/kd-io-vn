@@ -1,0 +1,137 @@
+---
+interface Props {
+  targetSelector?: string;
+  label?: string;
+}
+
+const {
+  targetSelector = '.blog-prose',
+  label = 'Tiến độ đọc và cuộn lên đầu trang',
+} = Astro.props;
+---
+
+<!-- Floating Circular Reading Progress Badge -->
+<button
+  id="reading-progress-widget"
+  type="button"
+  aria-label={label}
+  class="fixed bottom-6 right-6 z-40 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center backdrop-blur-md bg-white/90 dark:bg-[#161412]/90 border border-stone-200/80 dark:border-stone-800/80 shadow-lg shadow-orange-500/10 hover:shadow-orange-500/25 transition-all duration-300 opacity-0 translate-y-4 pointer-events-none group cursor-pointer hover:border-orange-500/50 hover:scale-105 active:scale-95"
+>
+  <!-- Circular SVG Progress Ring -->
+  <svg class="w-full h-full -rotate-90 p-1" viewBox="0 0 48 48">
+    <!-- Background Track -->
+    <circle
+      cx="24"
+      cy="24"
+      r="20"
+      class="text-stone-200 dark:text-stone-800"
+      stroke-width="3"
+      stroke="currentColor"
+      fill="transparent"
+    />
+    <!-- Active Progress Bar -->
+    <circle
+      id="reading-progress-bar"
+      cx="24"
+      cy="24"
+      r="20"
+      class="text-orange-600 dark:text-orange-500 transition-all duration-100 ease-out"
+      stroke-width="3.2"
+      stroke-dasharray="125.66"
+      stroke-dashoffset="125.66"
+      stroke-linecap="round"
+      stroke="currentColor"
+      fill="transparent"
+    />
+  </svg>
+
+  <!-- Center Content: Up Arrow Icon -->
+  <div class="absolute inset-0 flex items-center justify-center">
+    <svg
+      class="w-4 h-4 sm:w-5 sm:h-5 text-stone-700 dark:text-stone-200 group-hover:text-orange-600 dark:group-hover:text-orange-400 group-hover:-translate-y-0.5 transition-all duration-200"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </div>
+</button>
+
+<script is:inline define:vars={{ targetSelector }}>
+  (function initReadingProgress() {
+    function setup() {
+      const widget = document.getElementById('reading-progress-widget');
+      const progressBar = document.getElementById('reading-progress-bar');
+      const article = document.querySelector(targetSelector);
+
+      if (!widget || !progressBar || !article) return;
+
+      const circumference = 125.66; // 2 * Math.PI * 20
+      let ticking = false;
+
+      function updateProgress() {
+        const rect = article.getBoundingClientRect();
+        const articleTop = rect.top + window.scrollY;
+        const articleHeight = article.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollY = window.scrollY;
+
+        // Start measuring when top of article is in view
+        // End when bottom of article is in view
+        const startPoint = articleTop - 120; // 120px offset for header
+        const endPoint = articleTop + articleHeight - windowHeight;
+        const distance = endPoint - startPoint;
+
+        let percentage = 0;
+        if (distance > 0) {
+          percentage = ((scrollY - startPoint) / distance) * 100;
+          percentage = Math.min(100, Math.max(0, Math.round(percentage)));
+        }
+
+        // Update SVG circle
+        const offset = circumference - (percentage / 100) * circumference;
+        progressBar.style.strokeDashoffset = offset.toFixed(2);
+
+        // Toggle widget visibility (show when >= 5% through article or scrolled > 200px)
+        if (percentage >= 3 || (scrollY > articleTop && scrollY > 200)) {
+          widget.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+          widget.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        } else {
+          widget.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+          widget.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+        }
+
+        ticking = false;
+      }
+
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(updateProgress);
+          ticking = true;
+        }
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+
+      widget.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      });
+
+      // Initial run
+      updateProgress();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setup);
+    } else {
+      setup();
+    }
+
+    document.addEventListener('astro:after-swap', setup);
+  })();
+</script>

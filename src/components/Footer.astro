@@ -13,6 +13,7 @@ const homeUrl = currentLang === 'vi' ? '/' : `/${currentLang}/`;
 const pressUrl = currentLang === 'vi' ? '/press' : `/${currentLang}/press`;
 const privacyUrl = currentLang === 'vi' ? '/privacy' : `/${currentLang}/privacy`;
 const termsUrl = currentLang === 'vi' ? '/terms' : `/${currentLang}/terms`;
+const blogUrl = currentLang === 'vi' ? '/blog' : `/${currentLang}/blog`;
 const currentYear = new Date().getFullYear();
 ---
 
@@ -68,6 +69,11 @@ const currentYear = new Date().getFullYear();
           <li>
             <a href={`${homeUrl}#philosophy`} class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
               {t.nav.philosophy}
+            </a>
+          </li>
+          <li>
+            <a href={blogUrl} class="hover:text-orange-600 dark:hover:text-orange-400 transition-colors">
+              {t.nav.blog}
             </a>
           </li>
           <li>

@@ -25,5 +25,7 @@ export default defineConfig({
     '/vi/privacy': '/privacy',
     '/vi/terms': '/terms',
     '/vi/apps/[slug]': '/apps/[slug]',
+    '/vi/blog': '/blog',
+    '/vi/blog/[slug]': '/blog/[slug]',
   },
 });
