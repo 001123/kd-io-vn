@@ -1,18 +1,18 @@
 =====================================================
-KD LAB - BRAND GUIDELINES & ASSETS KIT
+KD LABS - BRAND GUIDELINES & ASSETS KIT
 =====================================================
 
-Studio: KD Lab
+Studio: KD Labs
 Website: https://kd.io.vn
 Focus: 100% Offline Mobile Apps, Hardware-backed Cryptography
 
 1. LOGO FILES
-- kd-lab-icon.svg / .png: App icon badge (dark background)
-- kd-lab-symbol-transparent.svg / .png: Enso Zen open circle & orange dot
-- kd-lab-logo-horizontal-dark.svg / .png: Full horizontal lockup for light surfaces
-- kd-lab-logo-horizontal-light.svg / .png: Full horizontal lockup for dark surfaces
-- kd-lab-logo-monochrome-dark.svg / .png: Black & white print version
-- kd-lab-logo-monochrome-white.svg / .png: Pure white inverted version
+- kd-labs-icon.svg / .png: App icon badge (dark background)
+- kd-labs-symbol-transparent.svg / .png: Enso Zen open circle & orange dot
+- kd-labs-logo-horizontal-dark.svg / .png: Full horizontal lockup for light surfaces
+- kd-labs-logo-horizontal-light.svg / .png: Full horizontal lockup for dark surfaces
+- kd-labs-logo-monochrome-dark.svg / .png: Black & white print version
+- kd-labs-logo-monochrome-white.svg / .png: Pure white inverted version
 
 2. OFFICIAL MASCOTS
 - be-khoa-mascot.svg / .png: Bé Khóa (Lock-bot) - Flagship Simple OTP mascot
@@ -38,4 +38,4 @@ Focus: 100% Offline Mobile Apps, Hardware-backed Cryptography
 - DON'T replace the Zen Orange accent color with arbitrary colors.
 
 Media Inquiries: contact@kd.io.vn
-Copyright (c) KD Lab. All rights reserved.
+Copyright (c) KD Labs. All rights reserved.

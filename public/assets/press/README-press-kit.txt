@@ -1,22 +1,22 @@
 =====================================================
-KD LAB - OFFICIAL PRESS KIT & BRAND ASSETS
+KD LABS - OFFICIAL PRESS KIT & BRAND ASSETS
 =====================================================
 
-Studio: KD Lab
+Studio: KD Labs
 Website: https://kd.io.vn
 Press Inquiries: contact@kd.io.vn
 Focus: 100% Offline Mobile Apps, Hardware-backed Cryptography
 
 1. OFFICIAL BOILERPLATE
-"KD Lab là một indie mobile studio độc lập tại Việt Nam, sáng tạo các ứng dụng di động tối giản theo tinh thần Zen Nhật Bản kết hợp mật mã học phần cứng hiện đại. Với tôn chỉ 100% ngoại tuyến (Zero-Network) và cam kết không thu thập dữ liệu người dùng, KD Lab hướng tới việc mang lại sự an tâm tuyệt đối và trải nghiệm tĩnh tại cho người dùng công nghệ trên toàn cầu."
+"KD Labs là một indie mobile studio độc lập tại Việt Nam, sáng tạo các ứng dụng di động tối giản theo tinh thần Zen Nhật Bản kết hợp mật mã học phần cứng hiện đại. Với tôn chỉ 100% ngoại tuyến (Zero-Network) và cam kết không thu thập dữ liệu người dùng, KD Labs hướng tới việc mang lại sự an tâm tuyệt đối và trải nghiệm tĩnh tại cho người dùng công nghệ trên toàn cầu."
 
 2. LOGO SUITE
-- kd-lab-icon.svg / .png: App icon badge (dark background)
-- kd-lab-symbol-transparent.svg / .png: Enso Zen open circle & orange dot
-- kd-lab-logo-horizontal-dark.svg / .png: Full horizontal lockup for light surfaces
-- kd-lab-logo-horizontal-light.svg / .png: Full horizontal lockup for dark surfaces
-- kd-lab-logo-monochrome-dark.svg / .png: Black & white print version
-- kd-lab-logo-monochrome-white.svg / .png: Pure white inverted version
+- kd-labs-icon.svg / .png: App icon badge (dark background)
+- kd-labs-symbol-transparent.svg / .png: Enso Zen open circle & orange dot
+- kd-labs-logo-horizontal-dark.svg / .png: Full horizontal lockup for light surfaces
+- kd-labs-logo-horizontal-light.svg / .png: Full horizontal lockup for dark surfaces
+- kd-labs-logo-monochrome-dark.svg / .png: Black & white print version
+- kd-labs-logo-monochrome-white.svg / .png: Pure white inverted version
 
 3. APPLICATION ICONS
 - simple-otp-icon.png: Official Simple OTP 512x512px app icon for Google Play Store
@@ -40,4 +40,4 @@ Focus: 100% Offline Mobile Apps, Hardware-backed Cryptography
 - DON'T replace the Zen Orange accent color with arbitrary colors.
 
 Media Inquiries: contact@kd.io.vn
-Copyright (c) KD Lab. All rights reserved.
+Copyright (c) KD Labs. All rights reserved.

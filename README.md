@@ -1,6 +1,6 @@
-# 🍊 KD Lab Website (`kd.io.vn`)
+# 🍊 KD Labs Website (`kd.io.vn`)
 
-The official website and product showcase portfolio for **KD Lab** — a Google Play Developer dedicated to crafting mobile applications with a **Privacy-First**, **100% Offline (Zero-Network Architecture)**, and **Zen Minimalist** design philosophy.
+The official website and product showcase portfolio for **KD Labs** — a Google Play Developer dedicated to crafting mobile applications with a **Privacy-First**, **100% Offline (Zero-Network Architecture)**, and **Zen Minimalist** design philosophy.
 
 [![Website](https://img.shields.io/badge/Live_Site-kd.io.vn-EA580C?style=for-the-badge&logo=cloudflare&logoColor=white)](https://kd.io.vn)
 [![Astro](https://img.shields.io/badge/Astro-v5-FF5D01?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
@@ -237,8 +237,8 @@ Configure custom domains directly in **Cloudflare Dashboard** > **Workers & Page
 
 ## 📬 Contact & License
 
-- **Developer:** KD Lab
-- **Google Play:** [KD Lab on Google Play Store](https://play.google.com/store/apps/dev?id=7744040993303027729)
+- **Developer:** KD Labs
+- **Google Play:** [KD Labs on Google Play Store](https://play.google.com/store/apps/dev?id=7744040993303027729)
 - **General Inquiries:** [contact@kd.io.vn](mailto:contact@kd.io.vn)
 - **Technical Support:** [support@kd.io.vn](mailto:support@kd.io.vn)
 - **License:** Distributed under the [MIT License](LICENSE).

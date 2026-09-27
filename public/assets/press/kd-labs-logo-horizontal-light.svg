@@ -6,8 +6,8 @@
     <circle cx="55.5" cy="34.5" r="6" fill="#FB713B"/>
   </g>
   <!-- Brand Name -->
-  <text x="125" y="62" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" fill="#F7F5F0" letter-spacing="-0.5">KD Lab</text>
-  <circle cx="282" cy="54" r="5" fill="#FB713B"/>
+  <text x="125" y="62" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" fill="#F7F5F0" letter-spacing="-0.5">KD Labs</text>
+  <circle cx="307" cy="54" r="5" fill="#FB713B"/>
   <!-- Subtitle -->
   <text x="126" y="86" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#A8A29E" letter-spacing="3">GOOGLE PLAY STUDIO</text>
 </svg>

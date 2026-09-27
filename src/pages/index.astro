@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KD Lab • Google Play Developer</title>
+    <title>KD Labs • Google Play Developer</title>
     
     <!-- Fallback meta refresh if JS is disabled -->
     <meta http-equiv="refresh" content="0;url=/vi/" />
@@ -15,21 +15,62 @@
     <script is:inline>
       (function() {
         try {
-          const savedLang = localStorage.getItem('kd_lang');
-          if (savedLang === 'vi') {
-            window.location.replace('/vi/');
-            return;
-          } else if (savedLang === 'en') {
-            window.location.replace('/en/');
+          // 1. Explicit query parameter override (?lang=vi or ?lang=en)
+          var params = new URLSearchParams(window.location.search);
+          var paramLang = params.get('lang');
+          if (paramLang === 'vi' || paramLang === 'en') {
+            try { localStorage.setItem('kd_lang', paramLang); } catch (e) {}
+            window.location.replace('/' + paramLang + '/');
             return;
           }
 
-          const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-          if (browserLang.startsWith('vi')) {
-            window.location.replace('/vi/');
-          } else {
-            window.location.replace('/en/');
+          // 2. Comprehensive browser language detection
+          // Checks navigator.languages (array), navigator.language, legacy browser properties, and Intl API
+          var langs = [];
+          if (Array.isArray(navigator.languages)) {
+            for (var i = 0; i < navigator.languages.length; i++) {
+              if (navigator.languages[i]) {
+                langs.push(String(navigator.languages[i]).toLowerCase());
+              }
+            }
           }
+          if (navigator.language) {
+            langs.push(String(navigator.language).toLowerCase());
+          }
+          if (navigator.userLanguage) {
+            langs.push(String(navigator.userLanguage).toLowerCase());
+          }
+          if (navigator.browserLanguage) {
+            langs.push(String(navigator.browserLanguage).toLowerCase());
+          }
+          try {
+            var intl = Intl.DateTimeFormat().resolvedOptions().locale;
+            if (intl) {
+              langs.push(String(intl).toLowerCase());
+            }
+          } catch (e) {}
+
+          // Check if Vietnamese is present in user's preferred languages
+          var hasVietnamese = langs.some(function(l) {
+            return l === 'vi' || l.indexOf('vi-') === 0 || l.indexOf('vi_') === 0;
+          });
+
+          if (hasVietnamese) {
+            try { localStorage.setItem('kd_lang', 'vi'); } catch (e) {}
+            window.location.replace('/vi/');
+            return;
+          }
+
+          // 3. If browser does not have Vietnamese, check stored preference
+          var savedLang = null;
+          try { savedLang = localStorage.getItem('kd_lang'); } catch (e) {}
+          if (savedLang === 'vi') {
+            window.location.replace('/vi/');
+            return;
+          }
+
+          // 4. Default for non-Vietnamese visitors
+          window.location.replace('/en/');
         } catch (e) {
           window.location.replace('/vi/');
         }
@@ -60,7 +101,7 @@
   </head>
   <body>
     <div class="redirect-box">
-      <h2>KD Lab</h2>
+      <h2>KD Labs</h2>
       <p>Đang chuyển hướng / Redirecting...</p>
       <p>
         <a href="/vi/">Tiếng Việt</a> | <a href="/en/">English</a>

@@ -142,8 +142,8 @@ export const appsData: AppItem[] = [
       en: 'Minimalist Pomodoro timer paired with ambient nature soundscapes, designed to cultivate deep work without cognitive noise.',
     },
     fullDescription: {
-      vi: 'Dự án đang trong phòng nghiên cứu phát triển tiếp theo của KD Lab.',
-      en: 'Active laboratory project at KD Lab.',
+      vi: 'Dự án đang trong phòng nghiên cứu phát triển tiếp theo của KD Labs.',
+      en: 'Active laboratory project at KD Labs.',
     },
     features: {
       vi: [
@@ -176,8 +176,8 @@ export const appsData: AppItem[] = [
       en: 'Pre-configured reserve slot. You can easily add your next mobile application to src/data/apps.ts.',
     },
     fullDescription: {
-      vi: 'Khung hiển thị mô-đun cho nhà phát triển KD Lab.',
-      en: 'Modular showcase slot for KD Lab developer.',
+      vi: 'Khung hiển thị mô-đun cho nhà phát triển KD Labs.',
+      en: 'Modular showcase slot for KD Labs developer.',
     },
     features: {
       vi: [

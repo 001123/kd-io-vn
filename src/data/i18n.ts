@@ -18,7 +18,7 @@ export const translations = {
       titleLine1: 'Tối giản trong thiết kế.',
       titleLine2: 'An toàn trong từng thao tác.',
       description:
-        'KD Lab sáng tạo các ứng dụng di động tinh gọn, 100% ngoại tuyến, bảo vệ bằng mã hóa phần cứng và tôn trọng quyền riêng tư tuyệt đối.',
+        'KD Labs sáng tạo các ứng dụng di động tinh gọn, 100% ngoại tuyến, bảo vệ bằng mã hóa phần cứng và tôn trọng quyền riêng tư tuyệt đối.',
       ctaGooglePlay: 'Sắp ra mắt trên Google Play',
       ctaBrowseApps: 'Khám phá Simple OTP',
       statsOffline: '100% Ngoại tuyến',
@@ -30,17 +30,17 @@ export const translations = {
       tagline: 'Dự án trọng tâm',
       title: 'Ứng dụng sắp ra mắt',
       subtitle:
-        'Tâm điểm ra mắt sắp tới của KD Lab: Simple OTP - Ứng dụng xác thực 2FA ngoại tuyến 100%, bảo vệ bằng mã hóa phần cứng cùng linh vật trợ thủ tương tác.',
+        'Tâm điểm ra mắt sắp tới của KD Labs: Simple OTP - Ứng dụng xác thực 2FA ngoại tuyến 100%, bảo vệ bằng mã hóa phần cứng cùng linh vật trợ thủ tương tác.',
       viewDetails: 'Chi tiết & Tính năng',
       getOnGooglePlay: 'Sắp có trên Google Play',
       viewOnGithub: 'Mã nguồn trên GitHub',
       releasedBadge: 'Đã phát hành',
       comingSoonBadge: 'Sắp ra mắt',
-      inLabBadge: 'Phòng Lab KD',
+      inLabBadge: 'KD Labs',
       readySlotBadge: 'Slot mở sẵn',
       slotTitleTemplate: 'Dự án tiếp theo',
       slotDescTemplate:
-        'KD Lab đang nghiên cứu và phát triển công cụ mới theo tinh thần Zen. Slot này đã sẵn sàng để tích hợp sản phẩm tiếp theo.',
+        'KD Labs đang nghiên cứu và phát triển công cụ mới theo tinh thần Zen. Slot này đã sẵn sàng để tích hợp sản phẩm tiếp theo.',
       slotHint: 'Cấu hình dễ dàng qua tệp dữ liệu src/data/apps.ts',
       featuresHeading: 'Tính năng cốt lõi:',
       version: 'Phiên bản',
@@ -70,7 +70,7 @@ export const translations = {
       tagline: 'Cam kết minh bạch',
       title: 'Tiêu chuẩn an toàn Google Play',
       subtitle:
-        'Tại KD Lab, dữ liệu của bạn thuộc về bạn. Chúng tôi tuân thủ nghiêm ngặt các chính sách an toàn dữ liệu của Google Play.',
+        'Tại KD Labs, dữ liệu của bạn thuộc về bạn. Chúng tôi tuân thủ nghiêm ngặt các chính sách an toàn dữ liệu của Google Play.',
       point1Title: 'Không thu thập dữ liệu ngầm',
       point1Desc:
         '0 kết nối mạng, 0 SDK thu thập dữ liệu, 0 theo dõi hành vi người dùng.',
@@ -84,7 +84,7 @@ export const translations = {
     },
     contact: {
       tagline: 'Kết nối',
-      title: 'Đồng hành cùng KD Lab',
+      title: 'Đồng hành cùng KD Labs',
       subtitle:
         'Bạn có câu hỏi, đóng góp mã nguồn hoặc muốn thử nghiệm sớm Simple OTP? Chúng tôi luôn sẵn lòng lắng nghe.',
       emailLabel: 'Email hỗ trợ chính thức',
@@ -103,7 +103,7 @@ export const translations = {
     },
     footer: {
       description:
-        'KD Lab - Studio phát triển ứng dụng di động độc lập. Tinh gọn, hữu ích và tôn trọng trải nghiệm người dùng Android & iOS.',
+        'KD Labs - Studio phát triển ứng dụng di động độc lập. Tinh gọn, hữu ích và tôn trọng trải nghiệm người dùng Android & iOS.',
       quickLinks: 'Điều hướng',
       legal: 'Pháp lý',
       privacyPolicy: 'Chính sách quyền riêng tư',
@@ -131,13 +131,13 @@ export const translations = {
       title: 'Chính Sách Quyền Riêng Tư',
       lastUpdated: 'Cập nhật lần cuối: Tháng 9, 2026',
       intro:
-        'KD Lab cam kết bảo vệ tuyệt đối sự riêng tư của bạn. Chúng tôi phát triển các ứng dụng di động như Simple OTP với kiến trúc 100% ngoại tuyến (Zero-Network) và không bao giờ thu thập thông tin người dùng.',
+        'KD Labs cam kết bảo vệ tuyệt đối sự riêng tư của bạn. Chúng tôi phát triển các ứng dụng di động như Simple OTP với kiến trúc 100% ngoại tuyến (Zero-Network) và không bao giờ thu thập thông tin người dùng.',
       summaryBadge: 'Tuân thủ Google Play Developer Policy & Kiến trúc Không-Mạng',
       sections: [
         {
           heading: '1. Không thu thập bất kỳ dữ liệu nào',
           content:
-            'Simple OTP và các ứng dụng của KD Lab KHÔNG thu thập tên, số điện thoại, địa chỉ IP, vị trí địa lý hay danh bạ của bạn. Ứng dụng không sử dụng bất kỳ SDK phân tích (như Firebase, Google Analytics) hay mã quảng cáo nào.',
+            'Simple OTP và các ứng dụng của KD Labs KHÔNG thu thập tên, số điện thoại, địa chỉ IP, vị trí địa lý hay danh bạ của bạn. Ứng dụng không sử dụng bất kỳ SDK phân tích (như Firebase, Google Analytics) hay mã quảng cáo nào.',
         },
         {
           heading: '2. Hoạt động ngoại tuyến 100% (Zero-Network)',
@@ -157,7 +157,7 @@ export const translations = {
         {
           heading: '5. Mã nguồn mở minh bạch & Liên hệ',
           content:
-            'Mã nguồn của Simple OTP được công khai minh bạch tại github.com/001123/simple-otp để cộng đồng tự do kiểm chứng. Mọi thắc mắc vui lòng gửi về support@kd-labs.io.',
+            'Mã nguồn của Simple OTP được công khai minh bạch tại github.com/001123/simple-otp để cộng đồng tự do kiểm chứng. Mọi thắc mắc vui lòng gửi về support@kd.io.vn.',
         },
       ],
     },
@@ -165,7 +165,7 @@ export const translations = {
       title: 'Điều Khoản Dịch Vụ',
       lastUpdated: 'Cập nhật lần cuối: Tháng 9, 2026',
       intro:
-        'Chào mừng bạn đến với các ứng dụng của KD Lab. Khi cài đặt và sử dụng ứng dụng của chúng tôi từ Google Play hoặc kho mã nguồn mở, bạn đồng ý với các điều khoản dưới đây.',
+        'Chào mừng bạn đến với các ứng dụng của KD Labs. Khi cài đặt và sử dụng ứng dụng của chúng tôi từ Google Play hoặc kho mã nguồn mở, bạn đồng ý với các điều khoản dưới đây.',
       sections: [
         {
           heading: '1. Giấy phép mã nguồn mở & Sử dụng',
@@ -175,7 +175,7 @@ export const translations = {
         {
           heading: '2. Trách nhiệm quản lý khóa bí mật',
           content:
-            'Vì KD Lab không lưu trữ dữ liệu của bạn trên bất kỳ máy chủ nào, bạn chịu trách nhiệm bảo quản mật khẩu sao lưu và thiết bị cá nhân của mình.',
+            'Vì KD Labs không lưu trữ dữ liệu của bạn trên bất kỳ máy chủ nào, bạn chịu trách nhiệm bảo quản mật khẩu sao lưu và thiết bị cá nhân của mình.',
         },
         {
           heading: '3. Miễn trừ trách nhiệm',
@@ -186,9 +186,9 @@ export const translations = {
     },
     pressPage: {
       badge: 'Media & Press Kit',
-      title: 'Bộ Tư Liệu Báo Chí & Thương Hiệu KD Lab',
+      title: 'Bộ Tư Liệu Báo Chí & Thương Hiệu KD Labs',
       subtitle:
-        'Thông cáo báo chí chính thức, thông tin studio, hệ thống logo vector, bảng màu Zen và biểu tượng ứng dụng KD Lab.',
+        'Thông cáo báo chí chính thức, thông tin studio, hệ thống logo vector, bảng màu Zen và biểu tượng ứng dụng KD Labs.',
       downloadKitBtn: 'Tải Trọn Bộ Press Kit (.zip)',
       downloadKitSub: 'Bao gồm file SVG vector, PNG 2K, App Icon, thông cáo & hướng dẫn sử dụng',
       backToHome: 'Quay về trang chủ',
@@ -200,11 +200,11 @@ export const translations = {
           'Trong Thiền học Á Đông, Ensō là vòng tròn vẽ bằng một nét mực dứt khoát không ngắt quãng. Vòng tròn mở, không khép kín hoàn toàn thể hiện tinh thần Kanso (Giản dị), sự khiêm tốn và khả năng đón nhận sự tiến hóa không ngừng.',
         ensoText2:
           'Dấu chấm tròn màu cam (Zen Orange) đặt tại vị trí trung tâm năng lượng của vòng tròn, tượng trưng cho hạt nhân bảo mật bất biến và ngọn lửa đam mê của một indie studio độc lập.',
-        nameHeading: 'Ý nghĩa tên gọi "KD Lab"',
+        nameHeading: 'Ý nghĩa tên gọi "KD Labs"',
         nameText1:
           'Chữ "KD" là sự hòa quyện giữa tinh thần Kanso (Tối giản trong tiếng Nhật) và Khởi Đầu (Sự tươi mới trong tiếng Việt). Dưới góc nhìn mật mã học, KD còn đại diện cho "Key & Data" - chìa khóa và dữ liệu được bảo vệ an toàn tuyệt đối.',
         nameText2:
-          '"Lab" là không gian nghiên cứu độc lập, nơi chúng tôi không ngừng thử nghiệm, tinh lọc để tạo ra những ứng dụng di động ngoại tuyến 100% tinh gọn nhất.',
+          '"Labs" là không gian nghiên cứu sáng tạo độc lập, nơi chúng tôi không ngừng thử nghiệm, tinh lọc để tạo ra những ứng dụng di động ngoại tuyến 100% tinh gọn nhất.',
         values: [
           { title: 'Kanso (Tối giản)', desc: 'Loại bỏ chi tiết thừa, tập trung vào cốt lõi trải nghiệm.' },
           { title: 'Zero-Network (Ngoại tuyến)', desc: 'Dữ liệu không bao giờ rời khỏi thiết bị người dùng.' },
@@ -227,48 +227,48 @@ export const translations = {
             name: 'Logo Ngang (Nền Sáng)',
             desc: 'Dành cho nền trắng hoặc giấy Washi. Chữ màu mực Sumi đậm kết hợp vòng tròn Ensō cam.',
             previewBg: 'light',
-            svgUrl: '/assets/press/kd-lab-logo-horizontal-dark.svg',
-            pngUrl: '/assets/press/kd-lab-logo-horizontal-dark.png',
+            svgUrl: '/assets/press/kd-labs-logo-horizontal-dark.svg',
+            pngUrl: '/assets/press/kd-labs-logo-horizontal-dark.png',
           },
           {
             id: 'horizontal-light',
             name: 'Logo Ngang (Nền Tối)',
             desc: 'Dành cho nền đen Sumi hoặc dark mode. Chữ màu sáng thanh thoát với độ tương phản cao.',
             previewBg: 'dark',
-            svgUrl: '/assets/press/kd-lab-logo-horizontal-light.svg',
-            pngUrl: '/assets/press/kd-lab-logo-horizontal-light.png',
+            svgUrl: '/assets/press/kd-labs-logo-horizontal-light.svg',
+            pngUrl: '/assets/press/kd-labs-logo-horizontal-light.png',
           },
           {
             id: 'icon-badge',
             name: 'Icon Badge Ứng Dụng',
             desc: 'Biểu tượng ứng dụng di động bo góc tròn chuẩn squircle trên nền đen Sumi.',
             previewBg: 'transparent',
-            svgUrl: '/assets/press/kd-lab-icon.svg',
-            pngUrl: '/assets/press/kd-lab-icon.png',
+            svgUrl: '/assets/press/kd-labs-icon.svg',
+            pngUrl: '/assets/press/kd-labs-icon.png',
           },
           {
             id: 'symbol-transparent',
             name: 'Ensō Mark (Nền Trong Suốt)',
             desc: 'Biểu tượng vòng tròn Ensō độc lập nền trong suốt, linh hoạt ứng dụng trên mọi chất liệu.',
             previewBg: 'transparent',
-            svgUrl: '/assets/press/kd-lab-symbol-transparent.svg',
-            pngUrl: '/assets/press/kd-lab-symbol-transparent.png',
+            svgUrl: '/assets/press/kd-labs-symbol-transparent.svg',
+            pngUrl: '/assets/press/kd-labs-symbol-transparent.png',
           },
           {
             id: 'monochrome-black',
             name: 'Đơn Sắc Đen (In ấn)',
             desc: 'Dành cho tài liệu đơn sắc, in ấn văn bản hoặc vật phẩm khắc laser.',
             previewBg: 'light',
-            svgUrl: '/assets/press/kd-lab-logo-monochrome-dark.svg',
-            pngUrl: '/assets/press/kd-lab-logo-monochrome-dark.png',
+            svgUrl: '/assets/press/kd-labs-logo-monochrome-dark.svg',
+            pngUrl: '/assets/press/kd-labs-logo-monochrome-dark.png',
           },
           {
             id: 'monochrome-white',
             name: 'Đơn Sắc Trắng (Âm bản)',
             desc: 'Dành cho in áo, khắc laser trên bề mặt tối màu hoặc màn hình đơn sắc.',
             previewBg: 'dark',
-            svgUrl: '/assets/press/kd-lab-logo-monochrome-white.svg',
-            pngUrl: '/assets/press/kd-lab-logo-monochrome-white.png',
+            svgUrl: '/assets/press/kd-labs-logo-monochrome-white.svg',
+            pngUrl: '/assets/press/kd-labs-logo-monochrome-white.png',
           },
         ],
       },
@@ -354,10 +354,10 @@ export const translations = {
         specimenUrl: 'https://fonts.google.com/specimen/Plus+Jakarta+Sans',
         specimenBtn: 'Mở Google Fonts',
         weights: [
-          { name: 'Light 300', class: 'font-light', sample: 'KD Lab - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
-          { name: 'Regular 400', class: 'font-normal', sample: 'KD Lab - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
-          { name: 'SemiBold 600', class: 'font-semibold', sample: 'KD Lab - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
-          { name: 'Bold 700', class: 'font-bold', sample: 'KD Lab - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
+          { name: 'Light 300', class: 'font-light', sample: 'KD Labs - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
+          { name: 'Regular 400', class: 'font-normal', sample: 'KD Labs - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
+          { name: 'SemiBold 600', class: 'font-semibold', sample: 'KD Labs - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
+          { name: 'Bold 700', class: 'font-bold', sample: 'KD Labs - Tối giản trong thiết kế, an toàn trong từng thao tác.' },
         ],
       },
       appIcons: {
@@ -381,7 +381,7 @@ export const translations = {
         tagline: 'Quy chuẩn sử dụng',
         title: 'Điều Nên Làm & Cần Tránh',
         subtitle:
-          'Nhằm đảm bảo sự nhất quán và tính nhận diện của KD Lab trên mọi ấn phẩm truyền thông, vui lòng tuân thủ các quy tắc dưới đây.',
+          'Nhằm đảm bảo sự nhất quán và tính nhận diện của KD Labs trên mọi ấn phẩm truyền thông, vui lòng tuân thủ các quy tắc dưới đây.',
         clearSpaceTitle: 'Khoảng trống an toàn (Clear Space)',
         clearSpaceDesc:
           'Luôn giữ khoảng cách an toàn xung quanh logo tối thiểu bằng chiều cao của chữ "K" trong logo. Không để bất kỳ chữ, hình khối hoặc đường kẻ nào xâm phạm vào vùng an toàn này.',
@@ -407,7 +407,7 @@ export const translations = {
           'Đoạn giới thiệu chuẩn mực sẵn sàng sao chép cho các bài viết báo chí, tin tức công nghệ và đối tác.',
         copyBtn: 'Sao chép Boilerplate',
         copied: 'Đã sao chép đoạn giới thiệu!',
-        text: 'KD Lab là một indie mobile studio độc lập tại Việt Nam, sáng tạo các ứng dụng di động tối giản theo tinh thần Zen Nhật Bản kết hợp mật mã học phần cứng hiện đại. Với tôn chỉ 100% ngoại tuyến (Zero-Network) và cam kết không thu thập dữ liệu người dùng, KD Lab hướng tới việc mang lại sự an tâm tuyệt đối và trải nghiệm tĩnh tại cho người dùng công nghệ trên toàn cầu.',
+        text: 'KD Labs là một indie mobile studio độc lập tại Việt Nam, sáng tạo các ứng dụng di động tối giản theo tinh thần Zen Nhật Bản kết hợp mật mã học phần cứng hiện đại. Với tôn chỉ 100% ngoại tuyến (Zero-Network) và cam kết không thu thập dữ liệu người dùng, KD Labs hướng tới việc mang lại sự an tâm tuyệt đối và trải nghiệm tĩnh tại cho người dùng công nghệ trên toàn cầu.',
         contactTitle: 'Bộ phận Truyền thông & Báo chí',
         contactDesc:
           'Nếu bạn là phóng viên, blogger công nghệ hoặc đối tác cần hình ảnh độ phân giải cao hoặc phỏng vấn nhà sáng lập:',
@@ -432,7 +432,7 @@ export const translations = {
       titleLine1: 'Simplicity in design.',
       titleLine2: 'Security in every touch.',
       description:
-        'KD Lab crafts refined, 100% offline mobile applications engineered with hardware-backed cryptography and uncompromising privacy.',
+        'KD Labs crafts refined, 100% offline mobile applications engineered with hardware-backed cryptography and uncompromising privacy.',
       ctaGooglePlay: 'Coming Soon on Google Play',
       ctaBrowseApps: 'Explore Simple OTP',
       statsOffline: '100% Offline Core',
@@ -444,17 +444,17 @@ export const translations = {
       tagline: 'Flagship Debut',
       title: 'Upcoming Project',
       subtitle:
-        'Upcoming release from KD Lab: Simple OTP - A 100% offline 2FA authenticator with hardware-backed encryption and interactive companion mascots.',
+        'Upcoming release from KD Labs: Simple OTP - A 100% offline 2FA authenticator with hardware-backed encryption and interactive companion mascots.',
       viewDetails: 'Details & Features',
       getOnGooglePlay: 'Coming Soon on Google Play',
       viewOnGithub: 'Source on GitHub',
       releasedBadge: 'Released',
       comingSoonBadge: 'Coming Soon',
-      inLabBadge: 'KD Lab',
+      inLabBadge: 'KD Labs',
       readySlotBadge: 'Open Slot',
       slotTitleTemplate: 'Next Project',
       slotDescTemplate:
-        'KD Lab is actively researching and engineering new tools guided by Zen principles. This slot is configured and ready for your next deployment.',
+        'KD Labs is actively researching and engineering new tools guided by Zen principles. This slot is configured and ready for your next deployment.',
       slotHint: 'Easily customize through data file src/data/apps.ts',
       featuresHeading: 'Core Security Pillars:',
       version: 'Version',
@@ -484,7 +484,7 @@ export const translations = {
       tagline: 'Transparency First',
       title: 'Google Play Data Safety Standards',
       subtitle:
-        'At KD Lab, your cryptographic data belongs exclusively to you. We strictly honor Google Play Developer Data Safety commitments.',
+        'At KD Labs, your cryptographic data belongs exclusively to you. We strictly honor Google Play Developer Data Safety commitments.',
       point1Title: 'Zero Network Tracking',
       point1Desc:
         '0 network calls, 0 third-party telemetry SDKs, 0 user tracking cookies.',
@@ -498,7 +498,7 @@ export const translations = {
     },
     contact: {
       tagline: 'Get in Touch',
-      title: 'Connect with KD Lab',
+      title: 'Connect with KD Labs',
       subtitle:
         'Have feedback, want to contribute to the codebase, or join early beta testing for Simple OTP? We are always glad to connect.',
       emailLabel: 'Official Support Email',
@@ -517,7 +517,7 @@ export const translations = {
     },
     footer: {
       description:
-        'KD Lab - Independent mobile development studio. Crafting refined, 100% offline, privacy-first Android & iOS tools.',
+        'KD Labs - Independent mobile development studio. Crafting refined, 100% offline, privacy-first Android & iOS tools.',
       quickLinks: 'Navigation',
       legal: 'Legal',
       privacyPolicy: 'Privacy Policy',
@@ -545,13 +545,13 @@ export const translations = {
       title: 'Privacy Policy',
       lastUpdated: 'Last Updated: September 2026',
       intro:
-        'KD Lab is committed to protecting your privacy. We engineer mobile applications like Simple OTP with a strict Zero-Network architecture that never collects or transmits user data.',
+        'KD Labs is committed to protecting your privacy. We engineer mobile applications like Simple OTP with a strict Zero-Network architecture that never collects or transmits user data.',
       summaryBadge: 'Google Play Developer Policy & Zero-Network Compliant',
       sections: [
         {
           heading: '1. Zero Data Collection',
           content:
-            'Simple OTP and KD Lab apps DO NOT collect your name, phone number, IP address, geolocation, or contacts. We include zero tracking or telemetry SDKs (no Firebase, no Google Analytics).',
+            'Simple OTP and KD Labs apps DO NOT collect your name, phone number, IP address, geolocation, or contacts. We include zero tracking or telemetry SDKs (no Firebase, no Google Analytics).',
         },
         {
           heading: '2. 100% Offline Architecture',
@@ -571,7 +571,7 @@ export const translations = {
         {
           heading: '5. Open Source Auditability & Contact',
           content:
-            'Simple OTP is free open-source software auditable at github.com/001123/simple-otp. For support or privacy questions, reach us at support@kd-labs.io.',
+            'Simple OTP is free open-source software auditable at github.com/001123/simple-otp. For support or privacy questions, reach us at support@kd.io.vn.',
         },
       ],
     },
@@ -579,7 +579,7 @@ export const translations = {
       title: 'Terms of Service',
       lastUpdated: 'Last Updated: September 2026',
       intro:
-        'Welcome to KD Lab software. By installing or utilizing our applications downloaded from the Google Play Store or open-source repositories, you agree to these terms.',
+        'Welcome to KD Labs software. By installing or utilizing our applications downloaded from the Google Play Store or open-source repositories, you agree to these terms.',
       sections: [
         {
           heading: '1. Open Source License & Usage',
@@ -589,7 +589,7 @@ export const translations = {
         {
           heading: '2. Responsibility for Master Passwords',
           content:
-            'Because KD Lab stores zero data on cloud servers, you are solely responsible for safeguarding your encrypted backup passphrases and physical device access.',
+            'Because KD Labs stores zero data on cloud servers, you are solely responsible for safeguarding your encrypted backup passphrases and physical device access.',
         },
         {
           heading: '3. Disclaimer of Warranties',
@@ -600,7 +600,7 @@ export const translations = {
     },
     pressPage: {
       badge: 'Media & Press Kit',
-      title: 'KD Lab Official Press Kit & Brand Assets',
+      title: 'KD Labs Official Press Kit & Brand Assets',
       subtitle:
         'Official press statement, studio facts, vector logo suites, Zen color system, and application icons.',
       downloadKitBtn: 'Download Press Kit (.zip)',
@@ -614,11 +614,11 @@ export const translations = {
           'In Zen philosophy, an Ensō is a sacred circle drawn in a single, fluid brushstroke. The unclosed, imperfect ring symbolizes Kanso (Simplicity), humility, and an infinite capacity for learning and evolution.',
         ensoText2:
           'The radiant Zen Orange dot placed at the focal core represents the inviolable heart of cryptographic security and the vibrant spirit of an independent studio.',
-        nameHeading: 'The Meaning of "KD Lab"',
+        nameHeading: 'The Meaning of "KD Labs"',
         nameText1:
           'The letters "KD" unite the Japanese concept of Kanso (Simplicity) with "Khởi Đầu" (Vietnamese for fresh beginnings). In cryptographic engineering, KD also signifies "Key & Data" — safeguarded with hardware-backed integrity.',
         nameText2:
-          '"Lab" represents our independent workshop, relentlessly experimenting and distilling mobile tools down to their purest offline essence.',
+          '"Labs" represents our independent workshop, relentlessly experimenting and distilling mobile tools down to their purest offline essence.',
         values: [
           { title: 'Kanso (Simplicity)', desc: 'Stripping away excess to accentuate core digital peace.' },
           { title: 'Zero-Network (100% Offline)', desc: 'Your private keys never leave your physical device.' },
@@ -641,48 +641,48 @@ export const translations = {
             name: 'Horizontal Logo (Light Surface)',
             desc: 'Tailored for pure white or Washi backgrounds. Sumi ink lettering with signature Zen Orange ring.',
             previewBg: 'light',
-            svgUrl: '/assets/press/kd-lab-logo-horizontal-dark.svg',
-            pngUrl: '/assets/press/kd-lab-logo-horizontal-dark.png',
+            svgUrl: '/assets/press/kd-labs-logo-horizontal-dark.svg',
+            pngUrl: '/assets/press/kd-labs-logo-horizontal-dark.png',
           },
           {
             id: 'horizontal-light',
             name: 'Horizontal Logo (Dark Surface)',
             desc: 'Tailored for Sumi black surfaces and dark mode. Clean high-contrast typography.',
             previewBg: 'dark',
-            svgUrl: '/assets/press/kd-lab-logo-horizontal-light.svg',
-            pngUrl: '/assets/press/kd-lab-logo-horizontal-light.png',
+            svgUrl: '/assets/press/kd-labs-logo-horizontal-light.svg',
+            pngUrl: '/assets/press/kd-labs-logo-horizontal-light.png',
           },
           {
             id: 'icon-badge',
             name: 'Application Icon Badge',
             desc: 'Rounded squircle application badge on deep Sumi black backdrop.',
             previewBg: 'transparent',
-            svgUrl: '/assets/press/kd-lab-icon.svg',
-            pngUrl: '/assets/press/kd-lab-icon.png',
+            svgUrl: '/assets/press/kd-labs-icon.svg',
+            pngUrl: '/assets/press/kd-labs-icon.png',
           },
           {
             id: 'symbol-transparent',
             name: 'Ensō Mark (Transparent)',
             desc: 'Standalone Ensō brush circle on transparent background for versatile placement.',
             previewBg: 'transparent',
-            svgUrl: '/assets/press/kd-lab-symbol-transparent.svg',
-            pngUrl: '/assets/press/kd-lab-symbol-transparent.png',
+            svgUrl: '/assets/press/kd-labs-symbol-transparent.svg',
+            pngUrl: '/assets/press/kd-labs-symbol-transparent.png',
           },
           {
             id: 'monochrome-black',
             name: 'Monochrome Black (Print)',
             desc: 'For single-color grayscale print documents, paperwork, and laser engravings.',
             previewBg: 'light',
-            svgUrl: '/assets/press/kd-lab-logo-monochrome-dark.svg',
-            pngUrl: '/assets/press/kd-lab-logo-monochrome-dark.png',
+            svgUrl: '/assets/press/kd-labs-logo-monochrome-dark.svg',
+            pngUrl: '/assets/press/kd-labs-logo-monochrome-dark.png',
           },
           {
             id: 'monochrome-white',
             name: 'Monochrome White (Inverted)',
             desc: 'For laser engraving on dark anodized metal, merchandise, and single-tone dark screens.',
             previewBg: 'dark',
-            svgUrl: '/assets/press/kd-lab-logo-monochrome-white.svg',
-            pngUrl: '/assets/press/kd-lab-logo-monochrome-white.png',
+            svgUrl: '/assets/press/kd-labs-logo-monochrome-white.svg',
+            pngUrl: '/assets/press/kd-labs-logo-monochrome-white.png',
           },
         ],
       },
@@ -768,10 +768,10 @@ export const translations = {
         specimenUrl: 'https://fonts.google.com/specimen/Plus+Jakarta+Sans',
         specimenBtn: 'Open Google Fonts',
         weights: [
-          { name: 'Light 300', class: 'font-light', sample: 'KD Lab - Simplicity in design, security in every touch.' },
-          { name: 'Regular 400', class: 'font-normal', sample: 'KD Lab - Simplicity in design, security in every touch.' },
-          { name: 'SemiBold 600', class: 'font-semibold', sample: 'KD Lab - Simplicity in design, security in every touch.' },
-          { name: 'Bold 700 / 800', class: 'font-bold', sample: 'KD Lab - Simplicity in design, security in every touch.' },
+          { name: 'Light 300', class: 'font-light', sample: 'KD Labs - Simplicity in design, security in every touch.' },
+          { name: 'Regular 400', class: 'font-normal', sample: 'KD Labs - Simplicity in design, security in every touch.' },
+          { name: 'SemiBold 600', class: 'font-semibold', sample: 'KD Labs - Simplicity in design, security in every touch.' },
+          { name: 'Bold 700 / 800', class: 'font-bold', sample: 'KD Labs - Simplicity in design, security in every touch.' },
         ],
       },
       appIcons: {
@@ -795,7 +795,7 @@ export const translations = {
         tagline: 'Brand Protection',
         title: 'Do\'s and Don\'ts Guidelines',
         subtitle:
-          'To preserve the elegance and clarity of the KD Lab identity across all media, please adhere to these guidelines.',
+          'To preserve the elegance and clarity of the KD Labs identity across all media, please adhere to these guidelines.',
         clearSpaceTitle: 'Clear Space Requirement',
         clearSpaceDesc:
           'Always preserve an exclusion zone around the logo equal to at least the height of the letter "K" in the wordmark. No text, graphic, or trim line should encroach on this perimeter.',
@@ -821,7 +821,7 @@ export const translations = {
           'Standardized overview text ready for press releases, technological media, and editorial coverage.',
         copyBtn: 'Copy Boilerplate',
         copied: 'Boilerplate copied to clipboard!',
-        text: 'KD Lab is an independent mobile application studio based in Vietnam, engineering minimalist tools guided by Japanese Zen aesthetics and hardware-backed cryptography. Guided by a strict 100% offline (Zero-Network) architecture and zero user data collection, KD Lab delivers uncompromising digital peace of mind to tech users globally.',
+        text: 'KD Labs is an independent mobile application studio based in Vietnam, engineering minimalist tools guided by Japanese Zen aesthetics and hardware-backed cryptography. Guided by a strict 100% offline (Zero-Network) architecture and zero user data collection, KD Labs delivers uncompromising digital peace of mind to tech users globally.',
         contactTitle: 'Media & Communications Contact',
         contactDesc:
           'For press kits, editorial inquiries, or founder interviews, please reach out to our communications inbox:',

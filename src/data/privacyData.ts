@@ -64,20 +64,20 @@ export interface PrivacyData {
 
 export const privacyData: Record<Locale, PrivacyData> = {
   vi: {
-    metaTitle: 'Chính Sách Quyền Riêng Tư Toàn Diện • KD Lab',
+    metaTitle: 'Chính Sách Quyền Riêng Tư Toàn Diện • KD Labs',
     metaDescription:
-      'Chính sách quyền riêng tư chi tiết của KD Lab: Kiến trúc 100% ngoại tuyến (Zero-Network), mã hóa phần cứng Keystore, tuân thủ Google Play Data Safety, Nghị định 13/2023/NĐ-CP và GDPR.',
+      'Chính sách quyền riêng tư chi tiết của KD Labs: Kiến trúc 100% ngoại tuyến (Zero-Network), mã hóa phần cứng Keystore, tuân thủ Google Play Data Safety, Nghị định 13/2023/NĐ-CP và GDPR.',
     badge: 'Văn Bản Pháp Lý & Cam Kết Kỹ Thuật • Tháng 09/2026',
     title: 'Chính Sách Quyền Riêng Tư',
     effectiveDate: 'Hiệu lực từ: 01/09/2026',
     lastUpdated: 'Phiên bản: 1.2.0 (Cập nhật lần cuối: Tháng 9, 2026)',
     intro:
-      'Tại KD Lab, chúng tôi tin rằng quyền riêng tư không phải là một tính năng đi kèm có thể tùy ý cấu hình, mà là quyền cơ bản bất khả xâm phạm của mỗi người dùng. Tài liệu này công khai minh bạch toàn bộ nguyên tắc xử lý dữ liệu, chứng minh kỹ thuật kiến trúc Zero-Network và đối chiếu chi tiết theo tiêu chuẩn Google Play Data Safety, Nghị định 13/2023/NĐ-CP (Việt Nam), GDPR (Liên minh Châu Âu) và CCPA (Hoa Kỳ).',
+      'Tại KD Labs, chúng tôi tin rằng quyền riêng tư không phải là một tính năng đi kèm có thể tùy ý cấu hình, mà là quyền cơ bản bất khả xâm phạm của mỗi người dùng. Tài liệu này công khai minh bạch toàn bộ nguyên tắc xử lý dữ liệu, chứng minh kỹ thuật kiến trúc Zero-Network và đối chiếu chi tiết theo tiêu chuẩn Google Play Data Safety, Nghị định 13/2023/NĐ-CP (Việt Nam), GDPR (Liên minh Châu Âu) và CCPA (Hoa Kỳ).',
     backToHome: 'Quay về trang chủ',
     tableOfContentsTitle: 'Mục Lục Văn Bản',
     readingTime: 'Thời gian đọc: ~8 phút',
     highlightsTitle: 'Tóm Tắt Cam Kết Cốt Lõi (At a Glance)',
-    highlightsSubtitle: 'Bốn nguyên tắc bất di bất dịch trong mọi sản phẩm phần mềm của KD Lab:',
+    highlightsSubtitle: 'Bốn nguyên tắc bất di bất dịch trong mọi sản phẩm phần mềm của KD Labs:',
     highlights: [
       {
         icon: 'zero-net',
@@ -110,15 +110,15 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '01',
         title: 'Giới Thiệu & Phạm Vi Điều Chỉnh',
         content: [
-          'Chính sách quyền riêng tư này ("Chính sách") áp dụng đối với tất cả các sản phẩm, ứng dụng di động, công cụ phần mềm do KD Lab ("chúng tôi", "KD Lab Studio") phát triển và phân phối thông qua Google Play Store, Apple App Store hoặc kho mã nguồn mở GitHub, bao gồm nhưng không giới hạn ở ứng dụng xác thực Simple OTP (Package ID: com.duybk.simpleotp) và trang thông tin chính thức https://kd.io.vn.',
-          'Bằng việc cài đặt, sao chép hoặc sử dụng bất kỳ ứng dụng nào của KD Lab, bạn thừa nhận đã đọc, hiểu và đồng ý với các nguyên tắc được nêu trong văn bản này. Nếu bạn không đồng ý với bất kỳ điều khoản nào, vui lòng gỡ cài đặt ứng dụng khỏi thiết bị của bạn.',
+          'Chính sách quyền riêng tư này ("Chính sách") áp dụng đối với tất cả các sản phẩm, ứng dụng di động, công cụ phần mềm do KD Labs ("chúng tôi", "KD Labs") phát triển và phân phối thông qua Google Play Store, Apple App Store hoặc kho mã nguồn mở GitHub, bao gồm nhưng không giới hạn ở ứng dụng xác thực Simple OTP (Package ID: com.duybk.simpleotp) và trang thông tin chính thức https://kd.io.vn.',
+          'Bằng việc cài đặt, sao chép hoặc sử dụng bất kỳ ứng dụng nào của KD Labs, bạn thừa nhận đã đọc, hiểu và đồng ý với các nguyên tắc được nêu trong văn bản này. Nếu bạn không đồng ý với bất kỳ điều khoản nào, vui lòng gỡ cài đặt ứng dụng khỏi thiết bị của bạn.',
         ],
         subsections: [
           {
             title: '1.1. Định nghĩa thuật ngữ chính',
             content: [
               '• "Dữ liệu cá nhân" (Personal Data): Thông tin dưới dạng ký hiệu, chữ viết, chữ số, hình ảnh, âm thanh hoặc dạng tương tự gắn liền với một con người cụ thể hoặc giúp xác định một con người cụ thể theo Nghị định 13/2023/NĐ-CP và GDPR.',
-              '• "Ứng dụng": Ứng dụng di động Simple OTP và các tiện ích độc lập do KD Lab phát hành.',
+              '• "Ứng dụng": Ứng dụng di động Simple OTP và các tiện ích độc lập do KD Labs phát hành.',
               '• "Thiết bị": Điện thoại thông minh, máy tính bảng hoặc thiết bị cá nhân khác chạy hệ điều hành Android hoặc iOS do người dùng sở hữu và kiểm soát.',
               '• "Khóa bí mật 2FA / Hạt giống (Seed)": Chuỗi ký tự chuẩn Base32 hoặc URI định dạng otpauth:// do các dịch vụ trực tuyến cung cấp để sinh mã xác thực hai lớp (TOTP / HOTP).',
             ],
@@ -126,7 +126,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
           {
             title: '1.2. Tư cách pháp lý và Trách nhiệm xử lý dữ liệu',
             content: [
-              'Theo khuôn khổ Nghị định 13/2023/NĐ-CP và GDPR Điều 4(7), đối với toàn bộ dữ liệu bạn nhập vào ứng dụng Simple OTP, bạn là Chủ thể Dữ liệu duy nhất đồng thời là Bên Kiểm soát Dữ liệu độc quyền. KD Lab KHÔNG đóng vai trò Bên Xử lý Dữ liệu trên máy chủ, bởi vì kiến trúc hệ thống của chúng tôi hoàn toàn không tiếp cận, không lưu trữ và không truyền tải dữ liệu của bạn.',
+              'Theo khuôn khổ Nghị định 13/2023/NĐ-CP và GDPR Điều 4(7), đối với toàn bộ dữ liệu bạn nhập vào ứng dụng Simple OTP, bạn là Chủ thể Dữ liệu duy nhất đồng thời là Bên Kiểm soát Dữ liệu độc quyền. KD Labs KHÔNG đóng vai trò Bên Xử lý Dữ liệu trên máy chủ, bởi vì kiến trúc hệ thống của chúng tôi hoàn toàn không tiếp cận, không lưu trữ và không truyền tải dữ liệu của bạn.',
             ],
           },
         ],
@@ -136,7 +136,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '02',
         title: 'Cam Kết Kiến Trúc Không-Mạng (Zero-Network Architecture)',
         content: [
-          'Sự khác biệt cốt lõi giữa Simple OTP của KD Lab và các ứng dụng xác thực thương mại khác trên thị trường là Kiến trúc Zero-Network (Không-Mạng). Đây là cam kết mang tính bảo đảm toán học và kỹ thuật, không đơn thuần chỉ là lời hứa pháp lý.',
+          'Sự khác biệt cốt lõi giữa Simple OTP của KD Labs và các ứng dụng xác thực thương mại khác trên thị trường là Kiến trúc Zero-Network (Không-Mạng). Đây là cam kết mang tính bảo đảm toán học và kỹ thuật, không đơn thuần chỉ là lời hứa pháp lý.',
           'Trong tệp kê khai ứng dụng Android (AndroidManifest.xml), chúng tôi hoàn toàn KHÔNG khai báo quyền truy cập Internet:',
         ],
         callout: {
@@ -168,7 +168,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '03',
         title: 'Biểu Mẫu Đối Chiếu An Toàn Dữ Liệu Google Play (Data Safety)',
         content: [
-          'Google Play Store yêu cầu mọi nhà phát triển phải công bố chi tiết bảng khai báo An toàn Dữ liệu (Data Safety Section). Dưới đây là đối chiếu chính xác từng mục theo hồ sơ khai báo chính thức của KD Lab trên Google Play Console:',
+          'Google Play Store yêu cầu mọi nhà phát triển phải công bố chi tiết bảng khai báo An toàn Dữ liệu (Data Safety Section). Dưới đây là đối chiếu chính xác từng mục theo hồ sơ khai báo chính thức của KD Labs trên Google Play Console:',
         ],
         table: {
           headers: ['Hạng mục dữ liệu', 'Trạng thái thu thập', 'Trạng thái chia sẻ', 'Mục đích & Ghi chú'],
@@ -237,7 +237,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
           {
             title: '4.1. Quyền bị từ chối tuyệt đối (Explicitly Forbidden Permissions)',
             content: [
-              'KD Lab cam kết vĩnh viễn không bổ sung các quyền sau vào Simple OTP:',
+              'KD Labs cam kết vĩnh viễn không bổ sung các quyền sau vào Simple OTP:',
               '• android.permission.INTERNET (Không mạng)',
               '• android.permission.ACCESS_FINE_LOCATION / COARSE_LOCATION (Không định vị)',
               '• android.permission.READ_CONTACTS (Không danh bạ)',
@@ -297,12 +297,12 @@ export const privacyData: Record<Locale, PrivacyData> = {
             content: [
               '• Tệp sao lưu do Simple OTP xuất ra có đuôi .simpleotp. Đây là một tệp nhị phân được đóng gói an toàn.',
               '• Cấu trúc tệp bao gồm: Header nhận diện phiên bản, Muối bảo mật ngẫu nhiên (Salt 32 bytes), Vector khởi tạo ngẫu nhiên (IV 12 bytes), Thẻ xác thực (Auth Tag 16 bytes) và Phần dữ liệu JSON đã mã hóa hoàn toàn.',
-              '• Mật khẩu sao lưu: Do chính bạn thiết lập tại thời điểm xuất tệp. KD Lab KHÔNG lưu trữ mật khẩu này và hoàn toàn KHÔNG CÓ CỬA SAU (Backdoor) để mở khóa tệp nếu bạn quên mật khẩu.',
+              '• Mật khẩu sao lưu: Do chính bạn thiết lập tại thời điểm xuất tệp. KD Labs KHÔNG lưu trữ mật khẩu này và hoàn toàn KHÔNG CÓ CỬA SAU (Backdoor) để mở khóa tệp nếu bạn quên mật khẩu.',
             ],
             callout: {
               type: 'alert',
               title: 'Cảnh báo trách nhiệm về Mật khẩu sao lưu',
-              text: 'Vui lòng ghi nhớ hoặc lưu trữ mật khẩu sao lưu vào trình quản lý mật khẩu tin cậy của bạn. Nếu bạn quên mật khẩu này, không ai trên thế giới — kể cả đội ngũ phát triển KD Lab — có thể giải mã hoặc khôi phục lại các mã 2FA trong tệp .simpleotp của bạn.',
+              text: 'Vui lòng ghi nhớ hoặc lưu trữ mật khẩu sao lưu vào trình quản lý mật khẩu tin cậy của bạn. Nếu bạn quên mật khẩu này, không ai trên thế giới — kể cả đội ngũ phát triển KD Labs — có thể giải mã hoặc khôi phục lại các mã 2FA trong tệp .simpleotp của bạn.',
             },
           },
           {
@@ -318,7 +318,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '07',
         title: 'Dữ Liệu Tương Tác Ngoại Vi & Kênh Hỗ Trợ',
         content: [
-          'Mặc dù ứng dụng Simple OTP là 100% ngoại tuyến, người dùng có thể tương tác với KD Lab thông qua các kênh liên lạc bên ngoài như Email hỗ trợ hoặc kho mã nguồn GitHub. Dưới đây là cách chúng tôi xử lý các thông tin phát sinh:',
+          'Mặc dù ứng dụng Simple OTP là 100% ngoại tuyến, người dùng có thể tương tác với KD Labs thông qua các kênh liên lạc bên ngoài như Email hỗ trợ hoặc kho mã nguồn GitHub. Dưới đây là cách chúng tôi xử lý các thông tin phát sinh:',
         ],
         subsections: [
           {
@@ -350,7 +350,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '08',
         title: 'Quyền Của Chủ Thể Dữ Liệu (Nghị Định 13, GDPR, CCPA)',
         content: [
-          'KD Lab hoàn toàn ủng hộ và tuân thủ các quy định pháp luật hiện đại về bảo vệ dữ liệu, bao gồm Nghị định số 13/2023/NĐ-CP của Chính phủ Việt Nam, Quy chế Bảo vệ Dữ liệu Chung (GDPR) của Liên minh Châu Âu và Đạo luật Quyền riêng tư Người tiêu dùng California (CCPA/CPRA).',
+          'KD Labs hoàn toàn ủng hộ và tuân thủ các quy định pháp luật hiện đại về bảo vệ dữ liệu, bao gồm Nghị định số 13/2023/NĐ-CP của Chính phủ Việt Nam, Quy chế Bảo vệ Dữ liệu Chung (GDPR) của Liên minh Châu Âu và Đạo luật Quyền riêng tư Người tiêu dùng California (CCPA/CPRA).',
         ],
         subsections: [
           {
@@ -358,7 +358,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
             content: [
               '• Quyền được biết và Quyền truy cập: Bạn có toàn quyền xem mọi dữ liệu đang được lưu trữ bằng cách mở ứng dụng trên thiết bị của mình. Không có dữ liệu ẩn nào được lưu ngoài tầm mắt bạn.',
               '• Quyền chỉnh sửa: Bạn có thể tự do đổi tên tài khoản 2FA, cập nhật icon hoặc chỉnh sửa thông tin nhà cung cấp trực tiếp trong màn hình chi tiết của ứng dụng.',
-              '• Quyền xóa dữ liệu (Right to be Forgotten): Vì KD Lab không lưu dữ liệu của bạn trên bất kỳ máy chủ nào, bạn không cần phải gửi đơn yêu cầu xóa dữ liệu. Bạn thực hiện quyền xóa ngay lập tức và triệt để bằng cách:',
+              '• Quyền xóa dữ liệu (Right to be Forgotten): Vì KD Labs không lưu dữ liệu của bạn trên bất kỳ máy chủ nào, bạn không cần phải gửi đơn yêu cầu xóa dữ liệu. Bạn thực hiện quyền xóa ngay lập tức và triệt để bằng cách:',
               '    1. Mở Cài đặt hệ điều hành Android > Ứng dụng > Simple OTP > Lưu trữ > Xóa dữ liệu (Clear Data); hoặc',
               '    2. Gỡ cài đặt ứng dụng Simple OTP khỏi thiết bị.',
               '• Quyền phản đối và Rút lại sự đồng ý: Bạn có thể thu hồi quyền Camera hoặc Thư viện ảnh bất kỳ lúc nào trong phần Cài đặt Quyền ứng dụng của hệ điều hành Android.',
@@ -371,7 +371,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '09',
         title: 'Bảo Vệ Quyền Riêng Tư Của Trẻ Em (COPPA Compliance)',
         content: [
-          'Các ứng dụng của KD Lab là công cụ tiện ích kỹ thuật số hướng tới người dùng phổ thông nói chung và không nhắm mục tiêu cụ thể đến trẻ em dưới 13 tuổi (hoặc dưới 16 tuổi theo quy định tại khu vực kinh tế Châu Âu EEA).',
+          'Các ứng dụng của KD Labs là công cụ tiện ích kỹ thuật số hướng tới người dùng phổ thông nói chung và không nhắm mục tiêu cụ thể đến trẻ em dưới 13 tuổi (hoặc dưới 16 tuổi theo quy định tại khu vực kinh tế Châu Âu EEA).',
           'Chúng tôi không cố ý thu thập, lưu trữ hay yêu cầu bất kỳ thông tin nhận dạng cá nhân nào từ trẻ em. Do kiến trúc Zero-Network không thu thập dữ liệu của bất kỳ ai, nguy cơ khai thác dữ liệu trẻ em trong các ứng dụng của chúng tôi là hoàn toàn bằng không.',
           'Nếu quý phụ huynh hoặc người giám hộ phát hiện trẻ em cung cấp thông tin liên hệ khi gửi email đến hòm thư hỗ trợ của chúng tôi, vui lòng liên hệ support@kd.io.vn để chúng tôi tiến hành xóa sạch các thư từ liên quan ngay lập tức.',
         ],
@@ -402,7 +402,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '11',
         title: 'Nhật Ký Phiên Bản & Thay Đổi Chính Sách',
         content: [
-          'KD Lab có thể định kỳ cập nhật Chính sách quyền riêng tư này để phản ánh các cải tiến về tính năng ứng dụng, thay đổi trong quy định pháp luật hoặc điều chỉnh tiêu chuẩn của Google Play Store.',
+          'KD Labs có thể định kỳ cập nhật Chính sách quyền riêng tư này để phản ánh các cải tiến về tính năng ứng dụng, thay đổi trong quy định pháp luật hoặc điều chỉnh tiêu chuẩn của Google Play Store.',
           'Mọi thay đổi sẽ được công bố trực tiếp tại trang này kèm theo việc cập nhật số phiên bản và ngày sửa đổi ở đầu tài liệu. Đối với những thay đổi trọng yếu, chúng tôi sẽ đưa thông báo nổi bật vào phần "Có gì mới" (What\'s New) trên trang phát hành của Google Play Store.',
         ],
         table: {
@@ -418,13 +418,13 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '12',
         title: 'Thông Tin Đơn Vị Chủ Quản & Kênh Liên Hệ',
         content: [
-          'Nếu bạn có bất kỳ câu hỏi, thắc mắc, phản ánh về an ninh hoặc cần hỗ trợ liên quan đến Chính sách quyền riêng tư này, vui lòng liên hệ với đội ngũ phụ trách quyền riêng tư của KD Lab qua các kênh chính thức sau:',
+          'Nếu bạn có bất kỳ câu hỏi, thắc mắc, phản ánh về an ninh hoặc cần hỗ trợ liên quan đến Chính sách quyền riêng tư này, vui lòng liên hệ với đội ngũ phụ trách quyền riêng tư của KD Labs qua các kênh chính thức sau:',
         ],
         subsections: [
           {
             title: '12.1. Thông tin đại diện phát triển',
             content: [
-              '• Đơn vị phát triển: KD Lab Studio (Nhà phát triển phần mềm độc lập)',
+              '• Đơn vị phát triển: KD Labs (Nhà phát triển phần mềm độc lập)',
               '• Quốc gia sở tại: Việt Nam',
               '• Đại diện kỹ thuật: Duy BK',
               '• Hòm thư điện tử bảo mật & hỗ trợ: support@kd.io.vn',
@@ -440,7 +440,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
       title: 'Đầu Mối Tiếp Nhận Vấn Đề Quyền Riêng Tư & An Ninh Mật Mã',
       description:
         'Bạn phát hiện ra lỗ hổng bảo mật hoặc có đề xuất cải thiện quyền riêng tư cho Simple OTP? Hãy liên hệ trực tiếp với chúng tôi. Chúng tôi luôn trân trọng mọi đóng góp xây dựng từ cộng đồng bảo mật.',
-      entityName: 'KD Lab Indie Studio',
+      entityName: 'KD Labs',
       jurisdiction: 'Việt Nam • Phạm vi phục vụ Toàn Cầu',
       supportEmail: 'support@kd.io.vn',
       githubRepo: 'https://github.com/001123/simple-otp',
@@ -449,20 +449,20 @@ export const privacyData: Record<Locale, PrivacyData> = {
   },
 
   en: {
-    metaTitle: 'Comprehensive Privacy Policy • KD Lab',
+    metaTitle: 'Comprehensive Privacy Policy • KD Labs',
     metaDescription:
-      'Detailed Privacy Policy of KD Lab: 100% Offline (Zero-Network Architecture), hardware-backed Keystore encryption, compliant with Google Play Data Safety, VN Decree 13/2023/ND-CP, GDPR, and CCPA.',
+      'Detailed Privacy Policy of KD Labs: 100% Offline (Zero-Network Architecture), hardware-backed Keystore encryption, compliant with Google Play Data Safety, VN Decree 13/2023/ND-CP, GDPR, and CCPA.',
     badge: 'Legal & Technical Compliance Document • September 2026',
     title: 'Privacy Policy',
     effectiveDate: 'Effective Date: September 1, 2026',
     lastUpdated: 'Version: 1.2.0 (Last Updated: September 2026)',
     intro:
-      'At KD Lab, we hold that privacy is not a decorative configurable feature, but an inviolable fundamental human right. This comprehensive document transparently articulates our data practices, mathematically and technically substantiates our Zero-Network architecture, and provides thorough alignment with the Google Play Data Safety requirements, Vietnam Decree 13/2023/ND-CP, the European Union General Data Protection Regulation (GDPR), and the California Consumer Privacy Act (CCPA/CPRA).',
+      'At KD Labs, we hold that privacy is not a decorative configurable feature, but an inviolable fundamental human right. This comprehensive document transparently articulates our data practices, mathematically and technically substantiates our Zero-Network architecture, and provides thorough alignment with the Google Play Data Safety requirements, Vietnam Decree 13/2023/ND-CP, the European Union General Data Protection Regulation (GDPR), and the California Consumer Privacy Act (CCPA/CPRA).',
     backToHome: 'Back to Homepage',
     tableOfContentsTitle: 'Table of Contents',
     readingTime: 'Estimated Reading Time: ~8 minutes',
     highlightsTitle: 'Executive Summary (At a Glance)',
-    highlightsSubtitle: 'Four non-negotiable architectural pillars embedded into every KD Lab software product:',
+    highlightsSubtitle: 'Four non-negotiable architectural pillars embedded into every KD Labs software product:',
     highlights: [
       {
         icon: 'zero-net',
@@ -495,15 +495,15 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '01',
         title: 'Introduction & Scope of Application',
         content: [
-          'This Privacy Policy ("Policy") governs all software applications, mobile utilities, and digital tools created and published by KD Lab ("we", "us", "our", or "KD Lab Studio") across the Google Play Store, Apple App Store, and open-source software repositories such as GitHub. This includes, without limitation, the Simple OTP authenticator app (Package ID: com.duybk.simpleotp) and our official domain https://kd.io.vn.',
-          'By installing, copying, or utilizing any KD Lab application, you acknowledge that you have read, understood, and consented to the stipulations detailed herein. If you do not consent to these terms, please immediately uninstall our applications from your hardware.',
+          'This Privacy Policy ("Policy") governs all software applications, mobile utilities, and digital tools created and published by KD Labs ("we", "us", "our", or "KD Labs") across the Google Play Store, Apple App Store, and open-source software repositories such as GitHub. This includes, without limitation, the Simple OTP authenticator app (Package ID: com.duybk.simpleotp) and our official domain https://kd.io.vn.',
+          'By installing, copying, or utilizing any KD Labs application, you acknowledge that you have read, understood, and consented to the stipulations detailed herein. If you do not consent to these terms, please immediately uninstall our applications from your hardware.',
         ],
         subsections: [
           {
             title: '1.1. Key Definitions',
             content: [
               '• "Personal Data": Any information relating to an identified or identifiable natural person as defined under GDPR Article 4(1) and Vietnam Decree 13/2023/ND-CP.',
-              '• "Application": The Simple OTP mobile application and all modular standalone software tools engineered by KD Lab.',
+              '• "Application": The Simple OTP mobile application and all modular standalone software tools engineered by KD Labs.',
               '• "Device": Any mobile phone, tablet, or consumer hardware operating Android or iOS owned and operated by the user.',
               '• "2FA Secret Key / Seed": Base32 formatted cryptographic strings or otpauth:// URIs issued by online service providers to calculate two-factor authentication tokens (TOTP / HOTP).',
             ],
@@ -511,7 +511,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
           {
             title: '1.2. Legal Status & Data Processing Roles',
             content: [
-              'Under GDPR Article 4(7) and Vietnam Decree 13/2023/ND-CP, with respect to all 2FA accounts and secrets entered into Simple OTP, you remain the sole Data Subject and the exclusive Data Controller. KD Lab DOES NOT act as a cloud Data Processor because our software architecture operates with zero servers, never ingests, never stores, and never transmits your data.',
+              'Under GDPR Article 4(7) and Vietnam Decree 13/2023/ND-CP, with respect to all 2FA accounts and secrets entered into Simple OTP, you remain the sole Data Subject and the exclusive Data Controller. KD Labs DOES NOT act as a cloud Data Processor because our software architecture operates with zero servers, never ingests, never stores, and never transmits your data.',
             ],
           },
         ],
@@ -521,7 +521,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '02',
         title: 'Zero-Network Architecture Guarantee',
         content: [
-          'The defining distinction between KD Lab’s Simple OTP and mainstream commercial authenticator utilities is our strict Zero-Network Architecture. This is a mathematical and operating-system-level guarantee rather than a mere contractual promise.',
+          'The defining distinction between KD Labs’ Simple OTP and mainstream commercial authenticator utilities is our strict Zero-Network Architecture. This is a mathematical and operating-system-level guarantee rather than a mere contractual promise.',
           'In our Android application manifest (AndroidManifest.xml), we purposefully omit network permissions entirely:',
         ],
         callout: {
@@ -553,7 +553,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '03',
         title: 'Google Play Data Safety Section Compliance',
         content: [
-          'The Google Play Store mandates that developers publish an explicit Data Safety declaration. Below is the verified item-by-item breakdown matching KD Lab’s official Google Play Console disclosure:',
+          'The Google Play Store mandates that developers publish an explicit Data Safety declaration. Below is the verified item-by-item breakdown matching KD Labs’ official Google Play Console disclosure:',
         ],
         table: {
           headers: ['Data Category', 'Collection Status', 'Sharing Status', 'Purpose & Handling Details'],
@@ -622,7 +622,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
           {
             title: '4.1. Explicitly Excluded Permissions',
             content: [
-              'KD Lab commits to never introducing the following invasive permissions into Simple OTP:',
+              'KD Labs commits to never introducing the following invasive permissions into Simple OTP:',
               '• android.permission.INTERNET (No network)',
               '• android.permission.ACCESS_FINE_LOCATION / COARSE_LOCATION (No GPS)',
               '• android.permission.READ_CONTACTS (No contacts)',
@@ -682,12 +682,12 @@ export const privacyData: Record<Locale, PrivacyData> = {
             content: [
               '• Backups are saved with the custom .simpleotp extension as an authenticated binary bundle.',
               '• Format specification: Version header byte, 32-byte cryptographic Salt, 12-byte initialization vector (IV), 16-byte authentication tag, followed by AES-256-GCM encrypted payload.',
-              '• Passphrase protection: Determined exclusively by you upon export. KD Lab holds NO record of this passphrase and incorporates ABSOLUTELY NO BACKDOOR to open your file if you forget it.',
+              '• Passphrase protection: Determined exclusively by you upon export. KD Labs holds NO record of this passphrase and incorporates ABSOLUTELY NO BACKDOOR to open your file if you forget it.',
             ],
             callout: {
               type: 'alert',
               title: 'Critical Passphrase Responsibility Warning',
-              text: 'Please preserve your backup passphrase in a dependable password manager. If you lose this passphrase, no entity on Earth — including KD Lab engineers — can recover or decrypt your .simpleotp backup file.',
+              text: 'Please preserve your backup passphrase in a dependable password manager. If you lose this passphrase, no entity on Earth — including KD Labs engineers — can recover or decrypt your .simpleotp backup file.',
             },
           },
           {
@@ -703,7 +703,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '07',
         title: 'External Interactions & Support Data',
         content: [
-          'While Simple OTP runs 100% offline, users may communicate with KD Lab through external touchpoints such as customer support email or GitHub. Here is how such interactions are managed:',
+          'While Simple OTP runs 100% offline, users may communicate with KD Labs through external touchpoints such as customer support email or GitHub. Here is how such interactions are managed:',
         ],
         subsections: [
           {
@@ -735,7 +735,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '08',
         title: 'Data Subject Rights (Decree 13, GDPR, CCPA/CPRA)',
         content: [
-          'KD Lab unconditionally honors global privacy frameworks including Vietnam Decree 13/2023/ND-CP, EU GDPR, and the California Consumer Privacy Act (CCPA/CPRA).',
+          'KD Labs unconditionally honors global privacy frameworks including Vietnam Decree 13/2023/ND-CP, EU GDPR, and the California Consumer Privacy Act (CCPA/CPRA).',
         ],
         subsections: [
           {
@@ -743,7 +743,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
             content: [
               '• Right to Know & Access: You have transparent, real-time access to all stored information directly inside the app interface. No shadow data is stored outside your view.',
               '• Right to Rectification: You can freely edit labels, issuers, and icons directly in the application UI at any moment.',
-              '• Right to Erasure (Right to be Forgotten): Because KD Lab retains zero user records on servers, you do not need to submit formal data deletion requests. You execute complete and irreversible erasure yourself by:',
+              '• Right to Erasure (Right to be Forgotten): Because KD Labs retains zero user records on servers, you do not need to submit formal data deletion requests. You execute complete and irreversible erasure yourself by:',
               '    1. Navigating to Device Settings > Apps > Simple OTP > Storage > Clear Data; or',
               '    2. Uninstalling Simple OTP from your device.',
               '• Right to Object & Withdraw Consent: You can revoke camera or storage permissions at any time via Android system settings.',
@@ -756,7 +756,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '09',
         title: "Children's Privacy Protection (COPPA Compliance)",
         content: [
-          'KD Lab software utilities are designed for general audiences and are not directed towards children under 13 years of age (or under 16 within the European Economic Area).',
+          'KD Labs software utilities are designed for general audiences and are not directed towards children under 13 years of age (or under 16 within the European Economic Area).',
           'We do not knowingly solicit, collect, or process personal data from children. Given our Zero-Network architecture which collects no user data whatsoever, the risk of child data exploitation within our software is non-existent.',
           'If a parent or guardian discovers that a child has communicated personal details via our support email, please notify support@kd.io.vn for prompt and complete record deletion.',
         ],
@@ -787,7 +787,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '11',
         title: 'Policy Updates & Version History',
         content: [
-          'KD Lab may periodically amend this Privacy Policy to reflect software enhancements, updated regulatory standards, or Google Play Developer Policy revisions.',
+          'KD Labs may periodically amend this Privacy Policy to reflect software enhancements, updated regulatory standards, or Google Play Developer Policy revisions.',
           'All updates will be published immediately on this page with an updated version number and effective date. Material alterations will also be highlighted in our Google Play Store "What\'s New" release notes.',
         ],
         table: {
@@ -803,13 +803,13 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '12',
         title: 'Developer Identification & Contact Channels',
         content: [
-          'If you have inquiries, privacy concerns, or security vulnerability disclosures regarding this Policy or KD Lab products, please reach our dedicated team through the following official channels:',
+          'If you have inquiries, privacy concerns, or security vulnerability disclosures regarding this Policy or KD Labs products, please reach our dedicated team through the following official channels:',
         ],
         subsections: [
           {
             title: '12.1. Developer Contact Details',
             content: [
-              '• Developer Entity: KD Lab Studio (Independent Mobile & Cryptographic Studio)',
+              '• Developer Entity: KD Labs (Independent Mobile & Cryptographic Studio)',
               '• Country of Origin: Vietnam',
               '• Lead Developer: Duy BK',
               '• Official Privacy & Support Email: support@kd.io.vn',
@@ -825,7 +825,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
       title: 'Privacy & Cryptographic Security Inquiries',
       description:
         'Discovered a potential vulnerability or have ideas to bolster Simple OTP’s privacy guarantees? Reach out directly. We actively collaborate with ethical security researchers.',
-      entityName: 'KD Lab Indie Studio',
+      entityName: 'KD Labs',
       jurisdiction: 'Vietnam • Serving Users Globally',
       supportEmail: 'support@kd.io.vn',
       githubRepo: 'https://github.com/001123/simple-otp',
