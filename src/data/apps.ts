@@ -61,7 +61,7 @@ export const appsData: AppItem[] = [
     size: '12.4 MB',
     osRequirement: 'Android 8.0 trở lên (API 26+) & iOS',
     lastUpdated: 'Tháng 9, 2026',
-    packageName: 'com.duybk.simpleotp',
+    packageName: 'vn.io.kd.simpleotp',
     googlePlayUrl: '#', // TODO: Thay bằng link Google Play chính thức khi publish
     githubUrl: 'https://github.com/kd-labs-io/simple-otp',
     iconImage: '/assets/simple-otp/icon.png',

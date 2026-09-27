@@ -110,7 +110,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '01',
         title: 'Giới Thiệu & Phạm Vi Điều Chỉnh',
         content: [
-          'Chính sách quyền riêng tư này ("Chính sách") áp dụng đối với tất cả các sản phẩm, ứng dụng di động, công cụ phần mềm do KD Labs ("chúng tôi", "KD Labs") phát triển và phân phối thông qua Google Play Store, Apple App Store hoặc kho mã nguồn mở GitHub, bao gồm nhưng không giới hạn ở ứng dụng xác thực Simple OTP (Package ID: com.duybk.simpleotp) và trang thông tin chính thức https://kd.io.vn.',
+          'Chính sách quyền riêng tư này ("Chính sách") áp dụng đối với tất cả các sản phẩm, ứng dụng di động, công cụ phần mềm do KD Labs ("chúng tôi", "KD Labs") phát triển và phân phối thông qua Google Play Store, Apple App Store hoặc kho mã nguồn mở GitHub, bao gồm nhưng không giới hạn ở ứng dụng xác thực Simple OTP (Package ID: vn.io.kd.simpleotp) và trang thông tin chính thức https://kd.io.vn.',
           'Bằng việc cài đặt, sao chép hoặc sử dụng bất kỳ ứng dụng nào của KD Labs, bạn thừa nhận đã đọc, hiểu và đồng ý với các nguyên tắc được nêu trong văn bản này. Nếu bạn không đồng ý với bất kỳ điều khoản nào, vui lòng gỡ cài đặt ứng dụng khỏi thiết bị của bạn.',
         ],
         subsections: [
@@ -495,7 +495,7 @@ export const privacyData: Record<Locale, PrivacyData> = {
         number: '01',
         title: 'Introduction & Scope of Application',
         content: [
-          'This Privacy Policy ("Policy") governs all software applications, mobile utilities, and digital tools created and published by KD Labs ("we", "us", "our", or "KD Labs") across the Google Play Store, Apple App Store, and open-source software repositories such as GitHub. This includes, without limitation, the Simple OTP authenticator app (Package ID: com.duybk.simpleotp) and our official domain https://kd.io.vn.',
+          'This Privacy Policy ("Policy") governs all software applications, mobile utilities, and digital tools created and published by KD Labs ("we", "us", "our", or "KD Labs") across the Google Play Store, Apple App Store, and open-source software repositories such as GitHub. This includes, without limitation, the Simple OTP authenticator app (Package ID: vn.io.kd.simpleotp) and our official domain https://kd.io.vn.',
           'By installing, copying, or utilizing any KD Labs application, you acknowledge that you have read, understood, and consented to the stipulations detailed herein. If you do not consent to these terms, please immediately uninstall our applications from your hardware.',
         ],
         subsections: [
