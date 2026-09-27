@@ -217,20 +217,19 @@ To add a new application to the portfolio showcase:
 
 ## ☁️ Cloudflare Deployment
 
-The project is preconfigured for **Cloudflare Pages / Workers** deployment via `wrangler.jsonc`.
+The project is configured for **Cloudflare Pages** deployment via `wrangler.jsonc` (`pages_build_output_dir: ./dist`).
 
-### 1. Synchronize Cloudflare Worker Types
-```bash
-npm run cf-typegen
-```
-
-### 2. Build and Deploy
+### 1. Build and Deploy locally (optional)
 ```bash
 npm run deploy
 ```
-This command compiles the project via `astro build` and deploys the static and edge assets using `wrangler deploy`.
+This command compiles the project via `astro build` and deploys the static assets using `wrangler pages deploy ./dist`.
 
-### Custom Domain Routes in `wrangler.jsonc`:
+### 2. Automatic Git Deployments
+When pushing to GitHub (`main` branch), Cloudflare Pages automatically detects `wrangler.jsonc`, runs `npm run build`, and deploys `./dist`.
+
+### Custom Domains on Cloudflare Pages:
+Configure custom domains directly in **Cloudflare Dashboard** > **Workers & Pages** > **kd-io-vn** > **Custom domains**:
 - `kd.io.vn`
 - `www.kd.io.vn`
 

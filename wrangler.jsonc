@@ -1,24 +1,7 @@
 {
 	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "kd-io-vn",
 	"compatibility_date": "2026-09-25",
 	"compatibility_flags": ["global_fetch_strictly_public"],
-	"name": "kd-io-vn",
-	"main": "@astrojs/cloudflare/entrypoints/server",
-	"assets": {
-		"directory": "./dist",
-		"binding": "ASSETS"
-	},
-	"observability": {
-		"enabled": true
-	},
-	"routes": [
-		{
-			"pattern": "kd.io.vn",
-			"custom_domain": true
-		},
-		{
-			"pattern": "www.kd.io.vn",
-			"custom_domain": true
-		}
-	]
+	"pages_build_output_dir": "./dist"
 }

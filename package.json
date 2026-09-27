@@ -11,7 +11,7 @@
     "preview": "astro build && astro preview",
     "astro": "astro",
     "generate-types": "wrangler types",
-    "deploy": "astro build && wrangler deploy",
+    "deploy": "astro build && wrangler pages deploy ./dist",
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
