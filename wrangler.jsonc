@@ -10,5 +10,15 @@
 	},
 	"observability": {
 		"enabled": true
-	}
+	},
+	"routes": [
+		{
+			"pattern": "kd.io.vn",
+			"custom_domain": true
+		},
+		{
+			"pattern": "www.kd.io.vn",
+			"custom_domain": true
+		}
+	]
 }
