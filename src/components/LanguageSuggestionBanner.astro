@@ -14,52 +14,62 @@ const enUrl = getLocalizedPath(currentPath, 'en');
 {currentLang === 'vi' && (
   <aside
     id="lang-suggestion-banner"
-    class="hidden fixed bottom-6 right-6 z-50 max-w-sm rounded-2xl border border-stone-300 dark:border-stone-700 bg-white/95 dark:bg-[#161513]/95 backdrop-blur-md p-4 shadow-2xl transition-all duration-300 transform translate-y-4 opacity-0"
+    class="hidden overflow-hidden transition-all duration-300 ease-out max-h-0 opacity-0 -translate-y-2 border-b border-orange-700 dark:border-orange-800 bg-orange-600 dark:bg-orange-700 text-white relative"
     role="status"
     aria-live="polite"
     aria-label="Language suggestion"
   >
-    <div class="flex items-start gap-3">
-      <div class="w-8 h-8 rounded-xl bg-orange-500/10 text-orange-600 dark:text-orange-500 flex items-center justify-center flex-shrink-0 text-base">
-        🌐
-      </div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
+        
+        <!-- Left: Globe Icon & Notification Text -->
+        <div class="flex items-start sm:items-center gap-3 min-w-0 pr-6 sm:pr-0">
+          <div class="w-7 h-7 rounded-lg bg-white/20 text-white flex items-center justify-center flex-shrink-0 text-sm mt-0.5 sm:mt-0">
+            🌐
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center sm:gap-2 text-xs leading-relaxed sm:leading-normal">
+            <span class="font-bold text-white whitespace-nowrap">
+              Browsing in English?
+            </span>
+            <span class="text-orange-200 hidden sm:inline">•</span>
+            <span class="font-medium text-white">
+              We detected your browser prefers English. Would you like to view KD Labs in English?
+            </span>
+          </div>
+        </div>
 
-      <div class="flex-1 space-y-2">
-        <p class="text-xs font-semibold text-stone-900 dark:text-stone-100 leading-snug">
-          Browsing in English?
-        </p>
-        <p class="text-[11px] text-stone-600 dark:text-stone-300 leading-normal">
-          We detected your browser prefers English. Would you like to view KD Labs in English?
-        </p>
+        <!-- Right: Action Buttons & Close Icon -->
+        <div class="flex items-center justify-between sm:justify-end gap-2 flex-shrink-0 pl-10 sm:pl-0">
+          <div class="flex items-center gap-2">
+            <a
+              id="switch-to-en-btn"
+              href={enUrl}
+              class="px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-orange-700 hover:bg-orange-50 transition-colors shadow-sm whitespace-nowrap"
+            >
+              Switch to English
+            </a>
+            <button
+              id="dismiss-lang-banner-btn"
+              type="button"
+              class="px-2.5 py-1.5 rounded-lg text-xs font-bold text-white hover:bg-white/20 border border-white/30 hover:border-white/60 transition-colors whitespace-nowrap"
+            >
+              Stay on Tiếng Việt
+            </button>
+          </div>
 
-        <div class="flex items-center gap-2 pt-1">
-          <a
-            id="switch-to-en-btn"
-            href={enUrl}
-            class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-orange-600 text-white hover:bg-orange-700 transition-colors shadow-xs"
-          >
-            Switch to English
-          </a>
           <button
-            id="dismiss-lang-banner-btn"
+            id="close-lang-banner-x"
             type="button"
-            class="px-2.5 py-1.5 rounded-lg text-xs font-medium text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
+            class="text-white/80 hover:text-white transition-colors p-1 absolute top-2.5 right-3 sm:static sm:ml-1"
+            aria-label="Close"
           >
-            Stay on Tiếng Việt
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
-      </div>
 
-      <button
-        id="close-lang-banner-x"
-        type="button"
-        class="text-stone-400 hover:text-stone-600 dark:hover:text-stone-200 transition-colors p-1"
-        aria-label="Close"
-      >
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+      </div>
     </div>
   </aside>
 
@@ -88,18 +98,20 @@ const enUrl = getLocalizedPath(currentPath, 'en');
 
         setTimeout(function () {
           banner.classList.remove('hidden');
+          // Force layout reflow before triggering smooth transition
+          void banner.offsetHeight;
           requestAnimationFrame(function () {
-            banner.classList.remove('translate-y-4', 'opacity-0');
-            banner.classList.add('translate-y-0', 'opacity-100');
+            banner.classList.remove('max-h-0', 'opacity-0', '-translate-y-2');
+            banner.classList.add('max-h-96', 'opacity-100', 'translate-y-0');
           });
-        }, 1200);
+        }, 1000);
 
         function dismissBanner() {
           try {
             localStorage.setItem('kd_lang_banner_dismissed', '1');
           } catch (e) {}
-          banner.classList.remove('translate-y-0', 'opacity-100');
-          banner.classList.add('translate-y-4', 'opacity-0');
+          banner.classList.remove('max-h-96', 'opacity-100', 'translate-y-0');
+          banner.classList.add('max-h-0', 'opacity-0', '-translate-y-2');
           setTimeout(function () {
             banner.classList.add('hidden');
           }, 300);

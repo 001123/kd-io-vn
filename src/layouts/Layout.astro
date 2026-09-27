@@ -3,7 +3,6 @@ import type { Locale } from '../data/i18n';
 import { getLocalizedPath } from '../data/i18n';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import LanguageSuggestionBanner from '../components/LanguageSuggestionBanner.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -100,7 +99,5 @@ const xDefaultURL = enAlternateURL;
 
       <Footer currentLang={lang} />
     </div>
-
-    <LanguageSuggestionBanner currentLang={lang} />
   </body>
 </html>

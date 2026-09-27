@@ -4,6 +4,7 @@ import { getTranslations } from '../data/i18n';
 import { siteConfig } from '../config/site';
 import LanguagePicker from './LanguagePicker.astro';
 import ThemeToggle from './ThemeToggle.astro';
+import LanguageSuggestionBanner from './LanguageSuggestionBanner.astro';
 
 interface Props {
   currentLang: Locale;
@@ -20,8 +21,12 @@ const privacyUrl = currentLang === 'vi' ? '/privacy' : `/${currentLang}/privacy`
 const blogUrl = currentLang === 'vi' ? '/blog' : `/${currentLang}/blog`;
 ---
 
-<header class="sticky top-0 z-50 backdrop-blur-md bg-stone-50/85 dark:bg-[#0F0E0D]/85 border-b border-stone-200/80 dark:border-stone-800/80 transition-colors duration-200">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<header class="sticky top-0 z-50 transition-colors duration-200">
+  <!-- Language Suggestion Top Banner -->
+  <LanguageSuggestionBanner currentLang={currentLang} />
+
+  <div class="backdrop-blur-md bg-stone-50/85 dark:bg-[#0F0E0D]/85 border-b border-stone-200/80 dark:border-stone-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 sm:h-20">
       
       <!-- Logo KD Labs -->
@@ -201,6 +206,7 @@ const blogUrl = currentLang === 'vi' ? '/blog' : `/${currentLang}/blog`;
         <span>KD Labs trên Google Play</span>
       </a>
     </div>
+  </div>
   </div>
 </header>
 
